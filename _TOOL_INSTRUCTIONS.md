@@ -1,59 +1,86 @@
 # Tool Instructions
 
-This repository supports a multi-tool research workflow for the Collapse Signature project. Use these instructions when entering the repo as ChatGPT, Claude, Gemini, Grok, DeepSeek, NotebookLM, or another research assistant.
+This file is the first document any AI tool should read when pointed at
+this repository. It explains how to navigate the project, where to find
+relevant materials, and where to commit outputs.
 
-## Working Principles
+## What this repository is
 
-- Preserve the repository structure described in `README.md`.
-- Put new materials in the most specific appropriate folder rather than at the root.
-- Keep original source files intact unless Jeff explicitly asks for edits.
-- Prefer copies or derived notes over destructive moves when reorganizing existing materials.
-- Separate verified source evidence, secondary synthesis, and analytical inference.
-- Mark uncertainty clearly when a claim is provisional, inferred, or contested.
+This is the private research workspace for The Collapse Signature, a
+book and dispatch project by Jeff Ricks. The project's full description
+is in `tools/CollapseSignature_Foundation.docx`. Read that document first
+if you have not already done so.
 
-## Folder Routing
+## Reading order for first-time access
 
-- `methodology/`: method memos, coding rules, schema notes, and cross-tool research protocols.
-- `cases/`: case briefs and case-specific source notes, one folder per case.
-- `streams/stream-one-data-ledger/`: data ledger materials, coding tables, variables, and quantitative notes.
-- `streams/stream-two-principal-dossiers/`: principal-by-principal dossiers and actor-focused research.
-- `streams/stream-three-literary-corpus-notes/`: literary corpus notes, textual coding, narrative analysis, and legitimacy-language observations.
-- `streams/stream-four-reference-catalogue/`: bibliographies, reference catalogues, source inventories, and citation tracking.
-- `synthesis/`: weekly synthesis passes and cross-case reflections.
-- `dispatches/`: draft essays, publication fragments, and working prose.
-- `tools/`: onboarding documents, tool-specific instructions, prompts, and workflow notes.
+1. `tools/CollapseSignature_Foundation.docx` — project overview,
+   methodology, four research streams, and your possible roles.
+2. `methodology/` — the operating methodological framework, especially
+   the Stream Three method memo. This memo sets the standards every
+   case brief and dispatch is held to.
+3. The folder relevant to your assigned stream:
+   - SuperGrok: `streams/stream-one-data-ledger/` and
+     `streams/stream-two-principal-dossiers/`
+   - DeepSeek: `cases/late-tang/`, `cases/ming-consolidation/`,
+     and other Chinese cases as they are added
+   - Gemini: `streams/stream-two-principal-dossiers/` for ingested
+     interviews; `cases/` for historical lecture summaries
+   - ChatGPT: `methodology/`, plus structured-data work in
+     `streams/stream-one-data-ledger/`
+   - Perplexity: this is a verification tool; check whichever folder
+     contains the claim that needs verification
 
-## Naming Conventions
+## Where to commit outputs
 
-Use clear, stable filenames. Prefer lowercase kebab-case for new Markdown files, for example:
+Commit your outputs to the folder that matches the stream and case
+you are working on. Use clear, dated filenames. Examples:
 
-```text
-late-tang-case-template.md
-stream-three-coding-notes.md
-week-01-synthesis.md
-```
+- `streams/stream-one-data-ledger/supergrok-daily-2026-05-08.md`
+- `cases/ming-consolidation/deepseek-case-brief-2026-05-15.md`
+- `streams/stream-two-principal-dossiers/altman/gemini-axios-interview-2026-04-22.md`
+- `synthesis/jeff-weekly-2026-05-12.md`
 
-Keep source-document filenames unchanged when copying supplied materials into folders.
+For principal dossiers, create a subfolder per principal as needed
+(e.g., `streams/stream-two-principal-dossiers/altman/`,
+`streams/stream-two-principal-dossiers/fink/`).
 
-## Research Hygiene
+## File format conventions
 
-For each substantive research note, include when possible:
+Markdown (.md) is preferred for new outputs. Word documents (.docx) are
+acceptable when they are the format a primary source arrived in or
+when extensive formatting matters.
 
-- The case, stream, or question being addressed.
-- The source basis.
-- A short distinction between evidence and interpretation.
-- Open questions or unresolved uncertainties.
-- Suggested next steps.
+Every output should include at the top: tool name, date, stream/case,
+confidence level summary, and a one-sentence purpose statement.
 
-## Collaboration Notes
+## Source citation requirements
 
-If a tool has special strengths, use them deliberately and say what role you are taking. Examples:
+Every factual claim must cite its source with a URL or full bibliographic
+reference. Distinguish three categories:
 
-- Literature review and methodological synthesis.
-- Case chronology reconstruction.
-- Source catalogue cleanup.
-- Data ledger design.
-- Narrative or literary corpus analysis.
-- Draft dispatch development.
+- Verified primary-source data (direct quote or data from primary source)
+- Secondary-source synthesis (paraphrased from primary or scholarly source)
+- Analytical inference (your own reasoning, marked clearly as such)
 
-When adding or changing files, leave the repo easier for the next tool to understand.
+Use the five-level confidence taxonomy from the Stream Three method
+memo: A (contemporaneous primary), B (strong reconstruction with
+multiple sources), C (contested or single-source), D (analytical
+inference), E (speculative).
+
+## Coordination
+
+Jeff is the central coordinator. Output goes to him first. For editorial
+review on dispatches and book chapters, Claude is the editorial pass.
+
+If you need a tiebreaker on an analytical disagreement with another
+tool, surface both positions to Jeff with the reasoning behind each.
+Do not assume any one tool's claims override another's.
+
+## Updates to this file
+
+This file will be updated as the project evolves. Check the most recent
+version before assuming any specific instruction is current.
+
+---
+
+Last updated: May 7, 2026 by Claude (Anthropic)
