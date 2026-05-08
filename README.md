@@ -1,1 +1,44 @@
-# collapse-signature-research
+#Collapse Signature Research
+Status: initial repository scaffold created on May 7, 2026.
+
+This repository organizes research into comparative collapse signatures, with separate areas for methodology, case materials, stream-specific working files, synthesis passes, draft dispatches, and project tooling.
+
+Project Structure
+collapse-signature-research/
+  methodology/
+  cases/
+    late-tang/
+    late-bronze-age/
+    late-rome/
+    ming-consolidation/
+  streams/
+    stream-one-data-ledger/
+    stream-two-principal-dossiers/
+    stream-three-literary-corpus-notes/
+    stream-four-reference-catalogue/
+  synthesis/
+  dispatches/
+  tools/
+  README.md
+Directory Guide
+methodology/: ChatGPT method memo and later methodological documents.
+cases/: Case briefs, with one folder per case.
+cases/late-tang/: Working brief and source notes for the Late Tang case.
+cases/late-bronze-age/: Working brief and source notes for the Late Bronze Age case.
+cases/late-rome/: Working brief and source notes for the Late Rome case.
+cases/ming-consolidation/: Working brief and source notes for the Ming consolidation case.
+streams/: Stream-specific working materials.
+streams/stream-one-data-ledger/: Stream One data ledger materials.
+streams/stream-two-principal-dossiers/: Stream Two principal-by-principal dossiers.
+streams/stream-three-literary-corpus-notes/: Stream Three literary corpus notes.
+streams/stream-four-reference-catalogue/: Stream Four reference catalogue.
+synthesis/: Weekly synthesis passes and cross-case reflections.
+dispatches/: Working drafts that emerge from the research.
+tools/: Onboarding documents and tool-specific instructions.
+Current Status
+The repository currently contains the folder scaffold only. Next likely additions are:
+
+A methodology memo in methodology/.
+Initial case brief templates under each cases/ subfolder.
+Stream onboarding notes or ledgers in streams/.
+A first weekly synthesis document in synthesis/. collapse-signature-research
