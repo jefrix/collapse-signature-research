@@ -1,0 +1,57 @@
+# Case Study: Mycenaean Administrative Collapse (c. 1210–1150 BCE)
+
+**Stream:** Stream Three (Civilizational Foundation)
+
+**Date:** May 15, 2026 (Projected Synthesis)
+
+**Confidence Level:** **B** (Aggregated) | Variable-level confidence below.
+
+## 1. Dating Methodology & Phasing
+
+The Mycenaean collapse is the canonical example of a **palace-administrative** system failing to scale its response to a multi-vector shock.
+
+* **Phase I: Late Helladic (LH) IIIB2 (c. 1250–1210 BCE)**: Peak centralization. Massive fortification of the Argolid (Cyclopean walls).
+* *Confidence: A* (Dendrochronology/Ceramic typology).
+
+
+* **Phase II: The Destructive Horizon (c. 1200–1177 BCE)**: Simultaneous burning of the major palatial centers (Pylos, Mycenae, Tiryns). Linear B archives are baked (and thus preserved) by the very fires that destroyed the administration.
+* *Confidence: A* (Burnt tablet archives).
+
+
+* **Phase III: LH IIIC Early (c. 1177–1130 BCE)**: Post-palatial fragmentation. Abandonment of writing (Linear B); transition to the "Greek Dark Age."
+* *Confidence: B* (Stratigraphic hiatus).
+
+
+
+---
+
+## 2. System-Type Coding: Palace-Administrative
+
+**Classification**: **Palace-Administrative** (Prop. System Type 5).
+**Analysis**: Unlike a "City-State Confederation" (which relies on horizontal peer-polity interaction), the Mycenaean system was a series of autarkic **command economies**. The Palace was a "black box" that managed all surplus, making the entire society's survival dependent on the functional integrity of the center. When the center burned, the society did not "decentralize"—it **simplified** to a subsistence level.
+
+---
+
+## 3. Quantifiable Variables & Compensatory Fragility
+
+* **Communication Tempo**: **Confidence: A**. Linear B tablets show a frantic, "just-in-time" administrative pace in the final months. The Pylos tablets (Tn 316) record emergency human sacrifices and the "watching of the coasts".
+* **Compensatory Fragility**: **Confidence: B**. The palaces compensated for a lack of domestic resource resilience by intensifying industrial specialization (e.g., perfumed oils and high-end textiles for trade). This created a "fragile rising" state: high throughput, zero redundancy.
+* **Narrative Classification**: `rising-but-vulnerable`. The construction of the massive **Lion Gate** and walls at Mycenae just decades before the collapse represents a "Rising Narrative" of power projection that masked terminal structural brittleness.
+
+---
+
+## 4. Literary-Sparse Asymmetry Rule (V3)
+
+Mycenae is the primary test case for this rule: high administrative noise (Linear B) vs. zero contemporary narrative.
+
+| Source Type | Signal Category | Confidence | Caveat |
+| --- | --- | --- | --- |
+| **Linear B Tablets** | Administrative Noise | **A** | Detailed inventories (chariots, bronze, wine) but zero mention of political causes or "the enemy". |
+| **Homeric Epics (Proxy)** | Literary Signal (Successor) | **D** | Written ~400 years later. Preserves the *feeling* of collapse (Trojan War) but projects 8th-century social structures (Basileus) onto 12th-century archaeology. |
+| **Pylos Watchers (Tn 316)** | Real-time Crisis Data | **A** | "Watchers to guard the coast"—the final operational signal before the fire. |
+
+---
+
+## 5. Explicit Comparison: Mycenae vs. Late Rome
+
+* **Administrative vs. Ideological**: Like the **Western Roman Empire** (DeepSeek's brief), Mycenae suffered from a disconnect between the center and the periphery. However, Rome had a "Return-to-Foundations" option (Byzantium) because it possessed a shared ideological substrate. Mycenae was a purely administrative gear; once the gear broke, the "watch" stopped entirely.
