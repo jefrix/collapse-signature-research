@@ -141,6 +141,54 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   50% { opacity: 0.55; box-shadow: 0 0 3px var(--accent); }
 }
 
+/* ── featured / synthesis spotlight ───────────────── */
+.spotlight {
+  margin: 0 auto 88px;
+  max-width: 860px;
+  border: 1px solid var(--accent-line);
+  background: linear-gradient(180deg, rgba(201,123,74,0.06), rgba(201,123,74,0.01));
+  padding: 36px 40px;
+  position: relative;
+}
+.spotlight::before {
+  content: "";
+  position: absolute; top:0; left:0; right:0;
+  height: 2px;
+  background: var(--accent);
+}
+.spotlight-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.spotlight-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: var(--ink-strong);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.spotlight-summary {
+  font-size: 1.05rem;
+  color: var(--ink);
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+.spotlight-summary em { color: var(--ink-strong); }
+.spotlight-actions {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 /* ── section ──────────────────────────────────────── */
 .section { margin-bottom: 84px; }
 .section-head {
@@ -332,7 +380,7 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 280px;
+  max-width: 300px;
 }
 .file-note {
   display: block;
@@ -406,16 +454,208 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.masthead, .intro, .section, .footer {
+.masthead, .intro, .spotlight, .section, .footer {
   animation: fadeUp 0.7s ease-out backwards;
 }
 .intro { animation-delay: 0.10s; }
-.section:nth-of-type(2) { animation-delay: 0.18s; }
-.section:nth-of-type(3) { animation-delay: 0.26s; }
-.section:nth-of-type(4) { animation-delay: 0.34s; }
-.section:nth-of-type(5) { animation-delay: 0.42s; }
-.section:nth-of-type(6) { animation-delay: 0.50s; }
-.footer { animation-delay: 0.58s; }
+.spotlight { animation-delay: 0.15s; }
+.section:nth-of-type(2) { animation-delay: 0.22s; }
+.section:nth-of-type(3) { animation-delay: 0.30s; }
+.section:nth-of-type(4) { animation-delay: 0.38s; }
+.section:nth-of-type(5) { animation-delay: 0.46s; }
+.section:nth-of-type(6) { animation-delay: 0.54s; }
+.section:nth-of-type(7) { animation-delay: 0.62s; }
+.footer { animation-delay: 0.70s; }
+
+/* ── markdown viewer ──────────────────────────────── */
+.viewer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 8, 6, 0.78);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 90;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+.viewer-backdrop.open { display: block; opacity: 1; }
+
+.viewer {
+  position: fixed;
+  top: 0; right: 0;
+  height: 100vh;
+  width: min(880px, 96vw);
+  background: var(--bg);
+  border-left: 1px solid var(--accent-line);
+  box-shadow: -20px 0 60px rgba(0,0,0,0.45);
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+.viewer.open { transform: translateX(0); }
+
+.viewer-header {
+  flex: 0 0 auto;
+  padding: 18px 28px;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  background: var(--bg-deeper);
+}
+.viewer-path {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.viewer-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex: 0 0 auto;
+}
+.viewer-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--ink-muted);
+  border: 1px solid var(--rule);
+  padding: 7px 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.viewer-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent-line);
+}
+
+.viewer-body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 36px 48px 80px;
+  scroll-behavior: smooth;
+}
+@media (max-width: 720px) {
+  .viewer-body { padding: 26px 22px 60px; }
+}
+
+/* prose styles inside viewer */
+.prose {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--ink-strong);
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 1.6em 0 0.6em;
+}
+.prose h1 { font-size: 2.1rem; margin-top: 0; border-bottom: 1px solid var(--rule); padding-bottom: 12px; }
+.prose h2 { font-size: 1.55rem; color: var(--accent); margin-top: 2em; }
+.prose h3 { font-size: 1.22rem; }
+.prose h4 { font-size: 1.05rem; font-style: italic; }
+.prose p { margin: 0.9em 0; }
+.prose a { color: var(--accent); border-bottom: 1px dotted var(--accent-line); }
+.prose a:hover { border-bottom-style: solid; text-decoration: none; }
+.prose strong { color: var(--ink-strong); }
+.prose em { color: var(--ink-strong); }
+.prose ul, .prose ol { margin: 0.9em 0 0.9em 1.4em; }
+.prose li { margin: 0.4em 0; }
+.prose blockquote {
+  border-left: 2px solid var(--accent);
+  padding: 6px 0 6px 18px;
+  color: var(--ink-muted);
+  font-style: italic;
+  margin: 1.2em 0;
+}
+.prose code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  background: var(--bg-deeper);
+  padding: 2px 6px;
+  border: 1px solid var(--rule);
+  color: var(--accent);
+}
+.prose pre {
+  background: var(--bg-deeper);
+  border: 1px solid var(--rule);
+  padding: 16px 20px;
+  overflow-x: auto;
+  margin: 1.2em 0;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.prose pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--ink);
+  font-size: inherit;
+}
+.prose table {
+  border-collapse: collapse;
+  margin: 1.4em 0;
+  font-size: 0.95em;
+  width: 100%;
+}
+.prose th, .prose td {
+  border: 1px solid var(--rule);
+  padding: 9px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+.prose th {
+  background: var(--bg-lift);
+  color: var(--ink-strong);
+  font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.02em;
+}
+.prose td:first-child { color: var(--ink-strong); }
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2em 0;
+}
+.prose .mermaid {
+  background: var(--bg-deeper);
+  border: 1px solid var(--rule);
+  padding: 24px;
+  margin: 1.4em 0;
+  text-align: center;
+  overflow-x: auto;
+}
+.viewer-loading, .viewer-error {
+  padding: 80px 0;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--ink-muted);
+}
+.viewer-error { color: #d36a4a; }
+
+/* trigger style — distinguish md-link from plain external */
+a.md-link::after {
+  content: "↗";
+  font-size: 0.75em;
+  margin-left: 4px;
+  color: var(--ink-faint);
+  transition: color 0.15s;
+}
+a.md-link:hover::after { color: var(--accent); }
 </style>
 </head>
 <body>
@@ -426,18 +666,32 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   <div class="eyebrow">Volume I · Cycle II</div>
   <h1 class="title">Collapse Signature<br>Research</h1>
   <p class="subtitle">An inquiry into civilizational and financial fragility</p>
-  <span class="cycle">8 May 2026 · In Review</span>
+  <span class="cycle">10 May 2026 · Synthesis Drafting</span>
 </header>
 
 <!-- ── intro ── -->
 <section class="intro">
-  <p>An ongoing multi-agent investigation into the structural patterns that precede systemic collapse — across civilizations, capital architectures, and the literary records left in their wake. The project pairs historical case studies (Late Bronze Age, Late Antiquity, Tang and Ming China, the Mongol fragmentation) with real-time mapping of the contemporary AI capital web. Methodology v3 is now canonical. Cycle II closes 15 May with the first formal synthesis.</p>
+  <p>An ongoing multi-agent investigation into the structural patterns that precede systemic collapse — across civilizations, capital architectures, and the literary records left in their wake. The project pairs historical case studies (Late Bronze Age, Late Antiquity, Tang and Qing China, Ming consolidation) with real-time mapping of the contemporary AI capital web. Methodology v3.1 is now in active iteration. The first cross-stream synthesis lands 15 May.</p>
 
   <div class="status-line">
-    <span><span class="pulse"></span><span class="key">Status</span><span class="val">Pause &amp; Review</span></span>
+    <span><span class="pulse"></span><span class="key">Status</span><span class="val">Synthesis Drafting</span></span>
     <span><span class="key">Streams</span><span class="val">Four</span></span>
-    <span><span class="key">Cases Filed</span><span class="val">Eleven</span></span>
-    <span><span class="key">Next Synthesis</span><span class="val">15 May 2026</span></span>
+    <span><span class="key">Cases Filed</span><span class="val">Twelve</span></span>
+    <span><span class="key">Synthesis</span><span class="val">15 May 2026</span></span>
+  </div>
+</section>
+
+<!-- ── synthesis spotlight ── -->
+<section class="spotlight">
+  <div class="spotlight-tag">Featured · Working Draft</div>
+  <h2 class="spotlight-title">The Collapse Signature — Cross-Stream Synthesis</h2>
+  <p class="spotlight-summary">
+    The signature is the conjunction of three measurable conditions: <em>high chokepoint concentration</em>, <em>active rising-narrative construction by named principals</em>, and <em>concentrated cross-channel exposure</em>. Today's US AI infrastructure system shows all three. The Late Qing showed all three before 1898. The Late Tang showed two of three and survived simplified for 144 years.
+  </p>
+  <div class="spotlight-actions">
+    <a class="md-link" href="#" data-md="synthesis/may-15-synthesis-draft-2026-05-10.md">→ Read the draft</a>
+    <a class="md-link" href="#" data-md="synthesis/may-15-synthesis-outline-2026-05-10.md">→ Outline</a>
+    <a class="md-link" href="#" data-md="synthesis/ledger-signals-from-git-history-2026-05-10.md">→ Git-history signals</a>
   </div>
 </section>
 
@@ -455,26 +709,26 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
     <div class="stream">
       <div class="stream-num">Stream One</div>
       <h3 class="stream-name">Financial Architecture</h3>
-      <p class="stream-desc">Real-time mapping of AI capital structures, vehicle disclosure, and falsifiable predictions on credit access.</p>
-      <a class="stream-link" href="https://github.com/jefrix/collapse-signature-research/tree/main/streams/stream-one-data-ledger">→ Data Ledger</a>
+      <p class="stream-desc">Real-time mapping of AI capital structures, vehicle disclosure, four committed case validations, and the falsifiable Oracle IG-credit prediction.</p>
+      <a class="stream-link" href="https://github.com/jefrix/collapse-signature-research/tree/main/streams/stream-one-data-ledger" target="_blank" rel="noopener">→ Data Ledger</a>
     </div>
     <div class="stream">
       <div class="stream-num">Stream Two</div>
       <h3 class="stream-name">Technocratic Class Map</h3>
-      <p class="stream-desc">Principal dossiers tracking the network of decision-makers across the contemporary capital web.</p>
-      <a class="stream-link" href="https://github.com/jefrix/collapse-signature-research/tree/main/streams/stream-two-principal-dossiers">→ Dossiers</a>
+      <p class="stream-desc">Principal dossiers tracking the legitimacy-exposed nodes: Sacks, Fink, Huang, Nadella, Altman, Rowan, plus the wider founder-class web.</p>
+      <a class="stream-link" href="https://github.com/jefrix/collapse-signature-research/tree/main/streams/stream-two-principal-dossiers" target="_blank" rel="noopener">→ Dossiers</a>
     </div>
     <div class="stream">
       <div class="stream-num">Stream Three</div>
       <h3 class="stream-name">Civilizational Foundation</h3>
-      <p class="stream-desc">Historical case briefs and literary corpus analysis, anchored by Tainter, Cline, Turchin, and Seshat.</p>
-      <a class="stream-link" href="https://github.com/jefrix/collapse-signature-research/tree/main/streams/stream-three-literary-corpus-notes">→ Corpus</a>
+      <p class="stream-desc">Historical case briefs and literary corpus analysis, anchored by Tainter, Cline, Turchin, and Seshat. Now spanning three civilizations and three system types.</p>
+      <a class="stream-link" href="https://github.com/jefrix/collapse-signature-research/tree/main/cases" target="_blank" rel="noopener">→ Cases</a>
     </div>
     <div class="stream">
       <div class="stream-num">Stream Four</div>
       <h3 class="stream-name">Reference Catalogue</h3>
       <p class="stream-desc">The living bibliography and source registry across all streams.</p>
-      <a class="stream-link" href="https://github.com/jefrix/collapse-signature-research/tree/main/streams/stream-four-reference-catalogue">→ Catalogue</a>
+      <a class="stream-link" href="https://github.com/jefrix/collapse-signature-research/tree/main/streams/stream-four-reference-catalogue" target="_blank" rel="noopener">→ Catalogue</a>
     </div>
   </div>
 </section>
@@ -494,15 +748,15 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
     <div class="era-label">Late Bronze Age <span class="span">c. 1210 – 1150 BCE</span></div>
     <div class="era-cases">
       <div class="era-case">
-        <span class="era-case-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/cases/late-bronze-age/egypt-resilience-brief.md">Egypt — Survival Clinic</a></span>
-        <span class="era-case-meta">Resilience · Return-to-Foundations</span>
+        <span class="era-case-title"><a class="md-link" href="#" data-md="cases/late-bronze-age/egypt-resilience-brief.md">Egypt — Survival Clinic</a></span>
+        <span class="era-case-meta">Resilience · Rising Mask of Decline</span>
       </div>
       <div class="era-case">
-        <span class="era-case-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/cases/late-bronze-age/mycenae-collapse-brief.md">Mycenae — Palace-Administrative Collapse</a></span>
+        <span class="era-case-title"><a class="md-link" href="#" data-md="cases/late-bronze-age/mycenae-collapse-brief.md">Mycenae — Palace-Administrative Collapse</a></span>
         <span class="era-case-meta">Collapse · Rising-but-Vulnerable</span>
       </div>
       <div class="era-case">
-        <span class="era-case-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/cases/late-bronze-age/hattusa-note.md">Hattusa — Hittite Center Failure</a></span>
+        <span class="era-case-title"><a class="md-link" href="#" data-md="cases/late-bronze-age/hattusa-note.md">Hattusa — Hittite Center Failure</a></span>
         <span class="era-case-meta">Collapse · Orderly Evacuation</span>
       </div>
     </div>
@@ -510,35 +764,43 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
     <div class="era-label">Late Antiquity <span class="span">395 – 636 CE</span></div>
     <div class="era-cases">
       <div class="era-case">
-        <span class="era-case-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/cases/late-rome/late-rome-case-brief-2026-05-08.md">Western Rome — Conquest-Empire Collapse</a></span>
-        <span class="era-case-meta">Collapse · Chokepoint: African Annona</span>
+        <span class="era-case-title"><a class="md-link" href="#" data-md="cases/late-rome/late-rome-case-brief-2026-05-08.md">Western Rome — Conquest-Empire Collapse</a></span>
+        <span class="era-case-meta">Collapse · Chokepoint: African Annona · CDI 2.80</span>
       </div>
       <div class="era-case">
-        <span class="era-case-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/cases/eastern-rome/eastern-rome-control-brief-2026-05-08.md">Eastern Rome — Persistence Control</a></span>
-        <span class="era-case-meta">Persistence · Geographic Resilience</span>
+        <span class="era-case-title"><a class="md-link" href="#" data-md="cases/eastern-rome/eastern-rome-control-brief-2026-05-08.md">Eastern Rome — Persistence Control</a></span>
+        <span class="era-case-meta">Persistence · Geographic Defensibility: High</span>
       </div>
     </div>
 
     <div class="era-label">Mid-Imperial China <span class="span">755 – 907 CE</span></div>
     <div class="era-cases">
       <div class="era-case">
-        <span class="era-case-title"><a href="https://github.com/jefrix/collapse-signature-research/tree/main/cases/late-tang">Late Tang — Simplification-Survival</a></span>
-        <span class="era-case-meta">Simplification · Salt-Monopoly Chokepoint</span>
+        <span class="era-case-title"><a class="md-link" href="#" data-md="cases/late-tang/late-tang-case-brief.md">Late Tang — Simplification-Survival</a></span>
+        <span class="era-case-meta">Simplification · Static Declining (-2) · 144 years</span>
+      </div>
+    </div>
+
+    <div class="era-label">Late-Imperial China <span class="span">1839 – 1912 CE</span></div>
+    <div class="era-cases">
+      <div class="era-case">
+        <span class="era-case-title"><a class="md-link" href="#" data-md="cases/late-qing/late-qing-case-brief-2026-05-10.md">Late Qing — Failed Rising</a></span>
+        <span class="era-case-meta">Terminal Collapse · -2 → +2 → -2 · 72 years</span>
       </div>
     </div>
 
     <div class="era-label">Early Modern China <span class="span">1368 – 1644 CE</span></div>
     <div class="era-cases">
       <div class="era-case">
-        <span class="era-case-title"><a href="https://github.com/jefrix/collapse-signature-research/tree/main/cases/ming-consolidation">Ming Consolidation</a></span>
-        <span class="era-case-meta">Reorganization · Long-Term Rising</span>
+        <span class="era-case-title"><a class="md-link" href="#" data-md="cases/ming-consolidation/ming-consolidation-control-case-brief-2026-05-08.md">Ming Consolidation</a></span>
+        <span class="era-case-meta">Reorganization · Genuine Rising (+2)</span>
       </div>
     </div>
 
     <div class="era-label">Eurasian Steppe <span class="span">1206 – 1368 CE</span></div>
     <div class="era-cases">
       <div class="era-case">
-        <span class="era-case-title"><a href="https://github.com/jefrix/collapse-signature-research/tree/main/cases/mongol-empire-fragmentation">Mongol Empire Fragmentation</a></span>
+        <span class="era-case-title"><a href="https://github.com/jefrix/collapse-signature-research/tree/main/cases/mongol-empire-fragmentation" target="_blank" rel="noopener">Mongol Empire Fragmentation</a></span>
         <span class="era-case-meta">Collapse · Literary-Sparse</span>
       </div>
     </div>
@@ -559,151 +821,249 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
   <ul class="file-list">
     <li>
       <div>
-        <div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/tree/main/streams/stream-one-data-ledger">Oracle case validation</a></div>
-        <div class="file-note">Vehicle-mediated buyer; gated on Grok's gap-closures for next iteration.</div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-one-data-ledger/cross-case-comparative-oracle-microsoft-amazon-google-2026-05-10.md">Cross-Case Comparative — Oracle / Microsoft / Amazon / Google</a></div>
+        <div class="file-note">Master v3 schema table; four distinct fragility subtypes; high-signal vs. overfit-risk field review.</div>
       </div>
-      <div class="file-path">stream-one-data-ledger/</div>
+      <div class="file-path">cross-case-comparative-...md</div>
     </li>
     <li>
       <div>
-        <div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/streams/stream-one-data-ledger/microsoft-case-validation-2026-05-08.md">Microsoft case validation</a></div>
-        <div class="file-note">Equity sponsor + cloud operator; on-balance integration with no off-book vehicles.</div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-one-data-ledger/google-case-validation-2026-05-10.md">Google / Alphabet — Vertically Integrated Chokepoint</a></div>
+        <div class="file-note">Internal frontier lab + custom chips + cloud + external-lab investor; CDI 2.82.</div>
       </div>
-      <div class="file-path">microsoft-case-validation.md</div>
+      <div class="file-path">google-case-validation-...md</div>
     </li>
     <li>
       <div>
-        <div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/streams/stream-one-data-ledger/amazon-case-validation-2026-05-08.md">Amazon case validation</a></div>
-        <div class="file-note">Pure platform-provider case; no equity stake, self-funded AWS capex.</div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-one-data-ledger/oracle-case-validation-2026-05-08.md">Oracle — Vehicle-Heavy Fragility</a></div>
+        <div class="file-note">Externally mediated lessor stack; OAI/Stargate corridor; CDI 2.79.</div>
       </div>
-      <div class="file-path">amazon-case-validation.md</div>
+      <div class="file-path">oracle-case-validation-...md</div>
     </li>
     <li>
       <div>
-        <div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/streams/stream-one-data-ledger/china-ai-financing-watch-2026-05-08.md">China AI Financing Watch</a></div>
-        <div class="file-note">Baseline brief on opaque vehicles, Big Fund III, provincial LGFV linkages.</div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-one-data-ledger/microsoft-case-validation-2026-05-08.md">Microsoft — On-Balance Equity-Platform</a></div>
+        <div class="file-note">Equity sponsor + cloud operator; on-balance integration; CDI 2.12.</div>
       </div>
-      <div class="file-path">china-ai-financing-watch.md</div>
+      <div class="file-path">microsoft-case-validation-...md</div>
     </li>
     <li>
       <div>
-        <div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/streams/stream-one-data-ledger/china-ai-financing-watch-update-2026-05-08.md">China AI Watch — Update</a></div>
-        <div class="file-note">DeepSeek/High-Flyer structure, Saudi PIF status, US/China structural contrast.</div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-one-data-ledger/amazon-case-validation-2026-05-08.md">Amazon — Self-Funded Platform Benchmark</a></div>
+        <div class="file-note">Resilience benchmark; pure platform-provider case; CDI 1.49.</div>
       </div>
-      <div class="file-path">china-ai-financing-watch-update.md</div>
+      <div class="file-path">amazon-case-validation-...md</div>
     </li>
     <li>
       <div>
-        <div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/streams/stream-one-data-ledger/new-watches-oracle-schema-vehicle-disclosure-falsifiable-prediction-2026-05-08.md">Standing watches — schema gaps · vehicles · predictions</a></div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-one-data-ledger/ai-circular-investment-web-visual-2026-05-10.md">AI Circular-Investment Web — Visual Exhibit</a></div>
+        <div class="file-note">Mermaid diagram of money/compute/equity flows; Anthropic flagged as cross-channel concentration node.</div>
+      </div>
+      <div class="file-path">ai-circular-investment-web-visual-...md</div>
+    </li>
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-one-data-ledger/ideological-financial-coupling-probe-2026-05-10.md">Ideological-Financial Coupling Probe</a></div>
+        <div class="file-note">Grok's 7-day scan: coupling concentrates at Sacks (X) and Fink (financial press), not pervasive across founder class.</div>
+      </div>
+      <div class="file-path">ideological-financial-coupling-probe-...md</div>
+    </li>
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-one-data-ledger/daily-financial-signals-ledger-2026-05-10.md">Daily Ledger — May 10, 2026</a></div>
+        <div class="file-note">Standing watches; Oracle IG-credit prediction holds at +5 days to checkpoint; Anthropic-Google coupling alert.</div>
+      </div>
+      <div class="file-path">daily-financial-signals-ledger-...md</div>
+    </li>
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-one-data-ledger/china-ai-labs-watch-2026-05-10.md">China AI Labs Weekly Watch</a></div>
+        <div class="file-note">DeepSeek/Moonshot/Zhipu/Baichuan/MiniMax/Stepfun status; quiet week; R2 flagged as next-cycle watch item.</div>
+      </div>
+      <div class="file-path">china-ai-labs-watch-...md</div>
+    </li>
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-one-data-ledger/new-watches-oracle-schema-vehicle-disclosure-falsifiable-prediction-2026-05-08.md">Standing Watches — Schema Gaps · Vehicles · Predictions</a></div>
         <div class="file-note">Live monitoring of Oracle disclosures, hyperscaler vehicle naming, IG-access prediction.</div>
       </div>
-      <div class="file-path">new-watches-...-2026-05-08.md</div>
+      <div class="file-path">new-watches-...md</div>
     </li>
   </ul>
 </section>
 
-<!-- ── IV. Methodology ── -->
+<!-- ── IV. Stream Two — Principal Dossiers ── -->
 <section class="section">
   <header class="section-head">
     <div class="numeral">IV</div>
     <div>
-      <h2 class="section-title">Methodology</h2>
-      <span class="section-kicker">Memos, refinements, and cross-coding under v3</span>
+      <h2 class="section-title">Stream Two — Principal Dossiers</h2>
+      <span class="section-kicker">The named, legitimacy-exposed nodes</span>
     </div>
   </header>
 
   <ul class="file-list">
     <li>
       <div>
-        <div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/methodology/01-stream-three-method-memo.md">01 · Stream Three Method Memo</a></div>
-        <div class="file-note">The original methodological frame for civilizational case briefs.</div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/marc-rowan/marc-rowan-dossier.md">Marc Rowan · Apollo</a></div>
+        <div class="file-note">Capital Allocator. The fragility-aware exception — defensive posture aligned with rather than masking exposure.</div>
       </div>
-      <div class="file-path">01-stream-three-method-memo.md</div>
+      <div class="file-path">marc-rowan-dossier.md</div>
     </li>
     <li>
       <div>
-        <div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/methodology/02-rising-vs-declining-narrative-thread.md">02 · Rising vs. Declining Narrative Thread</a></div>
-        <div class="file-note">Methodology for coding self-narrative as a collapse-signature variable.</div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/jensen-huang/jensen-huang-dossier.md">Jensen Huang · NVIDIA</a></div>
+        <div class="file-note">Frontier Builder. $1T compute demand projection; Sovereign AI framing; CUDA flywheel claim.</div>
       </div>
-      <div class="file-path">02-rising-vs-declining-narrative-thread.md</div>
+      <div class="file-path">jensen-huang-dossier.md</div>
     </li>
     <li>
       <div>
-        <div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/methodology/method-memo-v2-2026-05-08.md">Method Memo v2</a></div>
-        <div class="file-note">Compensatory fragility, return-to-foundations four-criterion threshold.</div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/satya-nadella/satya-nadella-dossier.md">Satya Nadella · Microsoft</a></div>
+        <div class="file-note">Infrastructure Operator. $190B 2026 capex guidance; "habitual AI" engagement claim; demand-constrained Azure.</div>
       </div>
-      <div class="file-path">method-memo-v2-2026-05-08.md</div>
+      <div class="file-path">satya-nadella-dossier.md</div>
     </li>
     <li>
       <div>
-        <div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/methodology/methodology-v3-updates-2026-05-08.md">Methodology v3 — Updates</a></div>
-        <div class="file-note">Literary-sparse rule, system-type taxonomy, common-mode shock, nine schema fields.</div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/altman-technocratic-new-deal.md">Sam Altman — Technocratic New Deal</a></div>
+        <div class="file-note">Frontier Builder. AGI/abundance public commitments; UBI proposal trajectory.</div>
       </div>
-      <div class="file-path">methodology-v3-updates-2026-05-08.md</div>
+      <div class="file-path">altman-technocratic-new-deal.md</div>
     </li>
     <li>
       <div>
-        <div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/methodology/cross-coding/late-rome-late-tang-comparative-table.md">Cross-coding · Late Rome × Late Tang</a></div>
-        <div class="file-note">Conquest empire vs. agrarian-bureaucratic collapse, side by side.</div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/fink-compute-asset-class.md">Larry Fink — Compute as Asset Class</a></div>
+        <div class="file-note">Capital Allocator. "Trillion-dollar futures on compute" framing — the cleanest contemporary Self-Strengthening analog.</div>
       </div>
-      <div class="file-path">cross-coding/late-rome-late-tang-...</div>
+      <div class="file-path">fink-compute-asset-class.md</div>
     </li>
     <li>
       <div>
-        <div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/methodology/cross-coding/mongol-late-rome-late-tang-sparse-coding.md">Cross-coding · Mongol literary-sparse rule</a></div>
-        <div class="file-note">Application of v3 sparse-asymmetry rule; module-not-applicable flag.</div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/long-form-ingestion-2026-05-10-rowan.md">Long-Form Ingestion — Rowan / Apollo Q1 Earnings</a></div>
+        <div class="file-note">Defensive macro signaling; "out-of-the-box" risk framing; private credit as parallel financial system.</div>
       </div>
-      <div class="file-path">cross-coding/mongol-...</div>
+      <div class="file-path">long-form-ingestion-...md</div>
+    </li>
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/00-taxonomy.md">Taxonomy · Class Positioning</a></div>
+        <div class="file-note">Capital Allocators · Frontier Builders · Ideological Architects · Infrastructure Operators.</div>
+      </div>
+      <div class="file-path">00-taxonomy.md</div>
     </li>
   </ul>
 </section>
 
-<!-- ── V. Dispatches ── -->
+<!-- ── V. Methodology ── -->
 <section class="section">
   <header class="section-head">
     <div class="numeral">V</div>
     <div>
-      <h2 class="section-title">Dispatches</h2>
-      <span class="section-kicker">Agent reflections during the Cycle II review pause</span>
+      <h2 class="section-title">Methodology</h2>
+      <span class="section-kicker">v3 canonical · v3.1 candidates active</span>
     </div>
   </header>
 
   <ul class="file-list">
     <li>
       <div>
-        <div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/dispatches/grok-review-2026-05-08.md">Grok — Stream One mapping reflection</a></div>
-        <div class="file-note">Historical signals mapped to live monitoring; blind-spot identification.</div>
+        <div class="file-title"><a class="md-link" href="#" data-md="methodology/chokepoint-dependency-index-formalization-2026-05-10.md">Chokepoint Dependency Index (CDI) — Formalization</a></div>
+        <div class="file-note">Concentration-weighted analytic overlay. Oracle 2.79 / MSFT 2.12 / AMZN 1.49 / Google 2.82; Western Rome 2.80 / Late Tang 2.68.</div>
       </div>
-      <div class="file-path">grok-review-2026-05-08.md</div>
+      <div class="file-path">chokepoint-dependency-index-...md</div>
     </li>
     <li>
       <div>
-        <div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/dispatches/chatgpt-review-2026-05-08.md">ChatGPT — case typology stress-test</a></div>
-        <div class="file-note">Vehicle / equity-platform / pure-platform discrimination under the v3 schema.</div>
+        <div class="file-title"><a class="md-link" href="#" data-md="methodology/methodology-v3-1-geographic-resilience-2026-05-10.md">v3.1 · Geographic Resilience Modifier</a></div>
+        <div class="file-note">Decision: subordinate modifier, not first-class variable. Coded as binary geographic_defensibility tag.</div>
       </div>
-      <div class="file-path">chatgpt-review-2026-05-08.md</div>
+      <div class="file-path">methodology-v3-1-geographic-resilience-...md</div>
     </li>
     <li>
       <div>
-        <div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/dispatches/deepseek-review-2026-05-08.md">DeepSeek — methodology forward look</a></div>
-        <div class="file-note">Geographic-resilience promotion, palace-administrative debate, chokepoint extension.</div>
+        <div class="file-title"><a class="md-link" href="#" data-md="methodology/methodology-v3-1-palace-administrative-2026-05-10.md">v3.1 · Palace-Administrative System Type 5</a></div>
+        <div class="file-note">Mycenae and Hattusa anchor the new system type; potential application to contemporary vertical-integration cases.</div>
       </div>
-      <div class="file-path">deepseek-review-2026-05-08.md</div>
+      <div class="file-path">methodology-v3-1-palace-administrative-...md</div>
     </li>
     <li>
       <div>
-        <div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/dispatches/gemini-review-2026-05-08.md">Gemini — variable-distinguishing reflection</a></div>
-        <div class="file-note">Caesaropapism vs. Maat-restoration; rising-narrative analogs in modern capital posture.</div>
+        <div class="file-title"><a class="md-link" href="#" data-md="methodology/methodology-v3-updates-2026-05-08.md">Methodology v3 — Updates</a></div>
+        <div class="file-note">Literary-sparse rule, system-type taxonomy, common-mode shock, nine schema fields.</div>
       </div>
-      <div class="file-path">gemini-review-2026-05-08.md</div>
+      <div class="file-path">methodology-v3-updates-...md</div>
+    </li>
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="methodology/method-memo-v2-2026-05-08.md">Method Memo v2</a></div>
+        <div class="file-note">Compensatory fragility, return-to-foundations four-criterion threshold.</div>
+      </div>
+      <div class="file-path">method-memo-v2-...md</div>
+    </li>
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="methodology/02-rising-vs-declining-narrative-thread.md">Rising vs. Declining Narrative Thread</a></div>
+        <div class="file-note">Methodology for coding self-narrative. Note: "failed rising" candidate emerging from Late Qing — not yet integrated.</div>
+      </div>
+      <div class="file-path">02-rising-vs-declining-...md</div>
+    </li>
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="methodology/01-stream-three-method-memo.md">Stream Three Method Memo (Foundational)</a></div>
+        <div class="file-note">The original methodological frame for civilizational case briefs.</div>
+      </div>
+      <div class="file-path">01-stream-three-method-memo.md</div>
     </li>
   </ul>
 </section>
 
-<!-- ── VI. Agents ── -->
+<!-- ── VI. Dispatches ── -->
 <section class="section">
   <header class="section-head">
     <div class="numeral">VI</div>
+    <div>
+      <h2 class="section-title">Dispatches</h2>
+      <span class="section-kicker">Agent reflections during Cycle II review</span>
+    </div>
+  </header>
+
+  <ul class="file-list">
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="dispatches/grok-review-2026-05-08.md">Grok — Stream One mapping reflection</a></div>
+        <div class="file-note">Historical signals mapped to live monitoring; flagged ideological-financial coupling as own blind spot. Now tested.</div>
+      </div>
+      <div class="file-path">grok-review-...md</div>
+    </li>
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="dispatches/chatgpt-review-2026-05-08.md">ChatGPT — case typology stress-test</a></div>
+        <div class="file-note">Vehicle / equity-platform / pure-platform discrimination under v3 schema.</div>
+      </div>
+      <div class="file-path">chatgpt-review-...md</div>
+    </li>
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="dispatches/deepseek-review-2026-05-08.md">DeepSeek — methodology forward look</a></div>
+        <div class="file-note">Geographic-resilience promotion, palace-administrative debate, chokepoint extension. All resolved into v3.1 candidates.</div>
+      </div>
+      <div class="file-path">deepseek-review-...md</div>
+    </li>
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="dispatches/gemini-review-2026-05-08.md">Gemini — variable-distinguishing reflection</a></div>
+        <div class="file-note">"Aesthetic of Certainty" compensatory-fragility insight; rising-mask-of-decline framing.</div>
+      </div>
+      <div class="file-path">gemini-review-...md</div>
+    </li>
+  </ul>
+</section>
+
+<!-- ── VII. Agents ── -->
+<section class="section">
+  <header class="section-head">
+    <div class="numeral">VII</div>
     <div>
       <h2 class="section-title">Agents</h2>
       <span class="section-kicker">Distributed analysis, single editorial line</span>
@@ -714,22 +1074,22 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
     <div class="agent">
       <div class="agent-name">Grok</div>
       <div class="agent-role">Stream One · Live</div>
-      <div class="agent-focus">Real-time monitoring, daily ledger, falsifiable-prediction tracking, repository operations.</div>
+      <div class="agent-focus">Daily ledger; Oracle IG-credit falsifiable prediction; ideological-financial coupling probe; X/Twitter real-time scan.</div>
     </div>
     <div class="agent">
       <div class="agent-name">ChatGPT</div>
       <div class="agent-role">Stream One · Schema</div>
-      <div class="agent-focus">Schema validation, structured case briefs (Oracle, Microsoft, Amazon), v3 ontology.</div>
+      <div class="agent-focus">Four committed case validations (Oracle / Microsoft / Amazon / Google); cross-case comparative; CDI formalization.</div>
     </div>
     <div class="agent">
       <div class="agent-name">DeepSeek</div>
       <div class="agent-role">Stream Three · Method</div>
-      <div class="agent-focus">Late Rome and Eastern Rome briefs, cross-coding tables, conquest-empire hypothesis.</div>
+      <div class="agent-focus">Late Tang, Late Rome, Eastern Rome, Ming consolidation, Late Qing briefs. The "failed rising" hypothesis.</div>
     </div>
     <div class="agent">
       <div class="agent-name">Gemini</div>
-      <div class="agent-role">Stream Three · LBA</div>
-      <div class="agent-focus">Late Bronze Age triad — Egypt, Mycenae, Hattusa — and rising-but-vulnerable coding.</div>
+      <div class="agent-role">Streams Two & Three</div>
+      <div class="agent-focus">Late Bronze Age triad; Rowan/Huang/Nadella dossiers; AI circular-investment web visual.</div>
     </div>
   </div>
 </section>
@@ -737,10 +1097,181 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 <!-- ── footer ── -->
 <footer class="footer">
   <span>Collapse Signature Research · jefrix</span>
-  <span><a href="https://github.com/jefrix/collapse-signature-research">github.com/jefrix/collapse-signature-research</a></span>
-  <span>Updated 8 May 2026</span>
+  <span><a href="https://github.com/jefrix/collapse-signature-research" target="_blank" rel="noopener">github.com/jefrix/collapse-signature-research</a></span>
+  <span>Updated 10 May 2026</span>
 </footer>
 
 </div>
+
+<!-- ── markdown viewer ── -->
+<div class="viewer-backdrop" id="viewer-backdrop"></div>
+<aside class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-path">
+  <header class="viewer-header">
+    <div class="viewer-path" id="viewer-path">—</div>
+    <div class="viewer-actions">
+      <button class="viewer-btn" id="viewer-github" title="Open on GitHub">GitHub ↗</button>
+      <button class="viewer-btn" id="viewer-close" title="Close (Esc)">Close ✕</button>
+    </div>
+  </header>
+  <div class="viewer-body" id="viewer-body">
+    <div class="viewer-loading">Loading…</div>
+  </div>
+</aside>
+
+<!-- libraries -->
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+
+<script>
+(() => {
+  const REPO = "jefrix/collapse-signature-research";
+  const BRANCH = "main";
+  const RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
+  const BLOB = `https://github.com/${REPO}/blob/${BRANCH}/`;
+
+  const backdrop = document.getElementById("viewer-backdrop");
+  const viewer = document.getElementById("viewer");
+  const body = document.getElementById("viewer-body");
+  const pathEl = document.getElementById("viewer-path");
+  const ghBtn = document.getElementById("viewer-github");
+  const closeBtn = document.getElementById("viewer-close");
+
+  let currentPath = null;
+
+  // configure marked
+  marked.setOptions({ gfm: true, breaks: false });
+  // initialize mermaid lazily
+  if (window.mermaid) {
+    mermaid.initialize({ startOnLoad: false, theme: "dark", securityLevel: "loose" });
+  }
+
+  function openViewer() {
+    backdrop.classList.add("open");
+    viewer.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closeViewer() {
+    backdrop.classList.remove("open");
+    viewer.classList.remove("open");
+    document.body.style.overflow = "";
+    currentPath = null;
+    history.replaceState(null, "", location.pathname + location.search);
+  }
+
+  // resolve a possibly-relative md link to an absolute repo path
+  function resolveLink(href, base) {
+    if (!href) return null;
+    if (/^https?:\/\//i.test(href)) {
+      // is it a github blob URL into our repo? convert to repo path
+      if (href.startsWith(BLOB)) return href.slice(BLOB.length);
+      return null; // external, leave alone
+    }
+    if (href.startsWith("#")) return null;
+    // relative — resolve against base
+    const baseDir = base ? base.replace(/[^/]+$/, "") : "";
+    const parts = (baseDir + href).split("/");
+    const stack = [];
+    for (const p of parts) {
+      if (p === "" || p === ".") continue;
+      if (p === "..") stack.pop();
+      else stack.push(p);
+    }
+    return stack.join("/");
+  }
+
+  async function loadMd(path) {
+    if (!path) return;
+    currentPath = path;
+    pathEl.textContent = path;
+    body.innerHTML = `<div class="viewer-loading">Loading ${path}…</div>`;
+    body.scrollTop = 0;
+    history.replaceState(null, "", `#${path}`);
+    openViewer();
+
+    try {
+      const res = await fetch(RAW + path, { cache: "no-cache" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const md = await res.text();
+      const rawHtml = marked.parse(md);
+      const safe = DOMPurify.sanitize(rawHtml, {
+        ADD_TAGS: ["pre"],
+        ADD_ATTR: ["class"]
+      });
+
+      const wrap = document.createElement("div");
+      wrap.className = "prose";
+      wrap.innerHTML = safe;
+
+      // promote ```mermaid``` code blocks to mermaid divs
+      wrap.querySelectorAll("pre code.language-mermaid").forEach((codeEl, i) => {
+        const div = document.createElement("div");
+        div.className = "mermaid";
+        div.textContent = codeEl.textContent;
+        codeEl.parentElement.replaceWith(div);
+      });
+
+      // rewire internal .md links to use the viewer
+      wrap.querySelectorAll("a[href]").forEach(a => {
+        const href = a.getAttribute("href");
+        if (!href) return;
+        const resolved = resolveLink(href, path);
+        if (resolved && resolved.endsWith(".md")) {
+          a.classList.add("md-link");
+          a.dataset.md = resolved;
+          a.href = "#" + resolved;
+          a.addEventListener("click", e => {
+            e.preventDefault();
+            loadMd(resolved);
+          });
+        } else if (/^https?:\/\//i.test(href)) {
+          a.target = "_blank";
+          a.rel = "noopener";
+        }
+      });
+
+      body.innerHTML = "";
+      body.appendChild(wrap);
+
+      // render mermaid blocks
+      const mermaidNodes = wrap.querySelectorAll(".mermaid");
+      if (mermaidNodes.length && window.mermaid) {
+        try {
+          await mermaid.run({ nodes: mermaidNodes });
+        } catch (err) {
+          console.warn("mermaid render failed:", err);
+        }
+      }
+    } catch (err) {
+      body.innerHTML = `<div class="viewer-error">Could not load ${path}<br><small>${err.message}</small></div>`;
+    }
+  }
+
+  // delegate clicks on .md-link triggers
+  document.addEventListener("click", e => {
+    const a = e.target.closest("a.md-link");
+    if (!a) return;
+    const path = a.dataset.md;
+    if (!path) return;
+    e.preventDefault();
+    loadMd(path);
+  });
+
+  closeBtn.addEventListener("click", closeViewer);
+  backdrop.addEventListener("click", closeViewer);
+  ghBtn.addEventListener("click", () => {
+    if (currentPath) window.open(BLOB + currentPath, "_blank", "noopener");
+  });
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && viewer.classList.contains("open")) closeViewer();
+  });
+
+  // deep-link support: open viewer if URL hash is a path
+  window.addEventListener("DOMContentLoaded", () => {
+    const hash = decodeURIComponent(location.hash.replace(/^#/, ""));
+    if (hash && hash.endsWith(".md")) loadMd(hash);
+  });
+})();
+</script>
 </body>
 </html>
