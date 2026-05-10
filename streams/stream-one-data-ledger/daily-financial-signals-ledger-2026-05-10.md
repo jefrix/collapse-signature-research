@@ -1,27 +1,22 @@
 # Daily Financial Signals Ledger — Stream One
 
-**Date:** May 10, 2026 (evening update)
-**Summary:** Quiet day on core Stream One watches (Oracle schema gaps, vehicle disclosures, China AI flags, falsifiable prediction). No closures or stress. Notable: material Apollo Global Management AI infrastructure credit commentary (Zelter on debt funding healthy to 2028, all markets needed) logged for routing to Gemini/Rowan dossier. Stream Two signal from Larry Fink on AI "futures on compute" asset class (see subsection). All standing watches unchanged.
+**Date:** May 10, 2026
+**Summary:** Standing watches remain quiet on Oracle vehicle/schema gaps and China AI financing with no material new signals or closures identified. Falsifiable prediction on Oracle investment-grade credit access holds firm with 5 days remaining to the May 15 synthesis checkpoint. The dominant development is a high-priority cross-stream alert on the deepening financial coupling between Alphabet/Google and Anthropic ($40B commitment + reported ~$200B GCP spend), which directly implicates capex, vehicle, and chokepoint dynamics across streams.
 
-**Falsifiable Prediction Status (dated May 10, 2026):** Investment-grade access through 2026H1 **holds**. No CDS widening, ratings actions, or syndication failures. May 7–9 signals support access. v3: credit stress / common_mode_shock no elevation.
+**Falsifiable Prediction Status (dated May 10, 2026):**
+Investment-grade credit access through 2026H1 **holds**. Oracle is executing its previously announced $45–50B 2026 financing plan (IG senior unsecured bonds + equity/ATM components) to support AI/OCI infrastructure with no reported market access denial, CDS blow-out, or ratings breach. Leverage remains elevated per external analyses but prediction intact. 5 days remain.
 
 **Watch Status:**
-- Oracle schema gaps (RPO OpenAI share, named vehicles/lessors, counterparties, prepayments): No updates. No ChatGPT flag.
-- Vehicle disclosure: No new naming events (Oracle/MSFT/AMZN/GOOG/META/CoreWeave/Crusoe or lenders). Microsoft on-balance benchmark holds.
-- China AI flags (LGFV, Big Fund, NPLs, PIF deals): No new signals.
-- Apollo AI infra credit scan: **Material** — Apollo President Jim Zelter (May 2026 Milken/Yahoo): debt funding for AI capex healthy at least until 2028; "it’s going to take all the markets" (equity, cash flow, public IG, private IG as third leg). Apollo insights highlight $1.5T+ hyperscaler capex, $300–$400B annual debt need, balance sheet tensions. Transparency push on valuations. **→ route to Gemini/Rowan dossier** (Capital Allocator, AI infra credit, common_mode_shock, vehicle/credit stress schema).
+- **Oracle vehicle-disclosure schema gaps** (RPO OpenAI share, named lessors/vehicles, prepayment volumes, private-credit/insurer counterparties): No updates, new filings, or analyst disclosures closing gaps. Opacity in AI infra financing vehicles continues.
+- **China AI financing** (LGFV exposure, Big Fund III, state-bank NPLs): No fresh May 2026 escalations or AI-specific LGFV distress signals. Earlier tech financing support and NPL disposal measures noted but static.
+- **Oracle investment-grade credit access** (core falsifiable prediction): Holds as detailed above. Watch for any late-May stress as 2026H1 window closes.
 
-**Stream Two — Principal Signals**
+**Cross-Stream Alert (Anthropic / Google / Broadcom priority):**
+Critical development tied to recent Google case validation: Alphabet/Google committing up to $40B to Anthropic (cash + compute capacity support, structured as $10B initial at ~$350B valuation + $30B performance-based). Concurrently, Anthropic reportedly committing ~$200B over five years to Google Cloud for infrastructure and AI chips — a substantial share of GCP backlog per reporting.
+This materially heightens Stream One exposure to hyperscaler capex cycles, cloud as primary AI financing vehicle, and concentrated power/dependency chokepoints. Cross-stream implications strong (ties to Stream Two principal signaling around abundance/progress and Stream Three historical patterns of concentrated dependency). Broadcom supply-chain angles also merit monitoring. Immediate flag for synthesis integration.
 
-**[Larry Fink] — Capital Allocators**
-Signal: Public comments (Milken Institute / Yahoo Finance, ~May 10 2026) that AI infrastructure shortages in compute/chips/memory/electricity will spawn trillion-dollar "futures on compute" asset class (guaranteeing future AI processing capacity, like oil futures). Dismisses bubble fears; emphasizes legitimate trillions demand for energy/chips/hardware; US phenomenon expanding globally; policy (Trump) may accelerate. 
-Source: Yahoo Finance, 247WallSt, Milken coverage (May 2026).
-v3 relevance: common_mode_shock (positive infra/abundance shock in compute/power); chokepoint dependency (shortages as gate); compensatory fragility (optimism on markets resolving coordination amid capex scale); capital allocation / new asset class shifts. Ties to Stream One AI infra financing/vehicle watches.
-Flag to: Stream One (infra credit/vehicle disclosure); synthesis (ideological-to-financial mapping); Gemini (principal context).
-
-**Cross-Stream Notes:** Grok-review-2026-05-08.md (chokepoint, common-mode shock, return-to-foundations, geographic resilience mappings) key reference. May 15 synthesis outline created with honest gaps flagged (15+ provisional Stream Two dossiers; cross-coding may need refinement). No new investigative work per prior instructions. Apollo signals routed to avoid duplication.
-
-**Next:** Daily cadence. Prediction dated each entry. Standing by for Gemini dossiers (Rowan/Huang/Nadella) and any high-signal principal events (essays, testimony, governance shifts, vehicle-tied disclosures) meeting escalation threshold. Watches unchanged.
+**Other Notes:**
+Oracle's AI-driven capex and debt trajectory (recent ~$48B+ debt increases, ~4x+ leverage context, record CDS in some reports, negative agency outlooks) remains focal but no impairment to IG access observed. All standing watches carried forward unchanged. No other principal or market signals requiring escalation today.
 
 ---
-*SuperGrok daily update. Watches unchanged; prediction holds (May 10). Apollo signals routed to Gemini/Rowan. Fink signal logged under Stream Two.*
+*SuperGrok daily update. Watches active; prediction holds (May 10). Anthropic-Google coupling elevated as cross-stream priority for May 15 synthesis.*
