@@ -5,7 +5,8 @@
 **Structure:** One folder per principal. Each folder contains:
 - `README.md` — Quick overview, category, status, and recommended content types
 - `Dossier-Template.md` — Standardized v3-aligned template ready to be filled with signals and analysis (copy to `dossier.md` or edit in place)
-- Future additions: specific signal logs, network maps, key documents, and cross-stream mappings
+- `dossier.md` — Populated initial analysis for active principals (v3 schema mappings, key claims, cross-stream links, falsifiable signals)
+- Future: specific signal logs, network maps, key documents
 
 **Categories** (aligned with expanded Stream Two scope):
 
@@ -32,9 +33,9 @@ Founders and leaders building core AI capabilities, models, and frontier infrast
 ## Ideological Architects
 Principals shaping the narrative, philosophy, and political framing around AI and technology.
 
-- [Peter Thiel](./peter-thiel/) — **Provisional** (Dossier-Template.md and README.md ready)
-- [Marc Andreessen](./marc-andreessen/) — **Provisional** (Dossier-Template.md and README.md ready)
-- [David Sacks](./david-sacks/) — **Provisional** (Dossier-Template.md and README.md ready)
+- [Peter Thiel](./peter-thiel/) — **Active** (dossier.md populated with v3 analysis)
+- [Marc Andreessen](./marc-andreessen/) — **Active** (dossier.md populated with v3 analysis)
+- [David Sacks](./david-sacks/) — **Active** (dossier.md populated with v3 analysis)
 - [Balaji Srinivasan](./balaji-srinivasan/) — **Provisional** (Dossier-Template.md and README.md ready)
 - [Curtis Yarvin](./curtis-yarvin/) — **Provisional** (Dossier-Template.md and README.md ready)
 
@@ -57,13 +58,12 @@ Leaders running major platforms, cloud providers, and physical AI infrastructure
 - Rolling X activity logs (general signals across principals)
 
 **Status Key:**
-- **Active**: Has existing dedicated content or dossier files (e.g., specific analysis docs)
-- **Provisional**: Folder initialized with README.md + Dossier-Template.md; ready for detailed data entry and Gemini collaboration
+- **Active**: Has populated dossier.md or existing dedicated content files with v3-aligned analysis
+- **Provisional**: Folder initialized with README.md + Dossier-Template.md; ready for detailed data entry and collaboration
 
 **Notes:**
-- Folders created as principals added to active watchlist.
-- When a full dossier is published (by Gemini or filled here), update status to Active and reference the specific dossier file in this index.
-- Each dossier should map to v3 schema: Narrative Classification, Compensatory Fragility, Return-to-Foundations, chokepoint/common-mode shock exposure, etc.
-- Use X monitoring (Grok) and other sources for falsifiable signals.
+- This turn of work (May 10, 2026) added initial dossier.md files for key Ideological Architects (Andreessen, Sacks, Thiel) with public-record claims mapped to v3 variables (Narrative Classification, Compensatory Fragility, Return-to-Foundations, cross-stream links).
+- Continue filling remaining dossiers in subsequent turns. Use X monitoring and other sources for falsifiable signals.
+- When Gemini or others publish full dossiers, update status and reference specific files here.
 
-*Last updated: May 10, 2026* (Dossier-Template.md added to all folders; status indicators expanded in index)
+*Last updated: May 10, 2026* (Index status indicators refined; three new dossiers populated)
