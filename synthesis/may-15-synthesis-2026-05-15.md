@@ -71,16 +71,21 @@ Cross-stream linkages (especially to Stream One financial architecture and Anthr
 
 The three candidates are treated as a **vertical stack** testing different layers of the system:
 
-- **Top Layer (Chokepoint Node)**: Anthropic structural disclosure (financial) + DPA invocation (political-coercive) — Gemini’s DPA brief integrated as the second scenario.
-- **Middle Layer (Credit Infrastructure)**: Oracle IG-access failure.
-- **Bottom Layer (Financial Regime)**: Compute-futures non-emergence.
+- **Top Layer (Chokepoint Node)**: Anthropic structural disclosure (financial) + DPA invocation (political-coercive)
+- **Middle Layer (Credit Infrastructure)**: Oracle IG-access failure
+- **Bottom Layer (Financial Regime)**: Compute-futures non-emergence
 
-Historical parallels have been corrected per feedback:
-- Anthropic → Beiyang Fleet itself (prestige artifact)
-- Oracle → Fuzhou Navy Yard (sustaining machinery)
-- Compute-futures → Jiangnan Arsenal / broader Self-Strengthening (slow-burn legitimacy test)
+### Corrected Historical Parallel Mapping
 
-The stack is tightly coupled. Stress at any layer can propagate.
+**Note on correction:** An earlier version of this section had the historical parallels reversed. The mapping below is now aligned with the analytical framing.
+
+| Layer                  | Contemporary Candidate          | Historical Parallel                          | Role in System                          |
+|------------------------|---------------------------------|----------------------------------------------|-----------------------------------------|
+| **Top (Chokepoint)**   | Anthropic (disclosure + DPA)    | **Beiyang Fleet itself**                     | Prestige artifact at symbolic center    |
+| **Middle (Infrastructure)** | Oracle (IG-access)         | **Fuzhou Navy Yard**                         | Sustaining industrial-financial machinery |
+| **Bottom (Regime)**    | Compute-futures non-emergence   | **Jiangnan Arsenal / Self-Strengthening**    | Slow-burn legitimacy and capability test |
+
+The stack is tightly coupled. A shock at any layer can propagate upward.
 
 ---
 
