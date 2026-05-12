@@ -122,6 +122,16 @@
 
 ---
 
+## Dario Amodei (Anthropic) — Frontier Builder
+
+| Signal | Status | Last Checked | Notes / Source |
+|--------|--------|--------------|----------------|
+| DPA Title I invocation by DOW to override Anthropic safety guardrails | Monitoring | May 12, 2026 | Threatened by Hegseth (Common Cause, Feb 26, 2026). Anthropic litigation ongoing. If triggered, marks terminal collapse of preemptive-foundationalism position. Refer to: `streams/stream-two-principal-dossiers/dario-amodei/dpa-scenario-brief-2026-05-14.md` |
+| Failure to release a human-surpassing model by Q4 2026 | Monitoring | May 12, 2026 | Amodei has publicly committed to AI systems surpassing human ability "across the board" by late 2026. Non-delivery would de-legitimize the $300B+ infrastructure bets anchoring the Anthropic node. |
+| Sharp increase in Claude API pricing or introduction of compute rationing for enterprise users | Monitoring | May 12, 2026 | Would indicate the infrastructure deficit has become terminal. Watch quarterly enterprise pricing announcements and any "priority tier" or rationing language in API terms. |
+
+---
+
 ## Notes & Next Steps
 
 - **Blackstone (BXDC IPO)** is currently the only triggered signal.
