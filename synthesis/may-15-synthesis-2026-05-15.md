@@ -85,6 +85,8 @@ The three candidates are treated as a **vertical stack** testing different layer
 | **Middle (Infrastructure)** | Oracle (IG-access)         | **Fuzhou Navy Yard**                         | Sustaining industrial-financial machinery |
 | **Bottom (Regime)**    | Compute-futures non-emergence   | **Jiangnan Arsenal / Self-Strengthening**    | Slow-burn legitimacy and capability test |
 
+**Source note:** The political-coercive vector at the Anthropic node is documented in Gemini's DPA scenario brief (streams/stream-two-principal-dossiers/dario-amodei/dpa-scenario-brief-2026-05-14.md), filed at Confidence A on the May 1 exclusion event. The brief covers: the DOW's formal exclusion of Anthropic from GenAI.mil IL6/IL7 infrastructure; Hegseth's threatened DPA Title I invocation to override Anthropic's safety guardrails (confidence designation on this sub-claim pending Gemini's source verification — see editorial flag); and two principal-level response paths (Sakharov/Oppenheimer) plus a federal-court transformation off-ramp. Citation update to the brief is in progress and will be confirmed before May 15.
+
 The stack is tightly coupled. A shock at any layer can propagate upward.
 
 ---
