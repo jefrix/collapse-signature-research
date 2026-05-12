@@ -52,7 +52,7 @@ Significant progress has been made populating dossiers across all four categorie
 
 - **Capital Allocators**: Schwarzman, Griffin, Dalio, Dimon now have populated dossiers.
 - **Infrastructure Operators**: Pichai, Jassy, Ellison now have populated dossiers.
-- **Frontier Builders**: Hassabis, Murati, Suleyman now have populated dossiers. Dario Amodei (Anthropic): Full principal dossier deferred to Cycle III. DPA scenario brief delivered and integrated into Part VI (filed at streams/stream-two-principal-dossiers/dario-amodei/dpa-scenario-brief-2026-05-14.md).
+- **Frontier Builders**: Hassabis, Murati, Suleyman now have populated dossiers. Dario Amodei (Anthropic): Full principal dossier delivered May 12 (`streams/stream-two-principal-dossiers/dario-amodei/dossier.md`). DPA scenario brief cross-referenced in Part VI.
 - **Ideological Architects**: Balaji Srinivasan dossier completed (Exit / Preemptive Foundationalist framing).
 
 Cross-stream linkages (especially to Stream One financial architecture and Anthropic concentration) have been strengthened.
@@ -112,7 +112,6 @@ The stack is tightly coupled. A shock at any layer can propagate upward.
 
 ## Next Steps (May 13–15)
 
-- Integrate Gemini’s Amodei dossier (when finalized) into Part IV and Part V.
 - Final epistemic and editorial pass.
 - May 15: Oracle prediction resolution + publication.
 
