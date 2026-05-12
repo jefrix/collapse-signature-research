@@ -52,8 +52,7 @@ Significant progress has been made populating dossiers across all four categorie
 
 - **Capital Allocators**: Schwarzman, Griffin, Dalio, Dimon now have populated dossiers.
 - **Infrastructure Operators**: Pichai, Jassy, Ellison now have populated dossiers.
-- **Frontier Builders**: Hassabis, Murati, Suleyman now have populated dossiers.
-  **Dario Amodei (Anthropic)**: Full principal dossier deferred to Cycle III. DPA scenario brief delivered and integrated into Part VI (filed at streams/stream-two-principal-dossiers/dario-amodei/dpa-scenario-brief-2026-05-14.md).
+- **Frontier Builders**: Hassabis, Murati, Suleyman now have populated dossiers. Dario Amodei (Anthropic): Full principal dossier deferred to Cycle III. DPA scenario brief delivered and integrated into Part VI (filed at streams/stream-two-principal-dossiers/dario-amodei/dpa-scenario-brief-2026-05-14.md).
 - **Ideological Architects**: Balaji Srinivasan dossier completed (Exit / Preemptive Foundationalist framing).
 
 Cross-stream linkages (especially to Stream One financial architecture and Anthropic concentration) have been strengthened.
