@@ -2,6 +2,8 @@
 
 **Confidence Level:** A (Primary Source Verification for May 1 event)
 
+**Note:** The DPA invocation threat sub-claim (Section 3) is sourced to Common Cause (February 26, 2026) and coded at Confidence B. All other claims remain at Confidence A.
+
 **Date:** May 14, 2026
 
 **Analytical Anchor:** Anthropic Node Scenario #2 (Political-Coercive)
@@ -27,6 +29,8 @@ On May 1, 2026, the Department of War (DOW) announced finalized agreements with 
 Secretary of War Pete Hegseth has threatened to invoke Title I of the Defense Production Act (1950) to prioritize DOW requirements over Anthropic’s private safety policies.
 
 - **Legal Vector**: Historically, the DPA has been used to compel the production of ventilators or baby formula. Invoking it to force the removal of software guardrails would be a first-of-its-kind application, treating "Safety Code" as a restricted resource that the state can "commandeer" for national defense.
+
+> [Citation: Common Cause reporting, February 26, 2026]
 
 ## 4. Immediate First-Order Effects
 
@@ -57,3 +61,4 @@ If Anthropic’s safety sovereignty fails, legitimacy will likely propagate to:
 - Senator Elizabeth Warren, "Letters re. Designation of Anthropic As National Security Risk," March 23, 2026.
 - Stanford CS182 Class Policy Memo, "Anthropic, AI, and the US Department of War," March 12, 2026.
 - Wikipedia, "Anthropic–United States Department of Defense dispute".
+- Common Cause reporting on DPA threat (February 26, 2026).
