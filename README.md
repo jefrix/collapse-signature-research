@@ -34,7 +34,7 @@ collapse-signature-research/
 - `cases/late-rome/`: Working brief and source notes for the Late Rome case.
 - `cases/ming-consolidation/`: Working brief and source notes for the Ming consolidation case.
 - `streams/`: Stream-specific working materials.
-- `streams/stream-one-data-ledger/`: Stream One data ledger materials.
+- `streams/stream-one-data-ledger/`: Stream One data ledger materials. **See also:** [Falsifiable Signals Watch](streams/stream-one-data-ledger/falsifiable-signals-watch.md) — consolidated active monitoring of all explicit testable predictions from the Principal Dossiers.
 - `streams/stream-two-principal-dossiers/`: Stream Two principal-by-principal dossiers.
 - `streams/stream-three-literary-corpus-notes/`: Stream Three literary corpus notes.
 - `streams/stream-four-reference-catalogue/`: Stream Four reference catalogue.
