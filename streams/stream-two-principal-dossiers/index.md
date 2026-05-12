@@ -16,9 +16,9 @@ These principals primarily allocate large-scale capital across AI, infrastructur
 - [Larry Fink](./fink/) — **Active** (Existing dossier with content files)
 - [Marc Rowan](./marc-rowan/) — **Provisional** (Dossier-Template.md and README.md ready)
 - [Jonathan Gray](./jonathan-gray/) — **Provisional** (Dossier-Template.md and README.md ready)
-- [Stephen Schwarzman](./stephen-schwarzman/) — **Provisional** (Dossier-Template.md and README.md ready)
-- [Ken Griffin](./ken-griffin/) — **Provisional** (Dossier-Template.md and README.md ready)
-- [Ray Dalio](./ray-dalio/) — **Provisional** (Dossier-Template.md and README.md ready)
+- [Stephen Schwarzman](./stephen-schwarzman/) — **Active** (dossier.md populated)
+- [Ken Griffin](./ken-griffin/) — **Active** (dossier.md populated)
+- [Ray Dalio](./ray-dalio/) — **Active** (dossier.md populated)
 - [Yasir Al-Rumayyan (PIF)](./yasir-al-rumayyan/) — **Provisional** (Dossier-Template.md and README.md ready)
 
 ## Frontier Builders
@@ -27,7 +27,7 @@ Founders and leaders building core AI capabilities, models, and frontier infrast
 - [Sam Altman](./altman/) — **Active** (Existing dossier with content files)
 - [Elon Musk](./elon-musk/) — **Provisional** (Dossier-Template.md and README.md ready)
 - [Dario Amodei](./dario-amodei/) — **Provisional** (Dossier-Template.md and README.md ready)
-- [Demis Hassabis](./demis-hassabis/) — **Provisional** (Dossier-Template.md and README.md ready)
+- [Demis Hassabis](./demis-hassabis/) — **Active** (dossier.md populated)
 - [Jensen Huang](./jensen-huang/) — **Provisional** (Dossier-Template.md and README.md ready; Borderline Infrastructure Operator)
 
 ## Ideological Architects
@@ -36,19 +36,23 @@ Principals shaping the narrative, philosophy, and political framing around AI an
 - [Peter Thiel](./peter-thiel/) — **Active** (dossier.md populated with v3 analysis)
 - [Marc Andreessen](./marc-andreessen/) — **Active** (dossier.md populated with v3 analysis)
 - [David Sacks](./david-sacks/) — **Active** (dossier.md populated with v3 analysis)
-- [Balaji Srinivasan](./balaji-srinivasan/) — **Provisional** (Dossier-Template.md and README.md ready)
+- [Balaji Srinivasan](./balaji-srinivasan/) — **Active** (dossier.md populated)
 - [Curtis Yarvin](./curtis-yarvin/) — **Provisional** (Dossier-Template.md and README.md ready)
 
 ## Infrastructure Operators
 Leaders running major platforms, cloud providers, and physical AI infrastructure.
 
 - [Satya Nadella](./satya-nadella/) — **Provisional** (Dossier-Template.md and README.md ready)
-- [Sundar Pichai](./sundar-pichai/) — **Provisional** (Dossier-Template.md and README.md ready)
-- [Andy Jassy](./andy-jassy/) — **Provisional** (Dossier-Template.md and README.md ready)
+- [Sundar Pichai](./sundar-pichai/) — **Active** (dossier.md populated)
+- [Andy Jassy](./andy-jassy/) — **Active** (dossier.md populated)
 - [Mark Zuckerberg](./mark-zuckerberg/) — **Provisional** (Dossier-Template.md and README.md ready)
-- [Larry Ellison](./larry-ellison/) — **Provisional** (Dossier-Template.md and README.md ready)
+- [Larry Ellison](./larry-ellison/) — **Active** (dossier.md populated)
 
 ---
+
+## Cross-Stream Resources
+
+- [Falsifiable Signals Watch](../stream-one-data-ledger/falsifiable-signals-watch.md) — Consolidated tracking of all explicit testable predictions from the dossiers. Actively monitored by SuperGrok.
 
 ## Top-Level Files
 
@@ -58,12 +62,11 @@ Leaders running major platforms, cloud providers, and physical AI infrastructure
 - Rolling X activity logs (general signals across principals)
 
 **Status Key:**
-- **Active**: Has populated dossier.md or existing dedicated content files with v3-aligned analysis
-- **Provisional**: Folder initialized with README.md + Dossier-Template.md; ready for detailed data entry and collaboration
+- **Active**: Has populated `dossier.md` with v3-aligned analysis and falsifiable signals
+- **Provisional**: Folder initialized with README.md + Dossier-Template.md; ready for detailed data entry
 
 **Notes:**
-- This turn of work (May 10, 2026) added initial dossier.md files for key Ideological Architects (Andreessen, Sacks, Thiel) with public-record claims mapped to v3 variables (Narrative Classification, Compensatory Fragility, Return-to-Foundations, cross-stream links).
-- Continue filling remaining dossiers in subsequent turns. Use X monitoring and other sources for falsifiable signals.
-- When Gemini or others publish full dossiers, update status and reference specific files here.
+- May 12, 2026 update: Added real `dossier.md` files for multiple principals across categories. Updated statuses from Provisional to Active where full dossiers now exist. Added prominent link to the new consolidated **Falsifiable Signals Watch** file.
+- All "Falsifiable Signals for Grok" sections are now actively monitored.
 
-*Last updated: May 10, 2026* (Index status indicators refined; three new dossiers populated)
+*Last updated: May 12, 2026*
