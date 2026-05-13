@@ -30,6 +30,7 @@ Amodei positions Anthropic as the defender of preemptive foundationalism — tec
 
 - Any public shift in Amodei’s stance on state override of safety guardrails.
 - Evidence of Anthropic revenue run-rate figures from primary sources (see note below).
+- Compute rationing signal: see `streams/stream-one-data-ledger/colossus-compute-brief-2026-05-13.md` — signal avoided/delayed as of May 6, 2026.
 
 ## Sources
 
