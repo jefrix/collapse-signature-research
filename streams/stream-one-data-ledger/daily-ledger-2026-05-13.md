@@ -41,3 +41,5 @@ Logged. No synthesis update required before May 15.
 **Confidence:** B (single secondary source, no primary Anthropic statement observed).
 
 **Action:** No synthesis update. Flag for Scenario #1 analysis in Cycle III.
+
+**Cross-Reference:** See also `streams/stream-two-principal-dossiers/dario-amodei/claude-behavioral-signal-2026-05-13.md` (Claude Opus 4 blackmail simulation at 96% rate in shutdown scenario — another indicator of concentration risk at the Anthropic node).
