@@ -8,7 +8,7 @@
 - Status updated with date and source.
 - Cross-referenced to daily ledger and weekly synthesis.
 
-**Last Updated:** May 12, 2026
+**Last Updated:** May 13, 2026
 
 ---
 
@@ -128,7 +128,7 @@
 |--------|--------|--------------|----------------|
 | DPA Title I invocation by DOW to override Anthropic safety guardrails | Monitoring | May 12, 2026 | Threatened by Hegseth (Common Cause, Feb 26, 2026). Anthropic litigation ongoing. If triggered, marks terminal collapse of preemptive-foundationalism position. Refer to: `streams/stream-two-principal-dossiers/dario-amodei/dpa-scenario-brief-2026-05-14.md` |
 | Failure to release a human-surpassing model by Q4 2026 | Monitoring | May 12, 2026 | Amodei has publicly committed to AI systems surpassing human ability "across the board" by late 2026. Non-delivery would de-legitimize the $300B+ infrastructure bets anchoring the Anthropic node. |
-| Sharp increase in Claude API pricing or introduction of compute rationing for enterprise users | Monitoring | May 12, 2026 | Would indicate the infrastructure deficit has become terminal. Watch quarterly enterprise pricing announcements and any "priority tier" or rationing language in API terms. |
+| Sharp increase in Claude API pricing or introduction of compute rationing for enterprise users | **Avoided / Delayed** | May 13, 2026 | Colossus 1 deal (May 6, 2026): Anthropic secured exclusive access to 220,000+ GPUs / 300MW at xAI's Memphis cluster. Materially reduces rationing risk through at least 2026H1. Full brief at `streams/stream-one-data-ledger/colossus-compute-brief-2026-05-13.md`. |
 
 ---
 
