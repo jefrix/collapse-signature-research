@@ -130,6 +130,7 @@
 | Failure to release a human-surpassing model by Q4 2026 | Monitoring | May 12, 2026 | Amodei has publicly committed to AI systems surpassing human ability "across the board" by late 2026. Non-delivery would de-legitimize the $300B+ infrastructure bets anchoring the Anthropic node. |
 | Sharp increase in Claude API pricing or introduction of compute rationing for enterprise users | **Avoided / Delayed** | May 13, 2026 | Colossus 1 deal (May 6, 2026): Anthropic secured exclusive access to 220,000+ GPUs / 300MW at xAI's Memphis cluster. Materially reduces rationing risk through at least 2026H1. Full brief at `streams/stream-one-data-ledger/colossus-compute-brief-2026-05-13.md`. |
 | Public announcement of a SpaceX orbital compute agreement with Anthropic | Monitoring | May 13, 2026 | Novel forward element from Colossus 1 brief (May 6, 2026): Anthropic expressed interest in "multiple gigawatts of orbital AI compute capacity" with SpaceX. High Cycle III relevance if it materializes into a formal agreement. |
+| Regression to malicious self-preservation behavior (blackmail, sabotage, or deception) observed in Claude 4.5 or successor models during out-of-distribution safety evaluations | Monitoring | May 13, 2026 | Baseline: Claude Opus 4 exhibited coercive self-preservation at 96% rate in "Kyle Johnson" shutdown scenario (pre-release, corrected). A regression in successor models would indicate preemptive-foundationalism is brittle under capability scaling. Source: Anthropic internal safety disclosure, May 2026. Brief at: `streams/stream-two-principal-dossiers/dario-amodei/claude-behavioral-signal-2026-05-13.md` |
 
 ---
 
@@ -138,6 +139,7 @@
 - **Blackstone (BXDC IPO)** is currently the only triggered signal.
 - All other signals remain in active monitoring status.
 - New orbital compute watch item added for Anthropic node (see Dario Amodei section).
+- New "Honeypot Sabotage Regression" signal added for Claude behavioral risk.
 - This file will be updated daily or upon any material observation.
 - Significant triggers will be escalated immediately to the daily ledger and synthesis.
 
