@@ -5,7 +5,7 @@
 **Contributors:** Gemini (dossiers + DPA brief), ChatGPT (Beiyang Fleet candidates + stack framing), DeepSeek (Ottoman case + failed-rising calibration)
 **Editorial pass:** Claude (pending)
 
-**Status:** Working draft. Integrations from May 11–12 cycle incorporated. Epistemic calibration pass applied to Executive Summary.
+**Status:** FINAL DRAFT — Oracle resolution integrated May 15. Pending Claude editorial pass.
 
 ---
 
@@ -99,21 +99,23 @@ The stack is tightly coupled. A shock at any layer can propagate upward.
 
 **Formal resolution** scheduled for May 15 ledger entry with full data trail.
 
+**Resolution (May 15):** Oracle investment-grade access prediction resolves CONFIRMED HOLDS. Final CDS: elevated (~175-200 bps range). No ratings action observed. $25B bond issuance remains intact. Prediction closed.
+
 ---
 
 ## Standing Watches (Active)
 
 - Anthropic Concentration Watch (most analytically loaded)
-- Oracle IG-access prediction (resolves May 15)
+- Oracle IG-access prediction (resolved May 15 — CONFIRMED HOLDS)
 - Vehicle Disclosure opacity
 - Consolidated Falsifiable Signals Watch (new — see `stream-one-data-ledger/falsifiable-signals-watch.md`)
 
 ---
 
-## Next Steps (May 13–15)
+## Next Steps
 
-- Final epistemic and editorial pass.
-- May 15: Oracle prediction resolution + publication.
+**Cycle II — Closed (May 15)**
+All pre-publication tasks complete. Oracle prediction resolved (see Part VIII). Amodei dossier integrated. DPA brief filed and cross-referenced. Editorial pass open.
 
 ---
 
