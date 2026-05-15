@@ -62,3 +62,6 @@ If Anthropic’s safety sovereignty fails, legitimacy will likely propagate to:
 - Stanford CS182 Class Policy Memo, "Anthropic, AI, and the US Department of War," March 12, 2026.
 - Wikipedia, "Anthropic–United States Department of Defense dispute".
 - Common Cause reporting on DPA threat (February 26, 2026).
+- Rozenshtein, Alan Z., "What the Defense Production Act Can and Can't Do to Anthropic," Lawfare, February 25, 2026.
+
+**Confidence note on DPA threat sub-claim:** Confidence B — two independent secondary sources (Common Cause, February 26, 2026; Rozenshtein, Lawfare, February 25, 2026). No primary DOD statement or direct Hegseth quote located. Sub-claim well-supported but not primary-sourced. If Gemini confirms the Lawfare piece directly quotes Hegseth or cites a primary DOD document, upgrade to Confidence A.
