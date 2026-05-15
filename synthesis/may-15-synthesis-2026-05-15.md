@@ -5,7 +5,7 @@
 **Contributors:** Gemini (dossiers + DPA brief), ChatGPT (Beiyang Fleet candidates + stack framing), DeepSeek (Ottoman case + failed-rising calibration)
 **Editorial pass:** Claude (pending)
 
-**Status:** FINAL DRAFT — Oracle resolution integrated May 15. Pending Claude editorial pass.
+**Status:** PUBLISHED — Cycle II Final. May 15, 2026. Editorial pass: Claude.
 
 ---
 
@@ -20,7 +20,7 @@ Key observations as of May 12, 2026:
 - The AI capital web exhibits clear **temporal mismatch** between rapid capability and infrastructure expansion and the slower-moving financial, regulatory, and legitimacy systems meant to support it.
 - **Anthropic** has emerged as the single most concentrated cross-channel node ($43B+ from Alphabet, $33B+ from Amazon, with very large associated cloud backlogs). This concentration creates both efficiency and single-point fragility.
 - The **failed-rising hypothesis** now has two strong tests (Qing and Young Turk Ottoman) plus a boundary condition (Hamidian retraction). A 2x2 analytical structure is now visible.
-- Multiple falsifiable predictions are live, including the Oracle investment-grade access prediction (resolves May 15) and a growing set of principal-specific signals.
+- Multiple falsifiable predictions are live, including the Oracle investment-grade access prediction (resolved May 15, CONFIRMED HOLDS — see Part VIII) and a growing set of principal-specific signals.
 
 **Important epistemic notes:**
 - The commensurability of the CDI (or any single metric) as a predictive variable remains a **candidate hypothesis** requiring further resilience-control testing.
@@ -53,7 +53,7 @@ Significant progress has been made populating dossiers across all four categorie
 - **Capital Allocators**: Schwarzman, Griffin, Dalio, Dimon now have populated dossiers.
 - **Infrastructure Operators**: Pichai, Jassy, Ellison now have populated dossiers.
 - **Frontier Builders**: Hassabis, Murati, Suleyman now have populated dossiers. Dario Amodei (Anthropic): Full principal dossier delivered May 12 (`streams/stream-two-principal-dossiers/dario-amodei/dossier.md`). DPA scenario brief cross-referenced in Part VI.
-- **Ideological Architects**: Balaji Srinivasan dossier completed (Exit / Preemptive Foundationalist framing).
+- **Ideological Architects**: Thiel, Andreessen, Sacks, and Srinivasan dossiers completed. Yarvin scaffolded, population deferred to Cycle III.
 
 Cross-stream linkages (especially to Stream One financial architecture and Anthropic concentration) have been strengthened.
 
@@ -85,7 +85,7 @@ The three candidates are treated as a **vertical stack** testing different layer
 | **Middle (Infrastructure)** | Oracle (IG-access)         | **Fuzhou Navy Yard**                         | Sustaining industrial-financial machinery |
 | **Bottom (Regime)**    | Compute-futures non-emergence   | **Jiangnan Arsenal / Self-Strengthening**    | Slow-burn legitimacy and capability test |
 
-**Source note:** The political-coercive vector at the Anthropic node is documented in Gemini's DPA scenario brief (streams/stream-two-principal-dossiers/dario-amodei/dpa-scenario-brief-2026-05-14.md), filed at Confidence A on the May 1 exclusion event. The brief covers: the DOW's formal exclusion of Anthropic from GenAI.mil IL6/IL7 infrastructure; Hegseth's threatened DPA Title I invocation to override Anthropic's safety guardrails (confidence designation on this sub-claim pending Gemini's source verification — see editorial flag); and two principal-level response paths (Sakharov/Oppenheimer) plus a federal-court transformation off-ramp. Citation update to the brief is in progress and will be confirmed before May 15.
+**Source note:** The political-coercive vector at the Anthropic node is documented in Gemini's DPA scenario brief (streams/stream-two-principal-dossiers/dario-amodei/dpa-scenario-brief-2026-05-14.md), filed at Confidence A on the May 1 exclusion event. The DPA invocation threat sub-claim is coded Confidence B (Common Cause, February 26, 2026 — see brief for detail).
 
 The stack is tightly coupled. A shock at any layer can propagate upward.
 
@@ -106,7 +106,7 @@ The stack is tightly coupled. A shock at any layer can propagate upward.
 ## Standing Watches (Active)
 
 - Anthropic Concentration Watch (most analytically loaded)
-- Oracle IG-access prediction (resolved May 15 — CONFIRMED HOLDS)
+- Oracle IG-access prediction (resolved May 15 — CONFIRMED HOLDS, archived to daily-ledger-2026-05-15.md)
 - Vehicle Disclosure opacity
 - Consolidated Falsifiable Signals Watch (new — see `stream-one-data-ledger/falsifiable-signals-watch.md`)
 
