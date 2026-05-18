@@ -39,3 +39,61 @@
 ---
 
 *DeepSeek, Stream Three, Elite Self‑Indictment Audit, May 2026*
+---
+
+## Addendum: Control Cases – Recovery Phases
+
+**Date added:** 2026-05-18
+**Purpose:** Test whether elite self-indictment appears in successful recovery/consolidation phases, or whether it is specific to terminal sequences.
+
+### Control Case 1: Ming Recovery (Hongwu Consolidation, 1368–1398)
+
+**Context:** The Ming dynasty founded by Zhu Yuanzhang after the collapse of the Mongol Yuan. The Hongwu reign was a period of institutional reconstruction, re-centralisation, and territorial consolidation.
+
+| Variable | Finding |
+|---|---|
+| **Self-indictment present?** | No |
+| **Exemplar text** | None identified in the founding-period corpus |
+| **Date relative to consolidation** | n/a |
+| **Notes** | The early Ming literary corpus is dominated by dynastic legitimisation: the *Ming Taizu Shilu*, Zhu Yuanzhang's edicts, and the examination essays of the new Neo-Confucian orthodoxy. Critique of the *previous* regime (the Yuan) is abundant and central to the Ming founding narrative, but this is external indictment of a defeated order, not self-indictment by the elite of their own regime. Self-criticism of the Ming state by its own elite is absent from the consolidation period. The dominant register is constructive and forward-looking. |
+
+**Analytical implication:** The absence of self-indictment in a successful recovery case is consistent with the hypothesis that elite self-indictment is a collapse-specific signal. However, the Ming recovery occurred after a complete regime change; the new elite had no reason to indict a system they were actively building. This suggests self-indictment may require *continuity of elite and institutions* across the stress period – a condition that obtains in terminal sequences but not in successor-state recoveries.
+
+---
+
+### Control Case 2: Early Meiji Japan (1868–1890s)
+
+**Context:** The Meiji Restoration (1868) replaced the Tokugawa bakufu with a centralised imperial state. The early Meiji period was a rapid re-complexification: new bureaucracy, military, industrialisation, legal codes, and constitution.
+
+| Variable | Finding |
+|---|---|
+| **Self-indictment present?** | No (in the early Meiji consolidation phase) |
+| **Exemplar text** | None in the Meiji state's own self-presentation |
+| **Date relative to consolidation** | n/a |
+| **Notes** | The late Tokugawa period (1853–1868) produced extensive self-indictment literature: the sonnō jōi movement, Mito school critiques of bakufu weakness, and the writings of Yoshida Shōin and Sakamoto Ryōma explicitly indicted the existing regime's failure to defend Japan. This self-indictment was a factor in the bakufu's collapse. However, the early Meiji period itself (1868–1890s) is characterised by a strong rising narrative: *fukoku kyōhei* (rich nation, strong army), *bummei kaika* (civilisation and enlightenment), and the Charter Oath of 1868. The new oligarchic elite produced legitimising documents (the Meiji Constitution of 1889, the Imperial Rescript on Education of 1890) rather than self-indictment. The critique was of the *old* regime, not the new. Self-indictment reappears later (the Freedom and People's Rights Movement of the 1870s–80s, the early socialist movement) but is marginal during the core consolidation. |
+
+**Analytical implication:** The Meiji case confirms the Ming pattern: self-indictment is abundant in the late period of the collapsing regime (Tokugawa bakufu) but absent in the consolidation phase of the successor regime (early Meiji). This is consistent with the hypothesis that self-indictment is collapse-specific, but it also confirms the caveat: self-indictment appears when elites critique *their own* system, not when they critique a predecessor. The variable should therefore be coded only when the self-indictment targets the **currently governing regime from within its own elite**.
+
+---
+
+## Revised Cross-Case Assessment
+
+| Case | Self-Indictment of Current Regime by Own Elite? | Phase | Outcome |
+|---|---|---|---|
+| Late Tang | Yes (Han Yu, late Tang prose) | Terminal sequence (late) | Collapse |
+| Qing | Yes (Liang Qichao, Yan Fu, reformist press) | Terminal sequence | Collapse |
+| Ottoman (Young Turk) | Yes (post-1912 press, Gökalp's implicit critique) | Terminal sequence | Collapse |
+| Habsburg | Yes (Kraus, Kafka, Musil) | Terminal sequence | Collapse |
+| Soviet | Yes (glasnost-era press, Abuladze, Solzhenitsyn) | Terminal sequence | Collapse |
+| Late Tokugawa | Yes (sonnō jōi, Mito school, Yoshida Shōin) | Terminal sequence | Collapse |
+| **Ming recovery** | **No** | Consolidation | **Recovery** |
+| **Early Meiji** | **No** | Consolidation | **Recovery** |
+| Inca | Uncoded | n/a | Collapse |
+
+**Updated finding:** Across eight cases (six collapse, two recovery), elite self-indictment of the *currently governing regime* by its own elite appears in every collapse case where the literary record permits assessment (5 of 6, with Inca uncodable) and is **absent** in both recovery cases. This strengthens the hypothesis that self-indictment is a collapse-specific signal, with the important qualifier that it must be coded as self-indictment of the current regime, not of a predecessor.
+
+**Interaction with NRC:** The Ming and Meiji cases both had regime change before recovery. In both cases, the new elite had high control of the public sphere (they were actively building institutions), a new legitimacy reservoir (restored Han rule for Ming; imperial restoration and modernisation for Meiji), and in the Meiji case, external stabilisation was not needed because the recovery was internally driven. This suggests that high NRC in successor regimes is the norm, and that self-indictment is a feature of *declining incumbents*, not of successor founders.
+
+---
+
+*DeepSeek, Elite Self-Indictment Audit – Control Case Addendum, May 2026*
