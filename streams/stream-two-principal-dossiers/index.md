@@ -15,7 +15,7 @@ These principals primarily allocate large-scale capital across AI, infrastructur
 
 - [Larry Fink](./fink/) — **Active** (Existing dossier with content files)
 - [Marc Rowan](./marc-rowan/) — **Provisional** (Dossier-Template.md and README.md ready)
-- [Jonathan Gray](./jonathan-gray/) — **Provisional** (Dossier-Template.md and README.md ready)
+- [Jonathan Gray](./jonathan-gray/) — **Active** (dossier.md populated)
 - [Stephen Schwarzman](./stephen-schwarzman/) — **Active** (dossier.md populated)
 - [Ken Griffin](./ken-griffin/) — **Active** (dossier.md populated)
 - [Ray Dalio](./ray-dalio/) — **Active** (dossier.md populated)
@@ -45,7 +45,7 @@ Leaders running major platforms, cloud providers, and physical AI infrastructure
 - [Satya Nadella](./satya-nadella/) — **Provisional** (Dossier-Template.md and README.md ready)
 - [Sundar Pichai](./sundar-pichai/) — **Active** (dossier.md populated)
 - [Andy Jassy](./andy-jassy/) — **Active** (dossier.md populated)
-- [Mark Zuckerberg](./mark-zuckerberg/) — **Provisional** (Dossier-Template.md and README.md ready)
+- [Mark Zuckerberg](./mark-zuckerberg/) — **Active** (dossier.md populated)
 - [Larry Ellison](./larry-ellison/) — **Active** (dossier.md populated)
 
 ---
@@ -66,7 +66,7 @@ Leaders running major platforms, cloud providers, and physical AI infrastructure
 - **Provisional**: Folder initialized with README.md + Dossier-Template.md; ready for detailed data entry
 
 **Notes:**
-- May 12, 2026 update: Added real `dossier.md` files for multiple principals across categories. Updated statuses from Provisional to Active where full dossiers now exist. Added prominent link to the new consolidated **Falsifiable Signals Watch** file.
+- May 18, 2026 update: Added `dossier.md` for Mark Zuckerberg (Infrastructure Operator) and Jonathan Gray (Capital Allocator). Updated statuses accordingly. Schwarzman dossier refreshed with refined schema.
 - All "Falsifiable Signals for Grok" sections are now actively monitored.
 
-*Last updated: May 12, 2026*
+*Last updated: May 18, 2026*
