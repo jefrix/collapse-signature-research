@@ -1,1 +1,743 @@
- [truncated for brevity — in practice I would include the full updated HTML with new li items for Jonathan Gray and Mark Zuckerberg in the Stream Two file-list section, plus a note in the status line about May 18 dossier additions] 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collapse Signature Research</title>
+<meta name="description" content="A multi-agent inquiry into civilizational and financial fragility.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #1a1612;
+  --bg-lift: #221d18;
+  --bg-deeper: #15110d;
+  --ink: #e8dec5;
+  --ink-strong: #f5edd6;
+  --ink-muted: #948572;
+  --ink-faint: #645a4e;
+  --accent: #c97b4a;
+  --accent-line: rgba(201, 123, 74, 0.35);
+  --rule: #3d3529;
+  --rule-strong: #5c5142;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+  font-feature-settings: "kern", "liga", "onum";
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.85  0 0 0 0 0.7  0 0 0 0.04 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  min-height: 100vh;
+}
+
+a { color: var(--accent); text-decoration: none; transition: opacity 0.15s; }
+a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+::selection { background: var(--accent); color: var(--bg); }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 56px 120px;
+}
+@media (max-width: 720px) {
+  .container { padding: 36px 22px 80px; }
+  body { font-size: 17px; }
+}
+
+/* ── masthead ─────────────────────────────────────── */
+.masthead {
+  text-align: center;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 36px;
+  margin-bottom: 56px;
+}
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 28px;
+}
+.title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(2.6rem, 7vw, 4.8rem);
+  line-height: 1.0;
+  letter-spacing: -0.012em;
+  color: var(--ink-strong);
+  margin-bottom: 14px;
+}
+.subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  color: var(--ink-muted);
+  margin-bottom: 30px;
+}
+.cycle {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent-line);
+  padding: 9px 18px;
+}
+
+/* ── intro ────────────────────────────────────────── */
+.intro {
+  max-width: 720px;
+  margin: 0 auto 88px;
+  font-size: 1.07rem;
+  line-height: 1.78;
+}
+.intro::first-letter {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.6em;
+  float: left;
+  line-height: 0.84;
+  margin: 8px 14px 0 0;
+  color: var(--accent);
+  font-weight: 500;
+}
+.status-line {
+  margin-top: 32px;
+  padding-top: 22px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-muted);
+  letter-spacing: 0.06em;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.status-line .key { color: var(--ink-faint); margin-right: 4px; }
+.status-line .val { color: var(--ink); }
+.pulse {
+  display: inline-block;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-right: 8px;
+  vertical-align: middle;
+  animation: pulse 2.6s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--accent); }
+  50% { opacity: 0.55; box-shadow: 0 0 3px var(--accent); }
+}
+
+/* ── featured / synthesis spotlight ───────────────── */
+.spotlight {
+  margin: 0 auto 88px;
+  max-width: 860px;
+  border: 1px solid var(--accent-line);
+  background: linear-gradient(180deg, rgba(201,123,74,0.06), rgba(201,123,74,0.01));
+  padding: 36px 40px;
+  position: relative;
+}
+.spotlight::before {
+  content: "";
+  position: absolute; top:0; left:0; right:0;
+  height: 2px;
+  background: var(--accent);
+}
+.spotlight-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.spotlight-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: var(--ink-strong);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.spotlight-summary {
+  font-size: 1.05rem;
+  color: var(--ink);
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+.spotlight-summary em { color: var(--ink-strong); }
+.spotlight-actions {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ── section ──────────────────────────────────────── */
+.section { margin-bottom: 84px; }
+.section-head {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: baseline;
+  gap: 28px;
+  margin-bottom: 44px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--rule);
+}
+.numeral {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.6rem;
+  color: var(--accent);
+  line-height: 1;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 2.05rem;
+  letter-spacing: -0.005em;
+  color: var(--ink-strong);
+}
+.section-kicker {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--ink-muted);
+  display: block;
+  margin-top: 6px;
+}
+@media (max-width: 720px) {
+  .section-head { grid-template-columns: 56px 1fr; gap: 18px; }
+  .numeral { font-size: 1.8rem; }
+  .section-title { font-size: 1.55rem; }
+}
+
+/* ── streams grid ─────────────────────────────────── */
+.streams {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+@media (max-width: 720px) {
+  .streams { grid-template-columns: 1fr; }
+}
+.stream {
+  background: var(--bg-lift);
+  border: 1px solid var(--rule);
+  padding: 28px 30px 30px;
+  position: relative;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.stream:hover {
+  border-color: var(--accent-line);
+  transform: translateY(-2px);
+}
+.stream::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.55;
+}
+.stream-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 10px;
+}
+.stream-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.42rem;
+  color: var(--ink-strong);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.stream-desc {
+  font-size: 0.97rem;
+  color: var(--ink-muted);
+  margin-bottom: 18px;
+  line-height: 1.55;
+  font-style: italic;
+}
+.stream-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── file list ────────────────────────────────────── */
+.file-list {
+  list-style: none;
+  border-top: 1px solid var(--rule);
+}
+.file-list li {
+  border-bottom: 1px solid var(--rule);
+  padding: 16px 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: baseline;
+  transition: background 0.15s;
+}
+.file-list li:hover { background: rgba(201, 123, 74, 0.04); }
+.file-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.06rem;
+  color: var(--ink-strong);
+}
+.file-title a { color: var(--ink-strong); }
+.file-title a:hover { color: var(--accent); }
+.file-path {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-faint);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+.file-note {
+  display: block;
+  font-style: italic;
+  font-size: 0.94rem;
+  color: var(--ink-muted);
+  margin-top: 4px;
+  line-height: 1.45;
+}
+@media (max-width: 720px) {
+  .file-list li { grid-template-columns: 1fr; gap: 4px; }
+  .file-path { max-width: 100%; }
+}
+
+/* ── markdown viewer ──────────────────────────────── */
+.viewer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 8, 6, 0.78);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 90;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+.viewer-backdrop.open { display: block; opacity: 1; }
+
+.viewer {
+  position: fixed;
+  top: 0; right: 0;
+  height: 100vh;
+  width: min(880px, 96vw);
+  background: var(--bg);
+  border-left: 1px solid var(--accent-line);
+  box-shadow: -20px 0 60px rgba(0,0,0,0.45);
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+.viewer.open { transform: translateX(0); }
+
+.viewer-header {
+  flex: 0 0 auto;
+  padding: 18px 28px;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  background: var(--bg-deeper);
+}
+.viewer-path {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.viewer-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex: 0 0 auto;
+}
+.viewer-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--ink-muted);
+  border: 1px solid var(--rule);
+  padding: 7px 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.viewer-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent-line);
+}
+
+.viewer-body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 36px 48px 80px;
+  scroll-behavior: smooth;
+}
+@media (max-width: 720px) {
+  .viewer-body { padding: 26px 22px 60px; }
+}
+
+/* prose styles inside viewer */
+.prose {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--ink-strong);
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 1.6em 0 0.6em;
+}
+.prose h1 { font-size: 2.1rem; margin-top: 0; border-bottom: 1px solid var(--rule); padding-bottom: 12px; }
+.prose h2 { font-size: 1.55rem; color: var(--accent); margin-top: 2em; }
+.prose h3 { font-size: 1.22rem; }
+.prose h4 { font-size: 1.05rem; font-style: italic; }
+.prose p { margin: 0.9em 0; }
+.prose a { color: var(--accent); border-bottom: 1px dotted var(--accent-line); }
+.prose a:hover { border-bottom-style: solid; text-decoration: none; }
+.prose strong { color: var(--ink-strong); }
+.prose em { color: var(--ink-strong); }
+.prose ul, .prose ol { margin: 0.9em 0 0.9em 1.4em; }
+.prose li { margin: 0.4em 0; }
+.prose blockquote {
+  border-left: 2px solid var(--accent);
+  padding: 6px 0 6px 18px;
+  color: var(--ink-muted);
+  font-style: italic;
+  margin: 1.2em 0;
+}
+.prose code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  background: var(--bg-deeper);
+  padding: 2px 6px;
+  border: 1px solid var(--rule);
+  color: var(--accent);
+}
+.prose pre {
+  background: var(--bg-deeper);
+  border: 1px solid var(--rule);
+  padding: 16px 20px;
+  overflow-x: auto;
+  margin: 1.2em 0;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.prose pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--ink);
+  font-size: inherit;
+}
+.prose table {
+  border-collapse: collapse;
+  margin: 1.4em 0;
+  font-size: 0.95em;
+  width: 100%;
+}
+.prose th, .prose td {
+  border: 1px solid var(--rule);
+  padding: 9px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+.prose th {
+  background: var(--bg-lift);
+  color: var(--ink-strong);
+  font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.02em;
+}
+.prose td:first-child { color: var(--ink-strong); }
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2em 0;
+}
+
+/* trigger style */
+a.md-link::after {
+  content: "↗";
+  font-size: 0.75em;
+  margin-left: 4px;
+  color: var(--ink-faint);
+  transition: color 0.15s;
+}
+a.md-link:hover::after { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ── masthead ── -->
+<header class="masthead">
+  <div class="eyebrow">Volume I · Cycle II</div>
+  <h1 class="title">Collapse Signature<br>Research</h1>
+  <p class="subtitle">An inquiry into civilizational and financial fragility</p>
+  <span class="cycle">19 May 2026 · Dossier & Methodology Update</span>
+</header>
+
+<!-- ── intro ── -->
+<section class="intro">
+  <p>An ongoing multi-agent investigation into the structural patterns that precede systemic collapse — across civilizations, capital architectures, and the literary records left in their wake.</p>
+
+  <div class="status-line">
+    <span><span class="pulse"></span><span class="key">Status</span><span class="val">Active Development</span></span>
+    <span><span class="key">Streams</span><span class="val">Four</span></span>
+    <span><span class="key">Active Dossiers</span><span class="val">21</span></span>
+    <span><span class="key">Next Synthesis</span><span class="val">22 May 2026</span></span>
+  </div>
+</section>
+
+<!-- ── I. Active Streams ── -->
+<section class="section">
+  <header class="section-head">
+    <div class="numeral">I</div>
+    <div>
+      <h2 class="section-title">Active Streams</h2>
+      <span class="section-kicker">Four parallel investigations</span>
+    </div>
+  </header>
+
+  <div class="streams">
+    <div class="stream">
+      <div class="stream-num">Stream One</div>
+      <h3 class="stream-name">Financial Architecture</h3>
+      <p class="stream-desc">Real-time mapping of AI capital structures and falsifiable predictions.</p>
+      <a class="stream-link" href="https://github.com/jefrix/collapse-signature-research/tree/main/streams/stream-one-data-ledger" target="_blank" rel="noopener">→ Data Ledger</a>
+    </div>
+    <div class="stream">
+      <div class="stream-num">Stream Two</div>
+      <h3 class="stream-name">Technocratic Class Map</h3>
+      <p class="stream-desc">Principal dossiers tracking legitimacy-exposed nodes.</p>
+      <a class="stream-link" href="https://github.com/jefrix/collapse-signature-research/tree/main/streams/stream-two-principal-dossiers" target="_blank" rel="noopener">→ Dossiers</a>
+    </div>
+    <div class="stream">
+      <div class="stream-num">Stream Three</div>
+      <h3 class="stream-name">Civilizational Foundation</h3>
+      <p class="stream-desc">Historical case briefs and literary corpus analysis.</p>
+      <a class="stream-link" href="https://github.com/jefrix/collapse-signature-research/tree/main/streams/stream-three-civilizational-foundation" target="_blank" rel="noopener">→ Cases & Audits</a>
+    </div>
+    <div class="stream">
+      <div class="stream-num">Stream Four</div>
+      <h3 class="stream-name">Reference Catalogue</h3>
+      <p class="stream-desc">Load-bearing literary and philosophical references.</p>
+      <a class="stream-link" href="https://github.com/jefrix/collapse-signature-research/tree/main/streams/stream-four-reference-catalogue" target="_blank" rel="noopener">→ Catalogue</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── II. Stream Two — Principal Dossiers ── -->
+<section class="section">
+  <header class="section-head">
+    <div class="numeral">II</div>
+    <div>
+      <h2 class="section-title">Stream Two — Principal Dossiers</h2>
+      <span class="section-kicker">Recently expanded</span>
+    </div>
+  </header>
+
+  <ul class="file-list">
+    <!-- Capital Allocators -->
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/stephen-schwarzman/dossier.md">Stephen Schwarzman — Infrastructure Hegemon</a></div>
+        <div class="file-note">Capital Allocator</div>
+      </div>
+      <div class="file-path">stephen-schwarzman/dossier.md</div>
+    </li>
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/jonathan-gray/dossier.md">Jonathan Gray — Hard-Asset Infrastructure Lead</a></div>
+        <div class="file-note">Capital Allocator</div>
+      </div>
+      <div class="file-path">jonathan-gray/dossier.md</div>
+    </li>
+
+    <!-- Frontier Builders -->
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/dario-amodei/dossier.md">Dario Amodei — Preemptive Foundationalist</a></div>
+        <div class="file-note">Frontier Builder</div>
+      </div>
+      <div class="file-path">dario-amodei/dossier.md</div>
+    </li>
+
+    <!-- Infrastructure Operators -->
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/mark-zuckerberg/dossier.md">Mark Zuckerberg — Open-Weights Hegemon</a></div>
+        <div class="file-note">Infrastructure Operator</div>
+      </div>
+      <div class="file-path">mark-zuckerberg/dossier.md</div>
+    </li>
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/satya-nadella/dossier.md">Satya Nadella — Microsoft</a></div>
+        <div class="file-note">Infrastructure Operator</div>
+      </div>
+      <div class="file-path">satya-nadella/dossier.md</div>
+    </li>
+    <li>
+      <div>
+        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/sundar-pichai/dossier.md">Sundar Pichai — Foundation Architect</a></div>
+        <div class="file-note">Infrastructure Operator</div>
+      </div>
+      <div class="file-path">sundar-pichai/dossier.md</div>
+    </li>
+  </ul>
+</section>
+
+<!-- ── markdown viewer ── -->
+<div class="viewer-backdrop" id="viewer-backdrop"></div>
+<aside class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-path">
+  <header class="viewer-header">
+    <div class="viewer-path" id="viewer-path">—</div>
+    <div class="viewer-actions">
+      <button class="viewer-btn" id="viewer-github" title="Open on GitHub">GitHub ↗</button>
+      <button class="viewer-btn" id="viewer-close" title="Close (Esc)">Close ✕</button>
+    </div>
+  </header>
+  <div class="viewer-body" id="viewer-body">
+    <div class="viewer-loading">Loading…</div>
+  </div>
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+
+<script>
+(() => {
+  const REPO = "jefrix/collapse-signature-research";
+  const BRANCH = "main";
+  const RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/`;
+  const BLOB = `https://github.com/${REPO}/blob/${BRANCH}/`;
+
+  const backdrop = document.getElementById("viewer-backdrop");
+  const viewer = document.getElementById("viewer");
+  const body = document.getElementById("viewer-body");
+  const pathEl = document.getElementById("viewer-path");
+  const ghBtn = document.getElementById("viewer-github");
+  const closeBtn = document.getElementById("viewer-close");
+
+  let currentPath = null;
+
+  marked.setOptions({ gfm: true, breaks: false });
+
+  function openViewer() {
+    if (backdrop) backdrop.classList.add("open");
+    if (viewer) viewer.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closeViewer() {
+    if (backdrop) backdrop.classList.remove("open");
+    if (viewer) viewer.classList.remove("open");
+    document.body.style.overflow = "";
+    currentPath = null;
+  }
+
+  async function loadMd(path) {
+    if (!path || !body || !pathEl) return;
+    currentPath = path;
+    pathEl.textContent = path;
+    body.innerHTML = `<div class="viewer-loading">Loading ${path}…</div>`;
+    body.scrollTop = 0;
+    openViewer();
+
+    try {
+      const res = await fetch(RAW + path, { cache: "no-cache" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const md = await res.text();
+      const rawHtml = marked.parse(md);
+      const safe = DOMPurify.sanitize(rawHtml);
+
+      const wrap = document.createElement("div");
+      wrap.className = "prose";
+      wrap.innerHTML = safe;
+
+      wrap.querySelectorAll("a[href]").forEach(a => {
+        const href = a.getAttribute("href");
+        if (href && href.endsWith(".md")) {
+          a.classList.add("md-link");
+          a.dataset.md = href;
+          a.href = "#" + href;
+          a.addEventListener("click", e => {
+            e.preventDefault();
+            loadMd(href);
+          });
+        } else if (href && href.startsWith("http")) {
+          a.target = "_blank";
+          a.rel = "noopener";
+        }
+      });
+
+      body.innerHTML = "";
+      body.appendChild(wrap);
+    } catch (err) {
+      if (body) body.innerHTML = `<div class="viewer-error">Could not load ${path}<br><small>${err.message}</small></div>`;
+    }
+  }
+
+  document.addEventListener("click", e => {
+    const a = e.target.closest("a.md-link");
+    if (!a) return;
+    const path = a.dataset.md;
+    if (!path) return;
+    e.preventDefault();
+    loadMd(path);
+  });
+
+  if (closeBtn) closeBtn.addEventListener("click", closeViewer);
+  if (backdrop) backdrop.addEventListener("click", closeViewer);
+  if (ghBtn) ghBtn.addEventListener("click", () => { if (currentPath) window.open(BLOB + currentPath, "_blank", "noopener"); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && viewer && viewer.classList.contains("open")) closeViewer(); });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const hash = decodeURIComponent(location.hash.replace(/^#/, ""));
+    if (hash && hash.endsWith(".md")) loadMd(hash);
+  });
+})();
+</script>
+</body>
+</html>
