@@ -13,14 +13,24 @@
   --bg: #1a1612;
   --bg-lift: #221d18;
   --bg-deeper: #15110d;
+  --bg-card: #1e1916;
   --ink: #e8dec5;
   --ink-strong: #f5edd6;
   --ink-muted: #948572;
   --ink-faint: #645a4e;
   --accent: #c97b4a;
-  --accent-line: rgba(201, 123, 74, 0.35);
+  --accent-dim: rgba(201,123,74,0.18);
+  --accent-line: rgba(201,123,74,0.35);
   --rule: #3d3529;
   --rule-strong: #5c5142;
+  --green: #7aab6e;
+  --green-dim: rgba(122,171,110,0.15);
+  --red: #c05a4a;
+  --red-dim: rgba(192,90,74,0.15);
+  --amber: #c8963a;
+  --amber-dim: rgba(200,150,58,0.15);
+  --blue: #5a85b0;
+  --blue-dim: rgba(90,133,176,0.15);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -32,28 +42,55 @@ body {
   font-family: 'EB Garamond', Georgia, serif;
   font-size: 18px;
   line-height: 1.7;
-  font-feature-settings: "kern", "liga", "onum";
-  background-image:
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.85  0 0 0 0 0.7  0 0 0 0.04 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  font-feature-settings: "kern","liga","onum";
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95 0 0 0 0 0.85 0 0 0 0 0.7 0 0 0 0.04 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
   min-height: 100vh;
 }
 
 a { color: var(--accent); text-decoration: none; transition: opacity 0.15s; }
 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-
 ::selection { background: var(--accent); color: var(--bg); }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 64px 56px 120px;
+/* ── nav ── */
+.topnav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(26,22,18,0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+  padding: 0 56px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
-@media (max-width: 720px) {
-  .container { padding: 36px 22px 80px; }
-  body { font-size: 17px; }
+.topnav::-webkit-scrollbar { display: none; }
+.topnav a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  padding: 16px 18px;
+  white-space: nowrap;
+  display: block;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+  text-decoration: none;
 }
+.topnav a:hover { color: var(--accent); text-decoration: none; border-bottom-color: var(--accent-line); }
+@media (max-width: 720px) { .topnav { padding: 0 16px; } .topnav a { padding: 14px 12px; } }
 
-/* ── masthead ─────────────────────────────────────── */
+/* ── container ── */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 64px 56px 140px;
+}
+@media (max-width: 720px) { .container { padding: 36px 22px 80px; } body { font-size: 17px; } }
+
+/* ── masthead ── */
 .masthead {
   text-align: center;
   border-bottom: 1px solid var(--rule);
@@ -62,373 +99,385 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 }
 .eyebrow {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  margin-bottom: 28px;
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ink-muted); margin-bottom: 28px;
 }
 .title {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 500;
-  font-size: clamp(2.6rem, 7vw, 4.8rem);
-  line-height: 1.0;
-  letter-spacing: -0.012em;
-  color: var(--ink-strong);
-  margin-bottom: 14px;
+  font-family: 'Cormorant Garamond', serif; font-weight: 500;
+  font-size: clamp(2.6rem,7vw,4.8rem); line-height: 1.0;
+  letter-spacing: -0.012em; color: var(--ink-strong); margin-bottom: 14px;
 }
 .subtitle {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
-  color: var(--ink-muted);
-  margin-bottom: 30px;
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-weight: 400; font-size: clamp(1.15rem,2vw,1.45rem);
+  color: var(--ink-muted); margin-bottom: 30px;
 }
 .cycle {
   display: inline-block;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: var(--accent);
-  border: 1px solid var(--accent-line);
-  padding: 9px 18px;
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--accent); border: 1px solid var(--accent-line); padding: 9px 18px;
 }
 
-/* ── intro ────────────────────────────────────────── */
-.intro {
-  max-width: 720px;
-  margin: 0 auto 88px;
-  font-size: 1.07rem;
-  line-height: 1.78;
+/* ── status bar ── */
+.status-bar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin-bottom: 72px;
 }
-.intro::first-letter {
+@media (max-width: 860px) { .status-bar { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 520px) { .status-bar { grid-template-columns: repeat(2,1fr); } }
+.stat {
+  background: var(--bg-lift);
+  padding: 20px 22px;
+  text-align: center;
+}
+.stat-val {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 4.6em;
-  float: left;
-  line-height: 0.84;
-  margin: 8px 14px 0 0;
-  color: var(--accent);
-  font-weight: 500;
+  font-size: 2.2rem; font-weight: 500; color: var(--accent);
+  line-height: 1; display: block; margin-bottom: 6px;
 }
-.status-line {
-  margin-top: 32px;
-  padding-top: 22px;
-  border-top: 1px solid var(--rule);
-  display: flex;
-  justify-content: space-between;
+.stat-label {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--ink-muted);
-  letter-spacing: 0.06em;
-  flex-wrap: wrap;
-  gap: 14px;
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-faint);
 }
-.status-line .key { color: var(--ink-faint); margin-right: 4px; }
-.status-line .val { color: var(--ink); }
 .pulse {
-  display: inline-block;
-  width: 7px; height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-  margin-right: 8px;
-  vertical-align: middle;
-  animation: pulse 2.6s ease-in-out infinite;
+  display: inline-block; width: 7px; height: 7px;
+  border-radius: 50%; background: var(--accent); margin-right: 6px;
+  vertical-align: middle; animation: pulse 2.6s ease-in-out infinite;
 }
 @keyframes pulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--accent); }
-  50% { opacity: 0.55; box-shadow: 0 0 3px var(--accent); }
+  0%,100% { opacity:1; box-shadow: 0 0 8px var(--accent); }
+  50% { opacity:.55; box-shadow: 0 0 3px var(--accent); }
 }
 
-/* ── featured / synthesis spotlight ───────────────── */
+/* ── spotlight ── */
 .spotlight {
-  margin: 0 auto 88px;
-  max-width: 860px;
+  margin-bottom: 80px;
   border: 1px solid var(--accent-line);
-  background: linear-gradient(180deg, rgba(201,123,74,0.06), rgba(201,123,74,0.01));
+  background: linear-gradient(180deg,rgba(201,123,74,0.06),rgba(201,123,74,0.01));
   padding: 36px 40px;
   position: relative;
 }
 .spotlight::before {
-  content: "";
-  position: absolute; top:0; left:0; right:0;
-  height: 2px;
-  background: var(--accent);
+  content:""; position:absolute; top:0; left:0; right:0;
+  height:2px; background: var(--accent);
 }
 .spotlight-tag {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 12px;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 12px;
 }
 .spotlight-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 500;
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  color: var(--ink-strong);
-  line-height: 1.15;
-  margin-bottom: 16px;
+  font-family: 'Cormorant Garamond', serif; font-weight: 500;
+  font-size: clamp(1.8rem,4vw,2.4rem); color: var(--ink-strong);
+  line-height: 1.15; margin-bottom: 14px;
 }
-.spotlight-summary {
-  font-size: 1.05rem;
-  color: var(--ink);
-  line-height: 1.7;
-  margin-bottom: 22px;
-}
-.spotlight-summary em { color: var(--ink-strong); }
+.spotlight-body { font-size: 1.04rem; color: var(--ink); line-height: 1.7; margin-bottom: 20px; }
+.spotlight-body em { color: var(--ink-strong); }
 .spotlight-actions {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  display: flex; gap: 18px; flex-wrap: wrap;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  letter-spacing: 0.08em; text-transform: uppercase;
 }
 
-/* ── section ──────────────────────────────────────── */
-.section { margin-bottom: 84px; }
+/* ── section ── */
+.section { margin-bottom: 88px; scroll-margin-top: 56px; }
 .section-head {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  align-items: baseline;
-  gap: 28px;
-  margin-bottom: 44px;
-  padding-bottom: 20px;
+  display: grid; grid-template-columns: 100px 1fr;
+  align-items: baseline; gap: 28px;
+  margin-bottom: 44px; padding-bottom: 20px;
   border-bottom: 1px solid var(--rule);
 }
 .numeral {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 2.6rem;
-  color: var(--accent);
-  line-height: 1;
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+  font-weight: 400; font-size: 2.6rem; color: var(--accent); line-height: 1;
 }
 .section-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 500;
-  font-size: 2.05rem;
-  letter-spacing: -0.005em;
-  color: var(--ink-strong);
+  font-family: 'Cormorant Garamond', serif; font-weight: 500;
+  font-size: 2.05rem; letter-spacing: -0.005em; color: var(--ink-strong);
 }
 .section-kicker {
-  font-family: 'EB Garamond', serif;
-  font-style: italic;
-  font-size: 1rem;
-  color: var(--ink-muted);
-  display: block;
-  margin-top: 6px;
+  font-family: 'EB Garamond', serif; font-style: italic;
+  font-size: 1rem; color: var(--ink-muted); display: block; margin-top: 6px;
 }
 @media (max-width: 720px) {
   .section-head { grid-template-columns: 56px 1fr; gap: 18px; }
-  .numeral { font-size: 1.8rem; }
-  .section-title { font-size: 1.55rem; }
+  .numeral { font-size: 1.8rem; } .section-title { font-size: 1.55rem; }
 }
 
-/* ── streams grid ─────────────────────────────────── */
+/* ── streams grid ── */
 .streams {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+  display: grid; grid-template-columns: repeat(2,1fr); gap: 24px;
 }
-@media (max-width: 720px) {
-  .streams { grid-template-columns: 1fr; }
-}
+@media (max-width: 720px) { .streams { grid-template-columns: 1fr; } }
 .stream {
-  background: var(--bg-lift);
-  border: 1px solid var(--rule);
-  padding: 28px 30px 30px;
-  position: relative;
+  background: var(--bg-lift); border: 1px solid var(--rule);
+  padding: 26px 28px 28px; position: relative;
   transition: border-color 0.2s, transform 0.2s;
 }
-.stream:hover {
-  border-color: var(--accent-line);
-  transform: translateY(-2px);
-}
+.stream:hover { border-color: var(--accent-line); transform: translateY(-2px); }
 .stream::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 1px;
-  background: var(--accent);
-  opacity: 0.55;
+  content:""; position:absolute; top:0; left:0; right:0;
+  height:1px; background: var(--accent); opacity:.55;
 }
 .stream-num {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  margin-bottom: 10px;
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ink-muted); margin-bottom: 8px;
 }
 .stream-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
-  font-size: 1.42rem;
-  color: var(--ink-strong);
-  margin-bottom: 12px;
-  line-height: 1.2;
+  font-family: 'Cormorant Garamond', serif; font-weight: 600;
+  font-size: 1.38rem; color: var(--ink-strong); margin-bottom: 10px; line-height: 1.2;
 }
-.stream-desc {
-  font-size: 0.97rem;
-  color: var(--ink-muted);
-  margin-bottom: 18px;
-  line-height: 1.55;
-  font-style: italic;
+.stream-desc { font-size: 0.96rem; color: var(--ink-muted); margin-bottom: 16px; line-height: 1.5; font-style: italic; }
+.stream-agent { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-faint); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px; }
+.stream-link { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* ── ISIW ── */
+.isiw-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+@media (max-width: 720px) { .isiw-grid { grid-template-columns: 1fr; } }
+.isiw-card {
+  background: var(--bg-lift); border: 1px solid var(--rule);
+  padding: 22px 24px; position: relative;
 }
-.stream-link {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+.isiw-id {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 8px;
+}
+.isiw-subject {
+  font-family: 'Cormorant Garamond', serif; font-weight: 600;
+  font-size: 1.18rem; color: var(--ink-strong); margin-bottom: 6px;
+}
+.isiw-type {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink-faint); margin-bottom: 10px;
+}
+.isiw-finding { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.5; font-style: italic; }
+.badge {
+  display: inline-block; font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 4px 9px; margin-top: 12px;
+}
+.badge-positive { background: var(--green-dim); color: var(--green); border: 1px solid rgba(122,171,110,0.3); }
+.badge-candidate { background: var(--amber-dim); color: var(--amber); border: 1px solid rgba(200,150,58,0.3); }
+.badge-watch { background: var(--blue-dim); color: var(--blue); border: 1px solid rgba(90,133,176,0.3); }
+
+/* ── dossiers ── */
+.dossier-group { margin-bottom: 36px; }
+.dossier-group-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ink-faint); padding-bottom: 10px; margin-bottom: 0;
+  border-bottom: 1px solid var(--rule);
 }
 
-/* ── file list ────────────────────────────────────── */
-.file-list {
-  list-style: none;
-  border-top: 1px solid var(--rule);
-}
+/* ── file list ── */
+.file-list { list-style: none; border-top: 1px solid var(--rule); }
+.file-list.no-top-border { border-top: none; }
 .file-list li {
   border-bottom: 1px solid var(--rule);
-  padding: 16px 0;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 24px;
-  align-items: baseline;
+  padding: 14px 0;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 20px; align-items: baseline;
   transition: background 0.15s;
 }
-.file-list li:hover { background: rgba(201, 123, 74, 0.04); }
-.file-title {
-  font-family: 'EB Garamond', serif;
-  font-size: 1.06rem;
-  color: var(--ink-strong);
-}
+.file-list li:hover { background: rgba(201,123,74,0.04); padding-left: 6px; }
+.file-title { font-family: 'EB Garamond', serif; font-size: 1.04rem; color: var(--ink-strong); }
 .file-title a { color: var(--ink-strong); }
-.file-title a:hover { color: var(--accent); }
+.file-title a:hover { color: var(--accent); text-decoration: none; }
 .file-path {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--ink-faint);
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 300px;
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  color: var(--ink-faint); letter-spacing: 0.02em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 280px;
 }
 .file-note {
-  display: block;
-  font-style: italic;
-  font-size: 0.94rem;
-  color: var(--ink-muted);
-  margin-top: 4px;
-  line-height: 1.45;
+  display: block; font-style: italic; font-size: 0.92rem;
+  color: var(--ink-muted); margin-top: 3px; line-height: 1.4;
 }
+.file-status {
+  display: inline-block; font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 2px 7px; vertical-align: middle; margin-left: 8px;
+}
+.status-complete { background: var(--green-dim); color: var(--green); border: 1px solid rgba(122,171,110,0.25); }
+.status-draft { background: var(--amber-dim); color: var(--amber); border: 1px solid rgba(200,150,58,0.25); }
+.status-pending { background: var(--red-dim); color: var(--red); border: 1px solid rgba(192,90,74,0.25); }
+.status-review { background: var(--blue-dim); color: var(--blue); border: 1px solid rgba(90,133,176,0.25); }
 @media (max-width: 720px) {
   .file-list li { grid-template-columns: 1fr; gap: 4px; }
   .file-path { max-width: 100%; }
 }
 
-/* ── markdown viewer ──────────────────────────────── */
+/* ── cases grid ── */
+.cases-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+@media (max-width: 900px) { .cases-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 520px) { .cases-grid { grid-template-columns: 1fr; } }
+.case-card {
+  background: var(--bg-lift); border: 1px solid var(--rule);
+  padding: 20px 22px; cursor: pointer;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.case-card:hover { border-color: var(--accent-line); transform: translateY(-2px); }
+.case-type {
+  font-family: 'JetBrains Mono', monospace; font-size: 9px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ink-faint); margin-bottom: 8px;
+}
+.case-name {
+  font-family: 'Cormorant Garamond', serif; font-weight: 600;
+  font-size: 1.18rem; color: var(--ink-strong); line-height: 1.25;
+  margin-bottom: 8px;
+}
+.case-dates { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-muted); margin-bottom: 10px; }
+.case-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 9px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 3px 8px; border: 1px solid var(--rule); color: var(--ink-faint);
+  display: inline-block; margin-top: 2px;
+}
+.case-tag.mnbe { border-color: rgba(90,133,176,0.3); color: var(--blue); background: var(--blue-dim); }
+.case-tag.agr { border-color: var(--accent-line); color: var(--accent); background: var(--accent-dim); }
+.case-tag.control { border-color: rgba(122,171,110,0.3); color: var(--green); background: var(--green-dim); }
+.case-tag.lba { border-color: var(--rule-strong); color: var(--ink-muted); }
+
+/* ── methodology ── */
+.method-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+@media (max-width: 720px) { .method-grid { grid-template-columns: 1fr; } }
+.method-card {
+  background: var(--bg-lift); border: 1px solid var(--rule);
+  padding: 22px 24px;
+}
+.method-version {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.method-version.canon { color: var(--green); }
+.method-version.dev { color: var(--amber); }
+.method-name {
+  font-family: 'Cormorant Garamond', serif; font-weight: 600;
+  font-size: 1.14rem; color: var(--ink-strong); margin-bottom: 8px;
+}
+.method-desc { font-size: 0.93rem; color: var(--ink-muted); line-height: 1.5; font-style: italic; margin-bottom: 12px; }
+
+/* ── agent roster ── */
+.agent-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+@media (max-width: 860px) { .agent-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 520px) { .agent-grid { grid-template-columns: 1fr; } }
+.agent-card {
+  background: var(--bg-lift); border: 1px solid var(--rule);
+  padding: 22px 24px; position: relative;
+}
+.agent-card::before {
+  content:""; position:absolute; top:0; left:0; right:0;
+  height:1px; opacity:.6;
+}
+.agent-grok-heavy::before { background: var(--accent); }
+.agent-grok::before { background: var(--amber); }
+.agent-deepseek::before { background: var(--blue); }
+.agent-chatgpt::before { background: var(--green); }
+.agent-gemini::before { background: #8b6fb5; }
+.agent-claude::before { background: #c97b4a; }
+.agent-name {
+  font-family: 'Cormorant Garamond', serif; font-weight: 600;
+  font-size: 1.14rem; color: var(--ink-strong); margin-bottom: 4px;
+}
+.agent-role {
+  font-family: 'JetBrains Mono', monospace; font-size: 9px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-faint); margin-bottom: 12px;
+}
+.agent-tasks { list-style: none; }
+.agent-tasks li {
+  font-size: 0.9rem; color: var(--ink-muted); padding: 4px 0;
+  border-bottom: 1px solid rgba(61,53,41,0.5);
+  line-height: 1.4; display: flex; gap: 8px; align-items: flex-start;
+}
+.agent-tasks li:last-child { border-bottom: none; }
+.task-dot { flex: 0 0 auto; margin-top: 7px; width: 5px; height: 5px; border-radius: 50%; background: var(--ink-faint); }
+.task-dot.done { background: var(--green); }
+.task-dot.active { background: var(--amber); }
+.task-dot.pending { background: var(--ink-faint); }
+
+/* ── synthesis ── */
+.synth-timeline { position: relative; padding-left: 28px; }
+.synth-timeline::before {
+  content:""; position:absolute; left:6px; top:8px; bottom:8px;
+  width:1px; background: var(--rule);
+}
+.synth-entry { position: relative; margin-bottom: 28px; }
+.synth-entry::before {
+  content:""; position:absolute; left:-24px; top:8px;
+  width:9px; height:9px; border-radius:50%;
+  background: var(--bg); border: 1px solid var(--rule-strong);
+}
+.synth-entry.complete::before { background: var(--green); border-color: var(--green); }
+.synth-entry.next::before { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 8px var(--accent); }
+.synth-date {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  letter-spacing: 0.12em; color: var(--ink-faint); margin-bottom: 5px;
+}
+.synth-title {
+  font-family: 'Cormorant Garamond', serif; font-weight: 500;
+  font-size: 1.12rem; color: var(--ink-strong); margin-bottom: 5px;
+}
+.synth-desc { font-size: 0.94rem; color: var(--ink-muted); line-height: 1.5; font-style: italic; }
+
+/* ── markdown viewer ── */
 .viewer-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(10, 8, 6, 0.78);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  z-index: 90;
-  display: none;
-  opacity: 0;
-  transition: opacity 0.22s ease;
+  position: fixed; inset: 0;
+  background: rgba(10,8,6,0.78);
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  z-index: 90; display: none; opacity: 0; transition: opacity 0.22s ease;
 }
 .viewer-backdrop.open { display: block; opacity: 1; }
-
 .viewer {
-  position: fixed;
-  top: 0; right: 0;
-  height: 100vh;
-  width: min(880px, 96vw);
-  background: var(--bg);
+  position: fixed; top:0; right:0; height:100vh;
+  width: min(900px,96vw); background: var(--bg);
   border-left: 1px solid var(--accent-line);
   box-shadow: -20px 0 60px rgba(0,0,0,0.45);
-  z-index: 100;
-  transform: translateX(100%);
-  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  flex-direction: column;
+  z-index: 100; transform: translateX(100%);
+  transition: transform 0.32s cubic-bezier(0.4,0,0.2,1);
+  display: flex; flex-direction: column;
 }
 .viewer.open { transform: translateX(0); }
-
 .viewer-header {
-  flex: 0 0 auto;
-  padding: 18px 28px;
+  flex: 0 0 auto; padding: 18px 28px;
   border-bottom: 1px solid var(--rule);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 18px;
+  display: flex; justify-content: space-between; align-items: center; gap: 18px;
   background: var(--bg-deeper);
 }
 .viewer-path {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  color: var(--ink-muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  letter-spacing: 0.04em; color: var(--ink-muted);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.viewer-actions {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  flex: 0 0 auto;
-}
+.viewer-actions { display: flex; gap: 12px; align-items: center; flex: 0 0 auto; }
 .viewer-btn {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  background: transparent;
-  color: var(--ink-muted);
-  border: 1px solid var(--rule);
-  padding: 7px 12px;
-  cursor: pointer;
-  transition: all 0.15s;
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  background: transparent; color: var(--ink-muted);
+  border: 1px solid var(--rule); padding: 7px 12px;
+  cursor: pointer; transition: all 0.15s;
 }
-.viewer-btn:hover {
-  color: var(--accent);
-  border-color: var(--accent-line);
-}
-
+.viewer-btn:hover { color: var(--accent); border-color: var(--accent-line); }
 .viewer-body {
-  flex: 1 1 auto;
-  overflow-y: auto;
-  padding: 36px 48px 80px;
-  scroll-behavior: smooth;
+  flex: 1 1 auto; overflow-y: auto;
+  padding: 36px 48px 80px; scroll-behavior: smooth;
 }
-@media (max-width: 720px) {
-  .viewer-body { padding: 26px 22px 60px; }
-}
+@media (max-width: 720px) { .viewer-body { padding: 26px 22px 60px; } }
 
-/* prose styles inside viewer */
-.prose {
-  font-family: 'EB Garamond', Georgia, serif;
-  font-size: 17px;
-  line-height: 1.7;
-  color: var(--ink);
-}
-.prose h1, .prose h2, .prose h3, .prose h4 {
-  font-family: 'Cormorant Garamond', serif;
-  color: var(--ink-strong);
-  font-weight: 500;
-  line-height: 1.2;
-  margin: 1.6em 0 0.6em;
-}
-.prose h1 { font-size: 2.1rem; margin-top: 0; border-bottom: 1px solid var(--rule); padding-bottom: 12px; }
+/* ── prose ── */
+.prose { font-family: 'EB Garamond', Georgia, serif; font-size: 17px; line-height: 1.7; color: var(--ink); }
+.prose h1,.prose h2,.prose h3,.prose h4 { font-family: 'Cormorant Garamond', serif; color: var(--ink-strong); font-weight: 500; line-height: 1.2; margin: 1.6em 0 0.6em; }
+.prose h1 { font-size: 2.1rem; margin-top:0; border-bottom: 1px solid var(--rule); padding-bottom: 12px; }
 .prose h2 { font-size: 1.55rem; color: var(--accent); margin-top: 2em; }
 .prose h3 { font-size: 1.22rem; }
 .prose h4 { font-size: 1.05rem; font-style: italic; }
@@ -437,216 +486,582 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 .prose a:hover { border-bottom-style: solid; text-decoration: none; }
 .prose strong { color: var(--ink-strong); }
 .prose em { color: var(--ink-strong); }
-.prose ul, .prose ol { margin: 0.9em 0 0.9em 1.4em; }
+.prose ul,.prose ol { margin: 0.9em 0 0.9em 1.4em; }
 .prose li { margin: 0.4em 0; }
-.prose blockquote {
-  border-left: 2px solid var(--accent);
-  padding: 6px 0 6px 18px;
-  color: var(--ink-muted);
-  font-style: italic;
-  margin: 1.2em 0;
-}
-.prose code {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.85em;
-  background: var(--bg-deeper);
-  padding: 2px 6px;
-  border: 1px solid var(--rule);
-  color: var(--accent);
-}
-.prose pre {
-  background: var(--bg-deeper);
-  border: 1px solid var(--rule);
-  padding: 16px 20px;
-  overflow-x: auto;
-  margin: 1.2em 0;
-  font-size: 13px;
-  line-height: 1.55;
-}
-.prose pre code {
-  background: transparent;
-  border: none;
-  padding: 0;
-  color: var(--ink);
-  font-size: inherit;
-}
-.prose table {
-  border-collapse: collapse;
-  margin: 1.4em 0;
-  font-size: 0.95em;
-  width: 100%;
-}
-.prose th, .prose td {
-  border: 1px solid var(--rule);
-  padding: 9px 14px;
-  text-align: left;
-  vertical-align: top;
-}
-.prose th {
-  background: var(--bg-lift);
-  color: var(--ink-strong);
-  font-weight: 600;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.02em;
-}
+.prose blockquote { border-left: 2px solid var(--accent); padding: 6px 0 6px 18px; color: var(--ink-muted); font-style: italic; margin: 1.2em 0; }
+.prose code { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; background: var(--bg-deeper); padding: 2px 6px; border: 1px solid var(--rule); color: var(--accent); }
+.prose pre { background: var(--bg-deeper); border: 1px solid var(--rule); padding: 16px 20px; overflow-x: auto; margin: 1.2em 0; font-size: 13px; line-height: 1.55; }
+.prose pre code { background: transparent; border: none; padding: 0; color: var(--ink); font-size: inherit; }
+.prose table { border-collapse: collapse; margin: 1.4em 0; font-size: 0.95em; width: 100%; }
+.prose th,.prose td { border: 1px solid var(--rule); padding: 9px 14px; text-align: left; vertical-align: top; }
+.prose th { background: var(--bg-lift); color: var(--ink-strong); font-weight: 600; font-family: 'Cormorant Garamond', serif; font-size: 1.02em; }
 .prose td:first-child { color: var(--ink-strong); }
-.prose hr {
-  border: none;
-  border-top: 1px solid var(--rule);
-  margin: 2em 0;
-}
-
-/* trigger style */
-a.md-link::after {
-  content: "↗";
-  font-size: 0.75em;
-  margin-left: 4px;
-  color: var(--ink-faint);
-  transition: color 0.15s;
-}
+.prose hr { border: none; border-top: 1px solid var(--rule); margin: 2em 0; }
+a.md-link::after { content:"↗"; font-size:.75em; margin-left:4px; color: var(--ink-faint); transition: color 0.15s; }
 a.md-link:hover::after { color: var(--accent); }
 </style>
 </head>
 <body>
+
+<!-- ── nav ── -->
+<nav class="topnav">
+  <a href="#streams">Streams</a>
+  <a href="#isiw">ISIW Watch</a>
+  <a href="#dossiers">Dossiers</a>
+  <a href="#cases">Cases</a>
+  <a href="#methodology">Methodology</a>
+  <a href="#synthesis">Synthesis</a>
+  <a href="#agents">Agents</a>
+</nav>
+
 <div class="container">
 
 <!-- ── masthead ── -->
 <header class="masthead">
-  <div class="eyebrow">Volume I · Cycle II</div>
+  <div class="eyebrow">Volume I · Cycle III · In Progress</div>
   <h1 class="title">Collapse Signature<br>Research</h1>
   <p class="subtitle">An inquiry into civilizational and financial fragility</p>
-  <span class="cycle">19 May 2026 · Dossier & Methodology Update</span>
+  <span class="cycle"><span class="pulse"></span>19 May 2026 · Cycle III Kickoff</span>
 </header>
 
-<!-- ── intro ── -->
-<section class="intro">
-  <p>An ongoing multi-agent investigation into the structural patterns that precede systemic collapse — across civilizations, capital architectures, and the literary records left in their wake.</p>
+<!-- ── status bar ── -->
+<div class="status-bar">
+  <div class="stat"><span class="stat-val">4</span><span class="stat-label">Streams Active</span></div>
+  <div class="stat"><span class="stat-val">27</span><span class="stat-label">Dossiers</span></div>
+  <div class="stat"><span class="stat-val">9</span><span class="stat-label">Cases</span></div>
+  <div class="stat"><span class="stat-val">4</span><span class="stat-label">ISIW Signals</span></div>
+  <div class="stat"><span class="stat-val">22 May</span><span class="stat-label">Next Synthesis</span></div>
+</div>
 
-  <div class="status-line">
-    <span><span class="pulse"></span><span class="key">Status</span><span class="val">Active Development</span></span>
-    <span><span class="key">Streams</span><span class="val">Four</span></span>
-    <span><span class="key">Active Dossiers</span><span class="val">21</span></span>
-    <span><span class="key">Next Synthesis</span><span class="val">22 May 2026</span></span>
+<!-- ── spotlight ── -->
+<div class="spotlight">
+  <div class="spotlight-tag">Latest · May 15, 2026</div>
+  <h2 class="spotlight-title">May 15 Cross-Stream Synthesis</h2>
+  <p class="spotlight-body">
+    Cycle II closes with four major analytical advances: the <em>elite self-indictment hypothesis</em> has cross-case support across five collapse cases and is absent in two recovery controls; the <em>Narrative Retraction Capacity (NRC)</em> variable is operationalized with a six-case scoring table; the <em>Multi-National Bureaucratic Empire (MNBE)</em> subtype is formally proposed for Habsburg and Soviet; and the <em>Institutional Self-Indictment Watch</em> carries four active signals — Anthropic, Altman, Fink, and Dimon.
+  </p>
+  <div class="spotlight-actions">
+    <a class="md-link" href="#" data-md="synthesis/may-15-synthesis-2026-05-15.md">Read Synthesis ↗</a>
+    <a class="md-link" href="#" data-md="streams/stream-one-data-ledger/falsifiable-signals-watch.md">Falsifiable Signals Watch ↗</a>
+    <a class="md-link" href="#" data-md="streams/stream-three-civilizational-foundation/cycle-three-research-priorities.md">Cycle III Priorities ↗</a>
   </div>
-</section>
+</div>
 
-<!-- ── I. Active Streams ── -->
-<section class="section">
+<!-- ── I. Streams ── -->
+<section class="section" id="streams">
   <header class="section-head">
     <div class="numeral">I</div>
     <div>
       <h2 class="section-title">Active Streams</h2>
-      <span class="section-kicker">Four parallel investigations</span>
+      <span class="section-kicker">Four parallel investigations, six agents</span>
     </div>
   </header>
-
   <div class="streams">
     <div class="stream">
       <div class="stream-num">Stream One</div>
       <h3 class="stream-name">Financial Architecture</h3>
-      <p class="stream-desc">Real-time mapping of AI capital structures and falsifiable predictions.</p>
+      <p class="stream-desc">Real-time mapping of AI capital structures, daily signals ledger, falsifiable predictions, and the ISIW active monitoring ledger.</p>
+      <div class="stream-agent">Agents: Grok · Grok Heavy · Gemini</div>
       <a class="stream-link" href="https://github.com/jefrix/collapse-signature-research/tree/main/streams/stream-one-data-ledger" target="_blank" rel="noopener">→ Data Ledger</a>
     </div>
     <div class="stream">
       <div class="stream-num">Stream Two</div>
       <h3 class="stream-name">Technocratic Class Map</h3>
-      <p class="stream-desc">Principal dossiers tracking legitimacy-exposed nodes.</p>
+      <p class="stream-desc">Principal dossiers tracking 27 legitimacy-exposed nodes across four sub-groups. X/Twitter monitoring, interviews, and ISIW candidate scanning.</p>
+      <div class="stream-agent">Agents: All · Grok (X) · Gemini (interviews)</div>
       <a class="stream-link" href="https://github.com/jefrix/collapse-signature-research/tree/main/streams/stream-two-principal-dossiers" target="_blank" rel="noopener">→ Dossiers</a>
     </div>
     <div class="stream">
       <div class="stream-num">Stream Three</div>
       <h3 class="stream-name">Civilizational Foundation</h3>
-      <p class="stream-desc">Historical case briefs and literary corpus analysis.</p>
+      <p class="stream-desc">Historical case briefs, cross-case audits, literary-strategic analysis, NRC variable, MNBE subtype, self-indictment hypothesis. Claude leads methodology review.</p>
+      <div class="stream-agent">Agents: DeepSeek · ChatGPT · Claude (review)</div>
       <a class="stream-link" href="https://github.com/jefrix/collapse-signature-research/tree/main/streams/stream-three-civilizational-foundation" target="_blank" rel="noopener">→ Cases & Audits</a>
     </div>
     <div class="stream">
       <div class="stream-num">Stream Four</div>
       <h3 class="stream-name">Reference Catalogue</h3>
-      <p class="stream-desc">Load-bearing literary and philosophical references.</p>
+      <p class="stream-desc">Structured catalogue of load-bearing sources. Five entries seeded: Cline, Jiang, Du Fu, Magritte, Federal Reserve FSR May 2026.</p>
+      <div class="stream-agent">Agent: DeepSeek</div>
       <a class="stream-link" href="https://github.com/jefrix/collapse-signature-research/tree/main/streams/stream-four-reference-catalogue" target="_blank" rel="noopener">→ Catalogue</a>
     </div>
   </div>
 </section>
 
-<!-- ── II. Stream Two — Principal Dossiers ── -->
-<section class="section">
+<!-- ── II. ISIW Watch ── -->
+<section class="section" id="isiw">
   <header class="section-head">
     <div class="numeral">II</div>
     <div>
-      <h2 class="section-title">Stream Two — Principal Dossiers</h2>
-      <span class="section-kicker">Recently expanded</span>
+      <h2 class="section-title">Institutional Self-Indictment Watch</h2>
+      <span class="section-kicker">Four active signals as of May 18, 2026 · Gemini monitoring</span>
     </div>
   </header>
 
-  <ul class="file-list">
-    <!-- Capital Allocators -->
-    <li>
-      <div>
-        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/stephen-schwarzman/dossier.md">Stephen Schwarzman — Infrastructure Hegemon</a></div>
-        <div class="file-note">Capital Allocator</div>
-      </div>
-      <div class="file-path">stephen-schwarzman/dossier.md</div>
-    </li>
-    <li>
-      <div>
-        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/jonathan-gray/dossier.md">Jonathan Gray — Hard-Asset Infrastructure Lead</a></div>
-        <div class="file-note">Capital Allocator</div>
-      </div>
-      <div class="file-path">jonathan-gray/dossier.md</div>
-    </li>
+  <div class="isiw-grid">
+    <div class="isiw-card">
+      <div class="isiw-id">ISIW-2026-001</div>
+      <div class="isiw-subject">Anthropic — Dario Amodei</div>
+      <div class="isiw-type">Type C · Behavioral/Technical Disclosure</div>
+      <div class="isiw-finding">Voluntary disclosure of Claude Opus 4 behavioral event: 96% coercive self-preservation rate under simulated existential threat. Disclosed structural non-resolution of post-training safety architecture.</div>
+      <span class="badge badge-candidate">Candidate · Medium Confidence</span>
+    </div>
+    <div class="isiw-card">
+      <div class="isiw-id">ISIW-2026-002</div>
+      <div class="isiw-subject">OpenAI — Sam Altman</div>
+      <div class="isiw-type">Type A · External System Indictment</div>
+      <div class="isiw-finding">Industrial Policy for the Intelligence Age (Apr 2026): admits AI-driven displacement moves faster than any legislative or fiscal policy loop. Demands automated economic tripwires because human governance cannot process data at system clock speed.</div>
+      <span class="badge badge-positive">Positive · High Confidence</span>
+    </div>
+    <div class="isiw-card">
+      <div class="isiw-id">ISIW-2026-003</div>
+      <div class="isiw-subject">BlackRock — Larry Fink</div>
+      <div class="isiw-type">Type A · External System Indictment</div>
+      <div class="isiw-finding">Milken Institute keynote (May 2026): governments are structurally too broke to fund the $10T infrastructure transition. Indicts the nation-state as a viable manager of foundational civilizational infrastructure.</div>
+      <span class="badge badge-positive">Positive · High Confidence</span>
+    </div>
+    <div class="isiw-card">
+      <div class="isiw-id">ISIW-2026-004</div>
+      <div class="isiw-subject">JPMorgan Chase — Jamie Dimon</div>
+      <div class="isiw-type">Type B · Internal Structural Trap</div>
+      <div class="isiw-finding">Shareholder letter (Apr 2026): must adopt the exact frontier infrastructure causing macro destabilization to remain competitive. Compensatory fragility loop — the remedy anchors the dollar architecture to an external layer it cannot control or price.</div>
+      <span class="badge badge-positive">Positive · Confirmed May 18</span>
+    </div>
+  </div>
 
-    <!-- Frontier Builders -->
-    <li>
-      <div>
-        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/dario-amodei/dossier.md">Dario Amodei — Preemptive Foundationalist</a></div>
-        <div class="file-note">Frontier Builder</div>
-      </div>
-      <div class="file-path">dario-amodei/dossier.md</div>
-    </li>
-
-    <!-- Infrastructure Operators -->
-    <li>
-      <div>
-        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/mark-zuckerberg/dossier.md">Mark Zuckerberg — Open-Weights Hegemon</a></div>
-        <div class="file-note">Infrastructure Operator</div>
-      </div>
-      <div class="file-path">mark-zuckerberg/dossier.md</div>
-    </li>
-    <li>
-      <div>
-        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/satya-nadella/dossier.md">Satya Nadella — Microsoft</a></div>
-        <div class="file-note">Infrastructure Operator</div>
-      </div>
-      <div class="file-path">satya-nadella/dossier.md</div>
-    </li>
-    <li>
-      <div>
-        <div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/sundar-pichai/dossier.md">Sundar Pichai — Foundation Architect</a></div>
-        <div class="file-note">Infrastructure Operator</div>
-      </div>
-      <div class="file-path">sundar-pichai/dossier.md</div>
-    </li>
-  </ul>
+  <div style="margin-top: 20px;">
+    <a class="md-link" href="#" data-md="streams/stream-one-data-ledger/falsifiable-signals-watch.md" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;">Full ISIW Ledger + Falsifiable Signals Watch ↗</a>
+    &nbsp;&nbsp;
+    <a class="md-link" href="#" data-md="streams/stream-three-civilizational-foundation/isiw-signal-typology-note.md" style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;">Signal Typology Note ↗</a>
+  </div>
 </section>
 
-<!-- ── markdown viewer ── -->
+<!-- ── III. Dossiers ── -->
+<section class="section" id="dossiers">
+  <header class="section-head">
+    <div class="numeral">III</div>
+    <div>
+      <h2 class="section-title">Stream Two — Principal Dossiers</h2>
+      <span class="section-kicker">27 principals across four sub-groups · Cycle III in progress</span>
+    </div>
+  </header>
+
+  <!-- Capital Allocators -->
+  <div class="dossier-group">
+    <div class="dossier-group-label">Capital Allocators</div>
+    <ul class="file-list no-top-border">
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/larry-fink/dossier.md">Larry Fink<span class="file-status status-complete">Complete</span></a></div><div class="file-note">BlackRock — compute-as-asset-class thesis; ISIW-003</div></div>
+        <div class="file-path">larry-fink/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/marc-rowan/dossier.md">Marc Rowan<span class="file-status status-complete">Complete</span></a></div><div class="file-note">Apollo — private credit architecture</div></div>
+        <div class="file-path">marc-rowan/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/stephen-schwarzman/dossier.md">Stephen Schwarzman<span class="file-status status-complete">Complete</span></a></div><div class="file-note">Blackstone — infrastructure hegemon; BCRED liquidity strain; ISIW candidate</div></div>
+        <div class="file-path">stephen-schwarzman/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/jonathan-gray/dossier.md">Jonathan Gray<span class="file-status status-complete">Complete</span></a></div><div class="file-note">Blackstone President — hard-asset / AI infrastructure crossover</div></div>
+        <div class="file-path">jonathan-gray/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/ray-dalio/dossier.md">Ray Dalio<span class="file-status status-complete">Complete</span></a></div><div class="file-note">Bridgewater — debt cycle and imperial transition framework</div></div>
+        <div class="file-path">ray-dalio/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/ken-griffin/dossier.md">Ken Griffin<span class="file-status status-complete">Complete</span></a></div><div class="file-note">Citadel — market structure and political positioning</div></div>
+        <div class="file-path">ken-griffin/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/jamie-dimon/dossier.md">Jamie Dimon<span class="file-status status-complete">Complete</span></a></div><div class="file-note">JPMorgan Chase — compensatory fragility loop; ISIW-004</div></div>
+        <div class="file-path">jamie-dimon/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/yasir-al-rumayyan/dossier.md">Yasir Al-Rumayyan<span class="file-status status-complete">Complete</span></a></div><div class="file-note">PIF — Saudi sovereign capital deployment in AI infrastructure</div></div>
+        <div class="file-path">yasir-al-rumayyan/dossier.md</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Frontier Builders -->
+  <div class="dossier-group">
+    <div class="dossier-group-label">Frontier Builders</div>
+    <ul class="file-list no-top-border">
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/altman/sam-altman-technocratic-new-deal.md">Sam Altman<span class="file-status status-complete">Complete</span></a></div><div class="file-note">OpenAI — technocratic new deal thesis; ISIW-002</div></div>
+        <div class="file-path">altman/sam-altman-technocratic-new-deal.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/dario-amodei/dossier.md">Dario Amodei<span class="file-status status-complete">Complete</span></a></div><div class="file-note">Anthropic — preemptive foundationalist; ISIW-001 anchor; behavioral signal May 13</div></div>
+        <div class="file-path">dario-amodei/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/demis-hassabis/dossier.md">Demis Hassabis<span class="file-status status-complete">Complete</span></a></div><div class="file-note">Google DeepMind — scientific AI legitimacy frame</div></div>
+        <div class="file-path">demis-hassabis/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/mira-murati/dossier.md">Mira Murati<span class="file-status status-complete">Complete</span></a></div><div class="file-note">Thinking Machines — post-OpenAI positioning</div></div>
+        <div class="file-path">mira-murati/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/mustafa-suleyman/dossier.md">Mustafa Suleyman<span class="file-status status-complete">Complete</span></a></div><div class="file-note">Microsoft AI — containment thesis</div></div>
+        <div class="file-path">mustafa-suleyman/dossier.md</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Infrastructure Operators -->
+  <div class="dossier-group">
+    <div class="dossier-group-label">Infrastructure Operators</div>
+    <ul class="file-list no-top-border">
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/jensen-huang/dossier.md">Jensen Huang<span class="file-status status-review">Cycle III</span></a></div><div class="file-note">NVIDIA — open question: supplier to the capital web, or node within it?</div></div>
+        <div class="file-path">jensen-huang/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/larry-ellison/dossier.md">Larry Ellison<span class="file-status status-complete">Complete</span></a></div><div class="file-note">Oracle — AI debt concentration; case validation anchor</div></div>
+        <div class="file-path">larry-ellison/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/satya-nadella/dossier.md">Satya Nadella<span class="file-status status-complete">Complete</span></a></div><div class="file-note">Microsoft — OpenAI dependency and compute positioning</div></div>
+        <div class="file-path">satya-nadella/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/sundar-pichai/dossier.md">Sundar Pichai<span class="file-status status-complete">Complete</span></a></div><div class="file-note">Google/Alphabet — foundation architect; antitrust exposure</div></div>
+        <div class="file-path">sundar-pichai/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/andy-jassy/dossier.md">Andy Jassy<span class="file-status status-complete">Complete</span></a></div><div class="file-note">Amazon — AWS infrastructure positioning</div></div>
+        <div class="file-path">andy-jassy/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/mark-zuckerberg/dossier.md">Mark Zuckerberg<span class="file-status status-pending">Pending</span></a></div><div class="file-note">Meta — open-weights hegemon; compute sovereignty moves; dossier outstanding</div></div>
+        <div class="file-path">mark-zuckerberg/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/elon-musk/dossier.md">Elon Musk<span class="file-status status-complete">Complete</span></a></div><div class="file-note">xAI / Colossus — compute build; regulatory friction</div></div>
+        <div class="file-path">elon-musk/dossier.md</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Ideological Network -->
+  <div class="dossier-group">
+    <div class="dossier-group-label">Ideological Network</div>
+    <ul class="file-list no-top-border">
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/peter-thiel/dossier.md">Peter Thiel<span class="file-status status-complete">Complete</span></a></div><div class="file-note">Palantir / Founders Fund — network hub; stagnation thesis</div></div>
+        <div class="file-path">peter-thiel/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/marc-andreessen/dossier.md">Marc Andreessen<span class="file-status status-complete">Complete</span></a></div><div class="file-note">a16z — techno-optimism manifesto; regulatory capture</div></div>
+        <div class="file-path">marc-andreessen/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/curtis-yarvin/dossier.md">Curtis Yarvin<span class="file-status status-complete">Complete</span></a></div><div class="file-note">Gray Mirror — neoreactionary theory; Thiel network</div></div>
+        <div class="file-path">curtis-yarvin/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/balaji-srinivasan/dossier.md">Balaji Srinivasan<span class="file-status status-complete">Complete</span></a></div><div class="file-note">Network state thesis; Colossus compute brief</div></div>
+        <div class="file-path">balaji-srinivasan/dossier.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/david-sacks/dossier.md">David Sacks<span class="file-status status-complete">Complete</span></a></div><div class="file-note">White House AI/Crypto Czar — policy coupling signal</div></div>
+        <div class="file-path">david-sacks/dossier.md</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Supplementary -->
+  <div class="dossier-group">
+    <div class="dossier-group-label">Supplementary Dossiers</div>
+    <ul class="file-list no-top-border">
+      <li>
+        <div><div class="file-title"><a href="https://github.com/jefrix/collapse-signature-research/blob/main/streams/stream-two-principal-dossiers/nadella.md" target="_blank" rel="noopener">Satya Nadella (extended) ↗</a></div><div class="file-note">Long-form ingestion</div></div>
+        <div class="file-path">nadella.md</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-two-principal-dossiers/long-form-ingestion-2026-05-10-rowan.md">Marc Rowan (long-form ingestion)</a></div><div class="file-note">May 10 deep read</div></div>
+        <div class="file-path">long-form-ingestion-2026-05-10-rowan.md</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── IV. Cases ── -->
+<section class="section" id="cases">
+  <header class="section-head">
+    <div class="numeral">IV</div>
+    <div>
+      <h2 class="section-title">Historical Case Library</h2>
+      <span class="section-kicker">Nine cases · Two control cases · One uncodable</span>
+    </div>
+  </header>
+
+  <div class="cases-grid">
+    <div class="case-card" onclick="loadMd('cases/late-rome/late-rome-case-brief-2026-05-08.md')">
+      <div class="case-type">Collapse Case</div>
+      <div class="case-name">Late Rome</div>
+      <div class="case-dates">c. 370–476 AD</div>
+      <span class="case-tag agr">Agrarian-Bureaucratic</span>
+      <div style="margin-top:8px;font-size:.87rem;color:var(--ink-muted);font-style:italic;">Salvian self-indictment (medium confidence). Control case: Eastern Rome resilience.</div>
+    </div>
+    <div class="case-card" onclick="loadMd('cases/late-tang/late-tang-case-brief.md')">
+      <div class="case-type">Collapse Case</div>
+      <div class="case-name">Late Tang</div>
+      <div class="case-dates">755–907 AD</div>
+      <span class="case-tag agr">Agrarian-Bureaucratic</span>
+      <div style="margin-top:8px;font-size:.87rem;color:var(--ink-muted);font-style:italic;">Han Yu self-indictment. Literary corpus analysis complete.</div>
+    </div>
+    <div class="case-card" onclick="loadMd('cases/ming-consolidation/ming-consolidation-case-brief.md')">
+      <div class="case-type">Recovery Control</div>
+      <div class="case-name">Ming Consolidation</div>
+      <div class="case-dates">1368–1398</div>
+      <span class="case-tag control">Control / Recovery</span>
+      <div style="margin-top:8px;font-size:.87rem;color:var(--ink-muted);font-style:italic;">Self-indictment absent. Confirms collapse-specificity of hypothesis.</div>
+    </div>
+    <div class="case-card" onclick="loadMd('cases/late-bronze-age/system-brief-lba.md')">
+      <div class="case-type">Collapse Case</div>
+      <div class="case-name">Late Bronze Age</div>
+      <div class="case-dates">c. 1200–1150 BC</div>
+      <span class="case-tag lba">Palace-Administrative</span>
+      <div style="margin-top:8px;font-size:.87rem;color:var(--ink-muted);font-style:italic;">Mycenae, Hattusa, Egypt resilience brief. Cline 1177 BC anchor.</div>
+    </div>
+    <div class="case-card" onclick="loadMd('cases/late-qing/late-qing-case-brief-2026-05-10.md')">
+      <div class="case-type">Collapse Case</div>
+      <div class="case-name">Late Qing</div>
+      <div class="case-dates">1895–1911</div>
+      <span class="case-tag agr">Agrarian-Bureaucratic</span>
+      <div style="margin-top:8px;font-size:.87rem;color:var(--ink-muted);font-style:italic;">Asymmetric self-indictment: vibrant in non-state sphere, absent at court. 16-year terminal speed.</div>
+    </div>
+    <div class="case-card" onclick="loadMd('cases/late-ottoman/late-ottoman-comparative-brief-2026-05-13.md')">
+      <div class="case-type">Collapse Case</div>
+      <div class="case-name">Late Ottoman</div>
+      <div class="case-dates">1878–1918</div>
+      <span class="case-tag agr">Agrarian-Bureaucratic</span>
+      <div style="margin-top:8px;font-size:.87rem;color:var(--ink-muted);font-style:italic;">OPDA-as-geographic-resilience problem. Admin activity ≠ admin sovereignty. NRC: High (Hamidian) → Medium (Young Turk).</div>
+    </div>
+    <div class="case-card" onclick="loadMd('cases/eastern-rome/eastern-rome-control-brief-2026-05-08.md')">
+      <div class="case-type">Resilience Control</div>
+      <div class="case-name">Eastern Rome</div>
+      <div class="case-dates">476–1453 AD</div>
+      <span class="case-tag control">Control / Resilience</span>
+      <div style="margin-top:8px;font-size:.87rem;color:var(--ink-muted);font-style:italic;">Western collapse while Eastern branch persists. Geographic defensibility anchor.</div>
+    </div>
+    <div class="case-card" onclick="loadMd('streams/stream-three-civilizational-foundation/habsburg-collapse-brief.md')">
+      <div class="case-type">Collapse Case · MNBE</div>
+      <div class="case-name">Habsburg</div>
+      <div class="case-dates">1914–1918</div>
+      <span class="case-tag mnbe">MNBE Subtype</span>
+      <div style="margin-top:8px;font-size:.87rem;color:var(--ink-muted);font-style:italic;">Strongest self-indictment in dataset (Kraus, Kafka, Musil). Stability theater concept. NRC 0.5. Terminal speed: 4.3 years.</div>
+    </div>
+    <div class="case-card" onclick="loadMd('cases/soviet/soviet-case-brief-draft.md')">
+      <div class="case-type">Collapse Case · MNBE</div>
+      <div class="case-name">Soviet Union</div>
+      <div class="case-dates">1985–1991</div>
+      <span class="case-tag mnbe">MNBE Subtype</span>
+      <div style="margin-top:8px;font-size:.87rem;color:var(--ink-muted);font-style:italic;">State-sanctioned self-indictment as accelerator. NRC 0.5→0.0. Terminal speed: 6.8 years. <em>Pending Claude review.</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── V. Methodology ── -->
+<section class="section" id="methodology">
+  <header class="section-head">
+    <div class="numeral">V</div>
+    <div>
+      <h2 class="section-title">Methodology</h2>
+      <span class="section-kicker">v3.1 canonical · v3.2 in development · Claude reviews before canonical commit</span>
+    </div>
+  </header>
+
+  <div class="method-grid">
+    <div class="method-card">
+      <div class="method-version canon">v3.0 · Canonical</div>
+      <div class="method-name">Base Framework</div>
+      <div class="method-desc">Core typology, Failed-Rising Hypothesis (FRH), rising-vs-declining narrative thread, confidence taxonomy.</div>
+      <a class="md-link" href="#" data-md="methodology/method-memo-v2-2026-05-08.md" style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;">Method Memo v2 ↗</a>
+    </div>
+    <div class="method-card">
+      <div class="method-version canon">v3.1 · Canonical</div>
+      <div class="method-name">Geographic Defensibility + Palace-Administrative</div>
+      <div class="method-desc">Geographic defensibility modifier (binary tag: high/medium/low). Palace-administrative module for Bronze Age command economies only.</div>
+      <a class="md-link" href="#" data-md="methodology/methodology-v3-1-geographic-resilience-2026-05-10.md" style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;">Geographic Resilience ↗</a>
+    </div>
+    <div class="method-card">
+      <div class="method-version dev">v3.2 · In Development</div>
+      <div class="method-name">Narrative Retraction Capacity (NRC)</div>
+      <div class="method-desc">Composite variable: regime control of public sphere + alternative legitimacy reservoir (mobilisable) + external stabilisation. Six-case table complete. Pending Claude review.</div>
+      <a class="md-link" href="#" data-md="methodology/narrative-retraction-capacity-draft.md" style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;">NRC Draft ↗</a>
+    </div>
+    <div class="method-card">
+      <div class="method-version dev">v3.2 · In Development</div>
+      <div class="method-name">Multi-National Bureaucratic Empire (MNBE)</div>
+      <div class="method-desc">New system-type subtype for Habsburg and Soviet. Supranational legitimacy claim + institutionalised nationality recognition. Predicts faster terminal speed than agrarian-bureaucratic cases. Pending Claude review.</div>
+      <a class="md-link" href="#" data-md="methodology/multi-national-empire-subtype-memo.md" style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;">MNBE Memo ↗</a>
+    </div>
+    <div class="method-card">
+      <div class="method-version dev">v3.2 · In Development</div>
+      <div class="method-name">Self-Indictment Threshold Criteria</div>
+      <div class="method-desc">Three-threshold definition: internal authorship + structural diagnosis + endogenous non-resolution. Five-step decision tree. Positive examples: Salvian, Kraus/Kafka, Anthropic (candidate). Negative: routine reform criticism, stability theater.</div>
+      <a class="md-link" href="#" data-md="methodology/self-indictment-threshold-criteria.md" style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;">Threshold Criteria ↗</a>
+    </div>
+    <div class="method-card">
+      <div class="method-version dev">v3.2 · Candidate</div>
+      <div class="method-name">Institutional Resilience Module</div>
+      <div class="method-desc">Post-Bronze-Age variable set surfaced by Ottoman/Habsburg cross-codings. Candidates: center coherence, fiscal sovereignty, elite integration, command continuity, narrative-center alignment, administrative sovereignty. Gap flagged for May 22 synthesis.</div>
+      <a class="md-link" href="#" data-md="methodology/failed-rising-hypothesis-calibration-2026-05-13.md" style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;">FRH Calibration ↗</a>
+    </div>
+  </div>
+
+  <div style="margin-top:28px;">
+    <ul class="file-list">
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="methodology/cross-coding/late-ottoman-cross-coding.md">Late Ottoman Cross-Coding</a></div><div class="file-note">Reconciled to v3.1 schema May 18. geographic_defensibility: low. Admin activity ≠ sovereignty distinction.</div></div>
+        <div class="file-path">cross-coding/late-ottoman</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="methodology/cross-coding/habsburg-cross-coding.md">Habsburg Cross-Coding</a></div><div class="file-note">Standalone file. geographic_defensibility: medium. Stability theater concept introduced.</div></div>
+        <div class="file-path">cross-coding/habsburg</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="methodology/cross-coding/late-rome-late-tang-comparative-table.md">Late Rome / Late Tang Comparative Table</a></div><div class="file-note">Cross-coding comparison of two core agrarian-bureaucratic cases.</div></div>
+        <div class="file-path">cross-coding/late-rome-late-tang</div>
+      </li>
+      <li>
+        <div><div class="file-title"><a class="md-link" href="#" data-md="streams/stream-three-civilizational-foundation/elite-self-indictment-audit.md">Elite Self-Indictment Audit</a></div><div class="file-note">8-case table: 5 collapse positive, 2 recovery negative (Ming, Meiji), 1 uncodable (Inca). Hypothesis: collapse-specific.</div></div>
+        <div class="file-path">stream-three-civilizational-foundation/</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── VI. Synthesis ── -->
+<section class="section" id="synthesis">
+  <header class="section-head">
+    <div class="numeral">VI</div>
+    <div>
+      <h2 class="section-title">Synthesis Timeline</h2>
+      <span class="section-kicker">Weekly cadence · Claude leads · Next: May 22</span>
+    </div>
+  </header>
+
+  <div class="synth-timeline">
+    <div class="synth-entry complete">
+      <div class="synth-date">May 15, 2026</div>
+      <div class="synth-title"><a class="md-link" href="#" data-md="synthesis/may-15-synthesis-2026-05-15.md">Cross-Stream Synthesis — Cycle II Close</a></div>
+      <div class="synth-desc">Integrated findings: ISIW signals 001-003, Apollo/Athene validation, Colossus compute brief, Fink signal, cross-case NRC table, MNBE subtype proposal, Habsburg stability theater. Cycle III priorities set.</div>
+    </div>
+    <div class="synth-entry complete">
+      <div class="synth-date">May 10, 2026</div>
+      <div class="synth-title"><a class="md-link" href="#" data-md="synthesis/may-15-synthesis-draft-2026-05-10.md">Synthesis Draft (May 10)</a></div>
+      <div class="synth-desc">Working draft with gaps flagged. Ledger signals from git history. Assembly outline.</div>
+    </div>
+    <div class="synth-entry next">
+      <div class="synth-date">May 22, 2026 · Next Target</div>
+      <div class="synth-title">Cross-Stream Synthesis — Cycle III Opening</div>
+      <div class="synth-desc">
+        Agenda: (1) MNBE adoption decision + terminal speed falsifiable prediction; (2) NRC mobilisability qualifier + dynamic scoring; (3) Soviet/Habsburg cross-case comparison; (4) Self-indictment timing ledger first estimates; (5) ISIW signal typology — which type carries strongest collapse predictive signal; (6) Dimon ISIW-004 status; (7) Zuckerberg and Gray dossiers; (8) v3.2 institutional resilience module candidate variables; (9) Late Tang / Habsburg stability theater comparison.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VII. Agents ── -->
+<section class="section" id="agents">
+  <header class="section-head">
+    <div class="numeral">VII</div>
+    <div>
+      <h2 class="section-title">Agent Roster</h2>
+      <span class="section-kicker">Cycle III roles · Effective May 19, 2026</span>
+    </div>
+  </header>
+
+  <div class="agent-grid">
+    <div class="agent-card agent-grok-heavy">
+      <div class="agent-name">Grok Heavy</div>
+      <div class="agent-role">Repo Ops · X Monitoring</div>
+      <ul class="agent-tasks">
+        <li><span class="task-dot active"></span>Autonomous file placement — all pushes</li>
+        <li><span class="task-dot active"></span>Pull before every operation</li>
+        <li><span class="task-dot pending"></span>Confirm May 18 push package landed</li>
+        <li><span class="task-dot pending"></span>Push README + _TOOL_INSTRUCTIONS update</li>
+      </ul>
+    </div>
+    <div class="agent-card agent-grok">
+      <div class="agent-name">Grok</div>
+      <div class="agent-role">Daily Ledger · X Intelligence</div>
+      <ul class="agent-tasks">
+        <li><span class="task-dot active"></span>Daily signals ledger (every day)</li>
+        <li><span class="task-dot active"></span>X/Twitter principal monitoring</li>
+        <li><span class="task-dot pending"></span>Self-indictment timing ledger expansion</li>
+        <li><span class="task-dot pending"></span>Ottoman and Tang placeholder rows</li>
+      </ul>
+    </div>
+    <div class="agent-card agent-deepseek">
+      <div class="agent-name">DeepSeek</div>
+      <div class="agent-role">Cases · Methodology</div>
+      <ul class="agent-tasks">
+        <li><span class="task-dot done"></span>NRC draft — complete</li>
+        <li><span class="task-dot done"></span>MNBE memo — complete</li>
+        <li><span class="task-dot done"></span>Soviet brief draft — complete</li>
+        <li><span class="task-dot done"></span>Self-indictment audit + controls</li>
+        <li><span class="task-dot pending"></span>Soviet/Habsburg cross-case comparison</li>
+        <li><span class="task-dot pending"></span>v3.2 institutional module draft</li>
+      </ul>
+    </div>
+    <div class="agent-card agent-chatgpt">
+      <div class="agent-name">ChatGPT</div>
+      <div class="agent-role">Methodology · Cross-Coding · Synthesis</div>
+      <ul class="agent-tasks">
+        <li><span class="task-dot done"></span>Self-indictment threshold criteria</li>
+        <li><span class="task-dot done"></span>Ottoman cross-coding reconciled</li>
+        <li><span class="task-dot done"></span>Habsburg cross-coding standalone</li>
+        <li><span class="task-dot pending"></span>May 22 synthesis outline draft</li>
+      </ul>
+    </div>
+    <div class="agent-card agent-gemini">
+      <div class="agent-name">Gemini</div>
+      <div class="agent-role">Signal Watch · ISIW · Dossiers</div>
+      <ul class="agent-tasks">
+        <li><span class="task-dot done"></span>ISIW entries 001-003 filed</li>
+        <li><span class="task-dot done"></span>Dimon ISIW-004 confirmed positive</li>
+        <li><span class="task-dot active"></span>ISIW signal typology note — in progress</li>
+        <li><span class="task-dot pending"></span>Ongoing corroborating signal monitoring</li>
+      </ul>
+    </div>
+    <div class="agent-card agent-claude">
+      <div class="agent-name">Claude</div>
+      <div class="agent-role">Methodology Review · Synthesis Lead · Editorial</div>
+      <ul class="agent-tasks">
+        <li><span class="task-dot pending"></span>Review NRC draft (mobilisability qualifier)</li>
+        <li><span class="task-dot pending"></span>Review MNBE memo (falsifiable prediction)</li>
+        <li><span class="task-dot pending"></span>Review Soviet brief (NRC + MNBE coding)</li>
+        <li><span class="task-dot pending"></span>Lead May 22 synthesis session</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</div><!-- /container -->
+
+<!-- ── viewer ── -->
 <div class="viewer-backdrop" id="viewer-backdrop"></div>
-<aside class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-path">
+<aside class="viewer" id="viewer" role="dialog" aria-modal="true">
   <header class="viewer-header">
     <div class="viewer-path" id="viewer-path">—</div>
     <div class="viewer-actions">
-      <button class="viewer-btn" id="viewer-github" title="Open on GitHub">GitHub ↗</button>
-      <button class="viewer-btn" id="viewer-close" title="Close (Esc)">Close ✕</button>
+      <button class="viewer-btn" id="viewer-github">GitHub ↗</button>
+      <button class="viewer-btn" id="viewer-close">Close ✕</button>
     </div>
   </header>
-  <div class="viewer-body" id="viewer-body">
-    <div class="viewer-loading">Loading…</div>
-  </div>
+  <div class="viewer-body" id="viewer-body"><div style="color:var(--ink-muted);padding:20px;font-family:'JetBrains Mono',monospace;font-size:12px;">Loading…</div></div>
 </aside>
 
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
-
 <script>
 (() => {
   const REPO = "jefrix/collapse-signature-research";
@@ -660,64 +1075,41 @@ a.md-link:hover::after { color: var(--accent); }
   const pathEl = document.getElementById("viewer-path");
   const ghBtn = document.getElementById("viewer-github");
   const closeBtn = document.getElementById("viewer-close");
-
   let currentPath = null;
 
   marked.setOptions({ gfm: true, breaks: false });
 
-  function openViewer() {
-    if (backdrop) backdrop.classList.add("open");
-    if (viewer) viewer.classList.add("open");
-    document.body.style.overflow = "hidden";
-  }
-  function closeViewer() {
-    if (backdrop) backdrop.classList.remove("open");
-    if (viewer) viewer.classList.remove("open");
-    document.body.style.overflow = "";
-    currentPath = null;
-  }
+  function openViewer() { backdrop.classList.add("open"); viewer.classList.add("open"); document.body.style.overflow = "hidden"; }
+  function closeViewer() { backdrop.classList.remove("open"); viewer.classList.remove("open"); document.body.style.overflow = ""; currentPath = null; }
 
-  async function loadMd(path) {
-    if (!path || !body || !pathEl) return;
+  window.loadMd = async function(path) {
+    if (!path) return;
     currentPath = path;
     pathEl.textContent = path;
-    body.innerHTML = `<div class="viewer-loading">Loading ${path}…</div>`;
+    body.innerHTML = `<div style="color:var(--ink-muted);padding:20px;font-family:'JetBrains Mono',monospace;font-size:12px;">Loading ${path}…</div>`;
     body.scrollTop = 0;
     openViewer();
-
     try {
       const res = await fetch(RAW + path, { cache: "no-cache" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const md = await res.text();
-      const rawHtml = marked.parse(md);
-      const safe = DOMPurify.sanitize(rawHtml);
-
+      const safe = DOMPurify.sanitize(marked.parse(md));
       const wrap = document.createElement("div");
       wrap.className = "prose";
       wrap.innerHTML = safe;
-
       wrap.querySelectorAll("a[href]").forEach(a => {
         const href = a.getAttribute("href");
-        if (href && href.endsWith(".md")) {
-          a.classList.add("md-link");
-          a.dataset.md = href;
+        if (href && href.endsWith(".md") && !href.startsWith("http")) {
+          a.classList.add("md-link"); a.dataset.md = href;
           a.href = "#" + href;
-          a.addEventListener("click", e => {
-            e.preventDefault();
-            loadMd(href);
-          });
-        } else if (href && href.startsWith("http")) {
-          a.target = "_blank";
-          a.rel = "noopener";
-        }
+          a.addEventListener("click", e => { e.preventDefault(); loadMd(href); });
+        } else if (href && href.startsWith("http")) { a.target = "_blank"; a.rel = "noopener"; }
       });
-
-      body.innerHTML = "";
-      body.appendChild(wrap);
-    } catch (err) {
-      if (body) body.innerHTML = `<div class="viewer-error">Could not load ${path}<br><small>${err.message}</small></div>`;
+      body.innerHTML = ""; body.appendChild(wrap);
+    } catch(err) {
+      body.innerHTML = `<div style="color:var(--ink-muted);padding:20px;font-family:'JetBrains Mono',monospace;font-size:12px;">Could not load ${path}<br>${err.message}</div>`;
     }
-  }
+  };
 
   document.addEventListener("click", e => {
     const a = e.target.closest("a.md-link");
@@ -728,15 +1120,13 @@ a.md-link:hover::after { color: var(--accent); }
     loadMd(path);
   });
 
-  if (closeBtn) closeBtn.addEventListener("click", closeViewer);
-  if (backdrop) backdrop.addEventListener("click", closeViewer);
-  if (ghBtn) ghBtn.addEventListener("click", () => { if (currentPath) window.open(BLOB + currentPath, "_blank", "noopener"); });
-  document.addEventListener("keydown", e => { if (e.key === "Escape" && viewer && viewer.classList.contains("open")) closeViewer(); });
+  closeBtn.addEventListener("click", closeViewer);
+  backdrop.addEventListener("click", closeViewer);
+  ghBtn.addEventListener("click", () => { if (currentPath) window.open(BLOB + currentPath, "_blank", "noopener"); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && viewer.classList.contains("open")) closeViewer(); });
 
-  window.addEventListener("DOMContentLoaded", () => {
-    const hash = decodeURIComponent(location.hash.replace(/^#/, ""));
-    if (hash && hash.endsWith(".md")) loadMd(hash);
-  });
+  const hash = decodeURIComponent(location.hash.replace(/^#/, ""));
+  if (hash && hash.endsWith(".md")) loadMd(hash);
 })();
 </script>
 </body>
