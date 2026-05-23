@@ -15,7 +15,7 @@ Mark Zuckerberg / Meta should be coded as a **dual-role principal**: both a Fron
 
 The key interpretation is the **Llama paradox**: Meta is spending at hyperscaler scale while releasing much of the model layer under open-weights terms. The best explanation is that Llama is not primarily a direct software monetization product. It is a moat-building and standards-setting instrument. Meta appears to be commoditizing part of the model layer to push value capture into layers where it is strongest: infrastructure scale, ad-product integration, user-distribution surfaces, inference data, developer ecosystem gravity, and custom hardware deployment.
 
-In the Beiyang Fleet stack, Meta is not cleanly top, middle, or bottom. It is a **vertically integrated stack actor**. It owns or controls enough of the top/chokepoint layer (Llama, Muse/Mata Superintelligence Labs, Meta AI), middle/infrastructure layer (data centers, MTIA/custom silicon, Nvidia/AMD procurement, Broadcom partnership), and demand/distribution layer (Facebook, Instagram, WhatsApp, Messenger, Threads, Ray-Ban Meta, Quest) that it should be coded as a structural outlier rather than forced into an existing subtype.
+In the Beiyang Fleet stack, Meta is not cleanly top, middle, or bottom. It is a **vertically integrated stack actor**. It owns or controls enough of the top/chokepoint layer (Llama, Muse / Meta Superintelligence Labs, Meta AI), middle/infrastructure layer (data centers, MTIA/custom silicon, Nvidia/AMD procurement, Broadcom partnership), and demand/distribution layer (Facebook, Instagram, WhatsApp, Messenger, Threads, Ray-Ban Meta, Quest) that it should be coded as a structural outlier rather than forced into an existing subtype.
 
 ---
 
@@ -131,7 +131,7 @@ Meta does not sit cleanly in one layer. It is best mapped as a **vertically inte
 
 | Stack Layer | Meta Position | Interpretation |
 |---|---|---|
-| Top / Chokepoint | Llama, Meta AI, Muse / Superintelligence Labs | Meta creates its own frontier or near-frontier model node rather than depending on Anthropic/OpenAI. |
+| Top / Chokepoint | Llama, Meta AI, Muse / Meta Superintelligence Labs | Meta creates its own frontier or near-frontier model node rather than depending on Anthropic/OpenAI. |
 | Middle / Infrastructure | Data centers, MTIA, Nvidia/AMD procurement, Broadcom partnership, AI clusters | Meta self-funds infrastructure rather than relying on Oracle-style vehicle-mediated buildout. |
 | Bottom / Regime | Open-weights ecosystem, developer standard-setting, consumer AI distribution | Meta attempts to shape the regime by making open weights a default standard and moving value capture elsewhere. |
 
@@ -206,6 +206,8 @@ Meta has strong control over its own messaging and distribution surfaces, but it
 **Low-current / monitor**
 
 No confirmed self-indictment signal. The closest candidate is the May 2026 internal/external acknowledgment that AI changes the optimal size of the company and that compute/infrastructure commitments are reshaping labor allocation. This is not yet self-indictment because it is framed as adaptation, not as an unresolvable structural failure.
+
+**Monitor threshold:** if Zuckerberg or a named Meta executive publicly frames the AI buildout as producing returns below internal expectations in a way that cannot be resolved by further investment, that crosses from adaptation framing into self-indictment territory and should be logged in the self-indictment timing ledger (`streams/stream-one-data-ledger/self-indictment-timing-ledger.md`).
 
 ---
 
@@ -307,6 +309,7 @@ Meta is a parallel integrated stack, not a single layer. It should be used as th
 - Reuters, “Major publishers sue Meta for copyright infringement over AI training,” May 5, 2026.
 - The Guardian, “Meta plans to link US and India with world's longest undersea cable project,” February 2025.
 - The Verge / Business Insider / Barron's / AP / Reuters coverage of Llama 4, Meta layoffs, AI infrastructure spending, and regulatory risks.
+- Meta Superintelligence Labs: referenced per public reporting (May 2026); official name, founding scope, and leadership structure to be confirmed before Cycle III synthesis integration.
 
 ---
 
