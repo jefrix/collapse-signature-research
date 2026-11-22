@@ -61,7 +61,7 @@ Most of the dossier's evidence base is real and pre-dates these events. That sup
 
 ## Pichai dossier: required revisions
 
-**P1. Intersect has closed.** The dossier says closing is "pending verification." Google closed the $4.75B acquisition around Mar 10, 2026, and Intersect's grid-tied assets were spun out as IPX Power (DCD, Nossaman, PV Tech; the falsifiable-signals watch has it as "Resolved — completed"). Update §II and §IV, and retire falsifiable signal 4.
+**P1. Intersect has closed. (FIXED by Claude, Nov 22: §II, §IV and signal 4 updated.)** The dossier says closing is "pending verification." Google closed the $4.75B acquisition around Mar 10, 2026, and Intersect's grid-tied assets were spun out as IPX Power (DCD, Nossaman, PV Tech; the falsifiable-signals watch has it as "Resolved — completed"). Update §II and §IV, and retire falsifiable signal 4.
 
 **P2. Capex guidance is stale.** The dossier cites $175–185B (Feb 2026). Alphabet raised this to **$195–205B at Q2** and reaffirmed it at Q3 (secondary sources, B). Verify against the Q3 release and update.
 
