@@ -8,7 +8,7 @@
 - Status updated with date and source.
 - Cross-referenced to daily ledger and weekly synthesis.
 
-**Last Updated:** May 13, 2026
+**Last Updated:** November 22, 2026 (partial refresh: only rows with new evidence were re-checked; all other rows still carry May 2026 check dates)
 
 ---
 
@@ -17,7 +17,7 @@
 | Signal | Status | Last Checked | Notes / Source |
 |--------|--------|--------------|----------------|
 | Public announcement of ticker symbol or IPO date for new data center public company | **Triggered** | May 12, 2026 | **BXDC** (Blackstone Digital Infrastructure Trust) IPO filed ~May 4-5, 2026. Targeting ~$1.75B. Expected NYSE listing. | 
-| BCRED redemption limits triggered for two consecutive quarters | Monitoring | May 12, 2026 | Q1 2026 saw elevated redemptions (~7.9% / $3.7B). Blackstone provided support. Continue watching Q2. |
+| BCRED redemption limits triggered for two consecutive quarters | **Triggered** | Nov 22, 2026 | 5% cap in Q2 2026 ($4.5B requested, ~half filled) and again in Q3 2026 ($4.3B requested, ~10% of shares). Net outflow ~3% of NAV; >$17B liquidity. Blackstone frames it as the system working as designed. See `oct-nov-catchup-ledger-2026-11-22.md`. |
 | Naming of specific JV partner for the $160B development pipeline | Monitoring | May 12, 2026 | No specific new named partner announced in recent coverage. |
 
 ---
@@ -28,7 +28,8 @@
 |--------|--------|--------------|----------------|
 | Citadel launches first dedicated AI Infrastructure fund | Monitoring | May 12, 2026 | No announcement observed. |
 | Public criticism of specific Trade Policy / tariff as "terminal" for market stability | Monitoring | May 12, 2026 | No direct high-signal statements in latest scan. |
-| Gold price exceeds $3,000/oz | Monitoring | May 12, 2026 | Gold remains elevated but has not crossed the $3,000 threshold in recent trading. |
+| Gold price exceeds $3,000/oz | **Triggered (stale threshold, corrected)** | Nov 22, 2026 | Prior status was wrong: gold passed $3,000 in 2025 and peaked at ~$5,608 in Jan 2026. Now ~$3,720 (18 Nov), a 14-month low on Fed-hike bets. Threshold has no signal value; see re-based row below. See `oct-nov-catchup-ledger-2026-11-22.md`. |
+| *(Re-based, proposed)* Gold sets a new all-time high above ~$5,608, or falls below $3,500 | Monitoring | Nov 22, 2026 | Proposed replacement for the stale threshold; needs sign-off. A new ATH = stress/flight-to-safety; a break below $3,500 = inflation and rate-hike regime. |
 
 ---
 
@@ -89,6 +90,7 @@
 | Groundbreaking or power-activation dates for the Abilene 1.2GW cluster | Monitoring | May 12, 2026 | No public groundbreaking/power-on date announced yet. |
 | OCI revenue growth slowdown below 50% YoY | Monitoring | May 12, 2026 | Recent growth remains strong (well above threshold). |
 | Public announcement of "Stargate Phase II" funding partners | Monitoring | May 12, 2026 | No Phase II partner announcements observed. |
+| Oracle retains investment-grade rating (May 15 resolution: CONFIRMED HOLDS) | **Holds — rating–market divergence** | Nov 22, 2026 | S&P BBB- (stable), Moody's Baa2 (negative), Fitch BBB. 5-yr CDS ~295–305 bps (Nov 7–13), trading near the single-B index. A cut to junk by S&P, or by Moody's following its negative outlook, resolves the prediction as FAILED. See `oct-nov-catchup-ledger-2026-11-22.md`. |
 
 ---
 
@@ -134,9 +136,20 @@
 
 ---
 
+## Jensen Huang (NVIDIA) — Infrastructure Supplier / Node
+
+| Signal | Status | Last Checked | Notes / Source |
+|--------|--------|--------------|----------------|
+| Principal status | **Changed — principal departed** | Nov 22, 2026 | Huang resigned as CEO and director after a board code-of-conduct finding (reported with Q3 FY27, 17 Nov). Colette Kress is interim CEO and CFO. Board says he will not return as CEO. |
+| NVIDIA continues credit-wrap / residual-value support on financing deals | Monitoring | Nov 22, 2026 | Supply commitments $279B → $390B. Management now says it will take part "selectively"; future support focused on land, power and shell. A pullback from credit wraps would argue against the node reading. See `oct-nov-catchup-ledger-2026-11-22.md`. |
+
+---
+
 ## Notes & Next Steps
 
-- **Blackstone (BXDC IPO)** is currently the only triggered signal.
+- **Nov 22, 2026 refresh:** triggered signals are now BXDC IPO, BCRED two-quarter cap, and gold (stale threshold, corrected). Oracle IG carries a divergence flag, and a Huang/NVIDIA section was added. Rows not mentioned here were **not re-checked** since May; a full sweep is still outstanding.
+
+- *(May 13)* **Blackstone (BXDC IPO)** was the only triggered signal.
 - All other signals remain in active monitoring status.
 - New orbital compute watch item added for Anthropic node (see Dario Amodei section).
 - New "Honeypot Sabotage Regression" signal added for Claude behavioral risk.
@@ -144,7 +157,7 @@
 - Significant triggers will be escalated immediately to the daily ledger and synthesis.
 
 **Maintained by:** SuperGrok
-**Next Review:** May 14, 2026
+**Next Review:** Full sweep of un-rechecked rows (overdue)
 
 ### Institutional Self-Indictment Watch
 
