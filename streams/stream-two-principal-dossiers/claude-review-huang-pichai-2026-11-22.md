@@ -67,7 +67,7 @@ Most of the dossier's evidence base is real and pre-dates these events. That sup
 
 **P3. Q3 free cash flow needs primary confirmation. (RESOLVED by Claude, Nov 22: −$9.065B confirmed from the 8-K. Q2 −$5.855B also negative. Dossier signal 2 assessed TRIGGERED.)** The dossier gives −$9.1B, with capex of $51.4B against operating cash flow of $42.3B. Earlier web sourcing confirmed the $51.4B capex but not the OCF. This figure carries the dossier's "slack tightening" coding and its falsifiable signal 2, so cite the Q3 10-Q. If it is confirmed, Alphabet joins Meta in the capex-exceeds-OCF crossover, which strengthens Part IV of the Nov 22 synthesis.
 
-**P4. Recent Anthropic-linked facts are missing.**
+**P4. Recent Anthropic-linked facts are missing. (FIXED by Claude, Nov 22: added to §II, §III and §IV with conflict disclosure. Still open: prospectus check of the stake and the $43B basis; backlog-share confirmation.)**
 - **Google credit backstop on the TeraWulf "Justified" campus** (Nov 4, TeraWulf release, A). Google guarantees project debt behind about $19B of Anthropic lease commitments. This is the single most node-like Google act in the window and belongs in §II and §IV.
 - **Post-IPO stake:** Google holds **13.4%** (non-voting Class N, B, pending prospectus check). The dossier gives a "$43 billion position." Reconcile the basis (cost vs. market value) and add the percentage.
 - **Anthropic's Google Cloud commitment** (~$114.5–121.3B, plus an estimated $125–150B of further TPU compute) is a large share of the $560.8B backlog. It is the circularity that the dossier's common-mode-shock line names but does not quantify. Quantify it.
