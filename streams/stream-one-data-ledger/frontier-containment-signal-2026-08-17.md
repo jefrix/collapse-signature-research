@@ -8,7 +8,7 @@
 
 **Target Repository Filing:** `streams/stream-one-data-ledger/frontier-containment-signal-2026-08-17.md`
 
-**Cross-Reference:** `streams/stream-three-civilizational-foundation/methodological-notes/evaluation-vendor-asymmetry.md`
+**Cross-Reference:** `dispatches/evaluation-vendor-asymmetry.md`
 
 ---
 
@@ -95,8 +95,8 @@ We recommend the following tripartite repository placement:
 * *Coding Note:* Explicitly coded as an industry-wide vendor failure; not logged as an isolated principal failure or an active node collapse signal for any individual builder.
 
 
-3. **Stream Three (Civilizational Foundation): Methodological Note**
-* *Target Path:* `streams/stream-three-civilizational-foundation/methodological-notes/evaluation-vendor-asymmetry.md`
+3. **Dispatches / Stream Three (Civilizational Foundation): Methodological Note**
+* *Target Path:* `dispatches/evaluation-vendor-asymmetry.md`
 * *Focus:* Deep analysis of the Qing-asymmetry dynamic in frontier technology governance; documenting how the private evaluation vendor layer functions as a de facto regulatory proxy in the presence of state administrative latency.
 
 
