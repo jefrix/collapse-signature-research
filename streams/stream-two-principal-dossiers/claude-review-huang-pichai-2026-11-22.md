@@ -65,7 +65,7 @@ Most of the dossier's evidence base is real and pre-dates these events. That sup
 
 **P2. Capex guidance is stale. (FIXED by Claude, Nov 22: §II updated to $195–205B, July raise. Still open: confirm the prior range and the Q3 reaffirmation against releases.)** The dossier cites $175–185B (Feb 2026). Alphabet raised this to **$195–205B at Q2** and reaffirmed it at Q3 (secondary sources, B). Verify against the Q3 release and update.
 
-**P3. Q3 free cash flow needs primary confirmation.** The dossier gives −$9.1B, with capex of $51.4B against operating cash flow of $42.3B. Earlier web sourcing confirmed the $51.4B capex but not the OCF. This figure carries the dossier's "slack tightening" coding and its falsifiable signal 2, so cite the Q3 10-Q. If it is confirmed, Alphabet joins Meta in the capex-exceeds-OCF crossover, which strengthens Part IV of the Nov 22 synthesis.
+**P3. Q3 free cash flow needs primary confirmation. (RESOLVED by Claude, Nov 22: −$9.065B confirmed from the 8-K. Q2 −$5.855B also negative. Dossier signal 2 assessed TRIGGERED.)** The dossier gives −$9.1B, with capex of $51.4B against operating cash flow of $42.3B. Earlier web sourcing confirmed the $51.4B capex but not the OCF. This figure carries the dossier's "slack tightening" coding and its falsifiable signal 2, so cite the Q3 10-Q. If it is confirmed, Alphabet joins Meta in the capex-exceeds-OCF crossover, which strengthens Part IV of the Nov 22 synthesis.
 
 **P4. Recent Anthropic-linked facts are missing.**
 - **Google credit backstop on the TeraWulf "Justified" campus** (Nov 4, TeraWulf release, A). Google guarantees project debt behind about $19B of Anthropic lease commitments. This is the single most node-like Google act in the window and belongs in §II and §IV.
