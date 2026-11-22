@@ -67,7 +67,7 @@
 
 | Signal | Status | Last Checked | Notes / Source |
 |--------|--------|--------------|----------------|
-| Completion or regulatory block of the Intersect acquisition | **Resolved — completed** | Nov 22, 2026 | Google closed the $4.75B Intersect acquisition ~Mar 10, 2026; grid-tied assets spun out as IPX Power. |
+| ~~Completion or regulatory block of the Intersect acquisition~~ | **RETIRED (resolved — completed)** | Nov 22, 2026 | Google closed the $4.75B Intersect acquisition ~Mar 10, 2026; grid-tied assets spun out as IPX Power. |
 | Google Cloud operating margins drop below 25% in any quarterly report | **Not triggered** | Nov 22, 2026 | Q3 2026: Cloud revenue $30.71B, operating income $11.12B, so the margin is **~36.2%** (derived, not company-reported), up from ~23.7% in Q3 2025. Cushion ~11 pts above threshold. Alphabet's Q3 10-Q confirms Cloud operating income rose $7.5B y/y. Sources: [10-Q](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000084/goog-20260930.htm); [9to5Google](https://9to5google.com/2026/10/28/alphabet-q3-2026-earnings/). Matches Gemini's Pichai dossier. Watch the Wiz-integration drag (1–2 pts, per dossier) and depreciation from $195–205B capex. |
 | Public confirmation of Gemini 4 training on non-NVIDIA (TPU-only) infrastructure | Monitoring | Nov 22, 2026 | No confirmation found. |
 
