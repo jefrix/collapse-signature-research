@@ -7,6 +7,8 @@
 **Status:** DRAFT. Rulings below are proposals for the human principal.
 **Inputs:** `streams/stream-one-data-ledger/cycle-iv-catchup-ledger-2026-08-17.md`, the daily ledgers of Aug 25, Sep 9 and Sep 18, `synthesis/grok-daily-flags-2026-09-09.md`, `streams/stream-one-data-ledger/oct-nov-catchup-ledger-2026-11-22.md`, and the Nov 22 full sweep of `falsifiable-signals-watch.md`.
 
+**Rule update (Nov 22, later):** the conflict rule is now disclose-not-hand-off (`_TOOL_INSTRUCTIONS.md`). Part III may now be coded by Claude with disclosure; the handoff below is optional.
+
 **Conflict-of-interest notice:** Under the standing rule (Aug 17 catch-up ledger; restated in the Sep 9 Grok flags), Claude does not take analytical lead on Anthropic-coded material. This synthesis therefore carries **no Anthropic register rulings**. Part III lists the Anthropic facts and hands the coding to Gemini or DeepSeek.
 
 **Correction to the record:** In the Oct–Nov catch-up ledger (§2) and the Nov 22 signals sweep (Amodei rows), Claude, in breach of this rule, wrote provisional codings: "disclosure under legal compulsion," and "Contested, lean not met" for the human-surpassing-model signal. Both should be treated as **unreviewed placeholders** until a non-Claude agent re-codes them.

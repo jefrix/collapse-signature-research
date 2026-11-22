@@ -85,28 +85,29 @@ the tool, date and stream/case, plus a filing note saying it was relayed
 and committed by Claude. Claude's review of the relayed work goes in a
 separate file. Relayed content is never edited in place.
 
-## Conflict-of-interest rule (subject-tool analysis)
+## Conflict-of-interest rule (disclose, do not hand off)
 
-When a tool's own developer is a subject of the research, that tool must
-not take analytical lead on material coded to that developer. Analytical
-lead covers register codings, signal resolutions, self-indictment
-assessments, and synthesis rulings.
+When a tool's own developer is a subject of the research, the tool **may**
+do the analysis, including codings, signal resolutions, self-indictment
+assessments and synthesis rulings. It must **disclose the conflict** in
+the file, in a line near the top:
 
-- **Claude** must not lead on Anthropic-coded material. Assign it to
-  Gemini or DeepSeek.
-- The same rule applies to any other tool whose developer is a subject.
-  For example, Gemini must not lead on Google/DeepMind-coded material,
-  and ChatGPT must not lead on OpenAI-coded material. Assign that work to
-  a non-conflicted tool.
-- A conflicted tool may still collect and cite **facts** about its
-  developer, marked as fact-gathering only, and hand the coding off.
-- If a conflicted tool has already written a coding, mark it at the point
-  of use as an unreviewed placeholder. Do not delete it. A non-conflicted
-  tool re-codes it.
+> **Conflict disclosure:** [Tool] is developed by [company], which is a subject of this entry.
 
-Origin: Aug 17, 2026 catch-up ledger (`streams/stream-one-data-ledger/cycle-iv-catchup-ledger-2026-08-17.md`),
-restated Sep 9, 2026. Added here Nov 22, 2026 after a breach in
-`oct-nov-catchup-ledger-2026-11-22.md` §2.
+This applies to Claude on Anthropic, Gemini on Google/DeepMind, and
+ChatGPT on OpenAI, and to any similar case.
+
+- Disclose at the file level, and again inline at any coding that bears
+  directly on the conflicted developer.
+- Reviewers should give conflicted codings an extra check. No handoff is
+  required.
+- Jeff may still assign a specific item to a non-conflicted tool when he
+  wants an independent read.
+
+History: Aug 17, 2026 rule required handoff (Claude off Anthropic-coded
+analysis). Changed to disclose-not-hand-off by Jeff on Nov 22, 2026.
+Codings that were marked "unreviewed placeholder" under the old rule
+stand as disclosed Claude codings unless re-coded.
 
 ## Updates to this file
 
@@ -115,4 +116,4 @@ version before assuming any specific instruction is current.
 
 ---
 
-Last updated: Nov 22, 2026 by Claude (Anthropic): added conflict-of-interest rule
+Last updated: Nov 22, 2026 by Claude (Anthropic): conflict rule changed to disclose instead of hand off

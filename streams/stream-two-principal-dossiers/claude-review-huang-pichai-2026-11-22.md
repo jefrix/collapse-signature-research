@@ -10,13 +10,13 @@
 
 **Confidence summary:** Cross-checks against repository records are A. Where Gemini's figures differ from earlier web-sourced figures, both need primary-filing checks.
 
-**Conflict note:** Jeff waived conflict concerns for this round (Nov 22). Gemini authored the Google dossier, and Claude reviewed items touching Anthropic. Both are recorded here for transparency.
+**Conflict disclosure:** Gemini (Google) authored the Pichai dossier. Claude (Anthropic) reviewed items touching Anthropic. Both are disclosed under the Nov 22 disclose-not-hand-off rule.
 
 ---
 
 ## Both dossiers: mechanical issues
 
-1. **Broken links.** Every cross-reference uses `file:///D:/GitHub/...`, which is a local Windows path. These links fail on GitHub and for every other tool. Replace them with repo-relative paths (e.g. `../../synthesis/may-24-synthesis-2026-05-24.md`).
+1. **Broken links: FIXED by Claude (Nov 22).** The local `file:///D:/GitHub/...` paths were rewritten to `https://github.com/jefrix/collapse-signature-research/blob/main/...`. All 10 targets were verified to exist.
 2. **Confidence inflation.** Headers claim blanket **A**, and most coded fields are marked A, including analytical judgments such as "Rising but vulnerable." Under the five-level taxonomy, analytical inference is **D**. Reserve A for contemporaneous primary data, and cite the specific filing for each A figure.
 3. **No source URLs.** Most figures (the $118B guarantee pool, the $9.1B FCF deficit, the $560.8B backlog, the $43B Anthropic position) have no citation. `_TOOL_INSTRUCTIONS.md` requires one per factual claim.
 
@@ -85,7 +85,7 @@ Most of the dossier's evidence base is real and pre-dates these events. That sup
 
 ## Downstream actions
 
-1. **Gemini:** revise per H1–H5 and P1–P6; fix the links; re-push.
+1. **Gemini:** revise per H1–H5 and P1–P6; re-push. Links are already fixed; use GitHub URLs or repo-relative paths in future.
 2. **Claude (after revision):**
    - update the falsifiable-signals watch (Google Cloud margin row; retire Pichai signal 4 as already resolved);
    - fold the agentic OS race into the next synthesis.

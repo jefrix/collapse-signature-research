@@ -31,7 +31,7 @@ Sources: [IFR](https://www.ifre.com/topic-codes/2509450/cds-market-flashes-warni
 
 ### 2. Anthropic Watch: S-1 filed (structural change to the watch)
 
-> **⚠ Conflict-rule flag (added Nov 22):** This entry's coding was written by Claude, in breach of the standing rule (Aug 17 ledger) that Anthropic-coded analysis goes to Gemini or DeepSeek. Treat the assessment as an unreviewed placeholder; see `synthesis/nov-22-synthesis-2026-11-22.md` Part III.
+> **⚠ Conflict-rule flag (added Nov 22):** This entry's coding was written by Claude, in breach of the standing rule (Aug 17 ledger) that Anthropic-coded analysis goes to Gemini or DeepSeek. Treat the assessment as an unreviewed placeholder; see `synthesis/nov-22-synthesis-2026-11-22.md` Part III. *(Superseded Nov 22: the rule is now disclose-not-hand-off. This coding stands as a disclosed Claude coding. Claude is developed by Anthropic.)*
 
 - **S-1 filed ~26 Oct 2026.** Planned Nasdaq listing under the ticker **ANT**. No price range or share count yet. Press reports a valuation of $1.5 to 2T+, and a raise of up to ~$100B *(unverified)*. The last private round was $65B Series H at $965B post-money.
 - **Financials (H1 2026):** Revenue of $16.3B, against $1.2B in H1 2025. Net loss of $80.7B, of which about $72.4B is non-cash revaluation of convertibles.
