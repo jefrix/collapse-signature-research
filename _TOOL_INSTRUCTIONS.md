@@ -76,6 +76,15 @@ If you need a tiebreaker on an analytical disagreement with another
 tool, surface both positions to Jeff with the reasoning behind each.
 Do not assume any one tool's claims override another's.
 
+## Relay filing for read-only tools
+
+DeepSeek can read the repository but cannot push. Jeff relays DeepSeek
+output into a Claude session, and Claude commits it **verbatim** to the
+matching case or stream folder. Each relayed file gets a header naming
+the tool, date and stream/case, plus a filing note saying it was relayed
+and committed by Claude. Claude's review of the relayed work goes in a
+separate file. Relayed content is never edited in place.
+
 ## Conflict-of-interest rule (subject-tool analysis)
 
 When a tool's own developer is a subject of the research, that tool must
