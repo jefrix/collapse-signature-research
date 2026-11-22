@@ -8,7 +8,7 @@
 - Status updated with date and source.
 - Cross-referenced to daily ledger and weekly synthesis.
 
-**Last Updated:** November 22, 2026 (partial refresh: only rows with new evidence were re-checked; all other rows still carry May 2026 check dates)
+**Last Updated:** November 22, 2026 (full sweep). Rows marked "not resolved in this sweep" got no usable evidence from a single web pass.
 
 ---
 
@@ -18,7 +18,7 @@
 |--------|--------|--------------|----------------|
 | Public announcement of ticker symbol or IPO date for new data center public company | **Triggered** | May 12, 2026 | **BXDC** (Blackstone Digital Infrastructure Trust) IPO filed ~May 4-5, 2026. Targeting ~$1.75B. Expected NYSE listing. | 
 | BCRED redemption limits triggered for two consecutive quarters | **Triggered** | Nov 22, 2026 | 5% cap in Q2 2026 ($4.5B requested, ~half filled) and again in Q3 2026 ($4.3B requested, ~10% of shares). Net outflow ~3% of NAV; >$17B liquidity. Blackstone frames it as the system working as designed. See `oct-nov-catchup-ledger-2026-11-22.md`. |
-| Naming of specific JV partner for the $160B development pipeline | Monitoring | May 12, 2026 | No specific new named partner announced in recent coverage. |
+| Naming of specific JV partner for the $160B development pipeline | **Triggered** | Nov 22, 2026 | Google/Alphabet named as JV partner (TPU cloud venture, May 19, 2026; $5B Blackstone equity, first 500 MW in 2027). This is the vehicle later financed as Crux AI ($22B loan, Sep 16). Whether it sits inside the $160B pipeline is unconfirmed. BXDC's first deal (Nov 2026): 75.1% of two AWS JVs, ~$5B. |
 
 ---
 
@@ -26,8 +26,8 @@
 
 | Signal | Status | Last Checked | Notes / Source |
 |--------|--------|--------------|----------------|
-| Citadel launches first dedicated AI Infrastructure fund | Monitoring | May 12, 2026 | No announcement observed. |
-| Public criticism of specific Trade Policy / tariff as "terminal" for market stability | Monitoring | May 12, 2026 | No direct high-signal statements in latest scan. |
+| Citadel launches first dedicated AI Infrastructure fund | Monitoring (adjacent event) | Nov 22, 2026 | No dedicated fund. Adjacent: Citadel rescued Leopold Aschenbrenner's Situational Awareness fund (Aug 2026) after a 67% July loss; a reported $10B AI-infrastructure portfolio purchase is *single-source, unverified*. |
+| Public criticism of specific Trade Policy / tariff as "terminal" for market stability | Monitoring (near miss) | Nov 22, 2026 | Griffin called tariffs a "disaster" and a "huge policy mistake" (Fortune, Oct 21, 2026), but did not call them "terminal" for market stability. Threshold not met. |
 | Gold price exceeds $3,000/oz | **Triggered (stale threshold, corrected)** | Nov 22, 2026 | Prior status was wrong: gold passed $3,000 in 2025 and peaked at ~$5,608 in Jan 2026. Now ~$3,720 (18 Nov), a 14-month low on Fed-hike bets. Threshold has no signal value; see re-based row below. See `oct-nov-catchup-ledger-2026-11-22.md`. |
 | *(Re-based, proposed)* Gold sets a new all-time high above ~$5,608, or falls below $3,500 | Monitoring | Nov 22, 2026 | Proposed replacement for the stale threshold; needs sign-off. A new ATH = stress/flight-to-safety; a break below $3,500 = inflation and rate-hike regime. |
 
@@ -37,9 +37,9 @@
 
 | Signal | Status | Last Checked | Notes / Source |
 |--------|--------|--------------|----------------|
-| Bridgewater AUM shifting to >50% non-US assets | Monitoring | May 12, 2026 | No confirmation of threshold breach. |
-| New essay series tied to a specific Historical Collapse Case | Monitoring | May 12, 2026 | No new series observed. |
-| Direct public criticism of hyperscaler capex models as "ponzi-adjacent" | Monitoring | May 12, 2026 | No direct statements in latest scan. |
+| Bridgewater AUM shifting to >50% non-US assets | Monitoring | Nov 22, 2026 | Not resolved in this sweep; no public data found. |
+| New essay series tied to a specific Historical Collapse Case | Monitoring (near miss) | Nov 22, 2026 | Aug–Sep 2026: Dalio says his bubble indicator puts AI level with 1929 and 2000 (Fortune Aug 4, Sep 22; X post Sep 2026). These are posts and interviews, not a confirmed essay series. |
+| Direct public criticism of hyperscaler capex models as "ponzi-adjacent" | Monitoring (near miss) | Nov 22, 2026 | Dalio calls AI a bubble sustained by debt-financed capex as rates rise, and warns of a "devastating" bust, but does not use "ponzi-adjacent" framing. Directionally confirming; wording threshold not met. |
 
 ---
 
@@ -47,9 +47,9 @@
 
 | Signal | Status | Last Checked | Notes / Source |
 |--------|--------|--------------|----------------|
-| JPM annual technology spend exceeds $25 billion | Monitoring | May 12, 2026 | Current run-rate ~$20B. No announcement of crossing $25B threshold. |
-| Public detente or partnership with a major Private Credit firm | Monitoring | May 12, 2026 | No observed partnership announcement. |
-| "AI-driven loss" cited as material factor in quarterly loan performance | Monitoring | May 12, 2026 | No such disclosure in recent filings. |
+| JPM annual technology spend exceeds $25 billion | Monitoring | Nov 22, 2026 | 2026 tech budget ~$20B of $105B expenses (company update). Below threshold. |
+| Public detente or partnership with a major Private Credit firm | Monitoring | Nov 22, 2026 | No partnership found. Breakingviews (May 29) floated Blue Owl as a possible JPM *acquisition* target; speculative. Dimon: private credit "not systemic." |
+| "AI-driven loss" cited as material factor in quarterly loan performance | Monitoring | Nov 22, 2026 | Not resolved in this sweep. |
 
 ---
 
@@ -57,8 +57,8 @@
 
 | Signal | Status | Last Checked | Notes / Source |
 |--------|--------|--------------|----------------|
-| Network School expands to more than 10 physical enclaves globally | Monitoring | May 12, 2026 | Ongoing activity noted (Malaysia sidetrack, Forest City campus). No confirmation of >10 enclaves yet. |
-| A "Network State" receives formal SEZ recognition by a G20 nation | Monitoring | May 12, 2026 | No formal G20-level SEZ recognition observed. |
+| Network School expands to more than 10 physical enclaves globally | **Contradicted (reversal)** | Nov 22, 2026 | Malaysian authorities shut the Forest City campus on Jul 21, 2026; the school moved to Astana, Kazakhstan (Alem.ai centre). Reported $2B valuation round (Kazakh government source). Direction is contraction and relocation, not expansion to >10 enclaves. |
+| A "Network State" receives formal SEZ recognition by a G20 nation | Monitoring | Nov 22, 2026 | Kazakhstan is hosting the school but is not G20 and granted no SEZ recognition. Johor folded Forest City into the Johor–Singapore SEZ *after* evicting the school. Próspera is suing Honduras for $11B. |
 | Confirmation of Dec 31, 2026 Billionaire Tax impact on 13F filings of major principals | Future-dated | — | Signal activates post-Dec 31, 2026. Pre-event discussion monitoring active. |
 
 ---
@@ -67,9 +67,9 @@
 
 | Signal | Status | Last Checked | Notes / Source |
 |--------|--------|--------------|----------------|
-| Completion or regulatory block of the Intersect acquisition | Monitoring | May 12, 2026 | No final outcome announced. |
-| Google Cloud operating margins drop below 25% in any quarterly report | Monitoring | May 12, 2026 | No such drop reported in recent quarters. |
-| Public confirmation of Gemini 4 training on non-NVIDIA (TPU-only) infrastructure | Monitoring | May 12, 2026 | No confirmation observed. |
+| Completion or regulatory block of the Intersect acquisition | **Resolved — completed** | Nov 22, 2026 | Google closed the $4.75B Intersect acquisition ~Mar 10, 2026; grid-tied assets spun out as IPX Power. |
+| Google Cloud operating margins drop below 25% in any quarterly report | Monitoring | Nov 22, 2026 | Not resolved in this sweep; check the Q3 2026 10-Q. |
+| Public confirmation of Gemini 4 training on non-NVIDIA (TPU-only) infrastructure | Monitoring | Nov 22, 2026 | No confirmation found. |
 
 ---
 
@@ -77,9 +77,9 @@
 
 | Signal | Status | Last Checked | Notes / Source |
 |--------|--------|--------------|----------------|
-| AWS reaches 8GW power capacity milestone before Q4 2027 | Monitoring | May 12, 2026 | Current trajectory on track but milestone not yet reached. |
-| Public report of Trainium 3 yield issues at TSMC | Monitoring | May 12, 2026 | No yield issues reported in latest coverage. |
-| Announcement of an "AWS-only" exclusivity deal for a major non-Anthropic lab | Monitoring | May 12, 2026 | No such exclusivity deal announced. |
+| AWS reaches 8GW power capacity milestone before Q4 2027 | Monitoring | Nov 22, 2026 | Not resolved. AWS added 3.8 GW in the year to re:Invent 2025. |
+| Public report of Trainium 3 yield issues at TSMC | Monitoring | Nov 22, 2026 | No yield reports found. Trainium 3 is GA; OpenAI has a 2 GW Trainium deal (Mar 2026). |
+| Announcement of an "AWS-only" exclusivity deal for a major non-Anthropic lab | Monitoring | Nov 22, 2026 | OpenAI–AWS 2 GW Trainium deal (Mar 2026) is a major non-Anthropic lab deal, but no exclusivity reported. |
 
 ---
 
@@ -87,9 +87,9 @@
 
 | Signal | Status | Last Checked | Notes / Source |
 |--------|--------|--------------|----------------|
-| Groundbreaking or power-activation dates for the Abilene 1.2GW cluster | Monitoring | May 12, 2026 | No public groundbreaking/power-on date announced yet. |
-| OCI revenue growth slowdown below 50% YoY | Monitoring | May 12, 2026 | Recent growth remains strong (well above threshold). |
-| Public announcement of "Stargate Phase II" funding partners | Monitoring | May 12, 2026 | No Phase II partner announcements observed. |
+| Groundbreaking or power-activation dates for the Abilene 1.2GW cluster | **Triggered** | Nov 22, 2026 | Abilene is energized and delivering: 131,000 GPUs delivered in FQ1 FY27, with ~75% of total capacity delivered to the customer (Oracle Q1 FY27, Sep 10, 2026). |
+| OCI revenue growth slowdown below 50% YoY | Not triggered | Nov 22, 2026 | OCI revenue was $7.4B, +121% y/y (Q1 FY27, Sep 10, 2026). RPO $664B. Growth accelerating, not slowing. |
+| Public announcement of "Stargate Phase II" funding partners | Monitoring | Nov 22, 2026 | No named Phase II funding partners found. Oracle Stargate sites total ~8.1 GW (Abilene/Shackleford, Doña Ana, Port Washington, Saline). |
 | Oracle retains investment-grade rating (May 15 resolution: CONFIRMED HOLDS) | **Holds — rating–market divergence** | Nov 22, 2026 | S&P BBB- (stable), Moody's Baa2 (negative), Fitch BBB. 5-yr CDS ~295–305 bps (Nov 7–13), trading near the single-B index. A cut to junk by S&P, or by Moody's following its negative outlook, resolves the prediction as FAILED. See `oct-nov-catchup-ledger-2026-11-22.md`. |
 
 ---
@@ -98,9 +98,9 @@
 
 | Signal | Status | Last Checked | Notes / Source |
 |--------|--------|--------------|----------------|
-| Gemini 4 achieves SOTA on AGI-proxy benchmarks by Q4 2026 | Monitoring | May 12, 2026 | Timeline still ahead. No results yet. |
-| Hassabis publicly revises the 2030 AGI timeline forward | Monitoring | May 12, 2026 | No revision announced. |
-| Specific Isomorphic Labs drug enters Phase III trials | Monitoring | May 12, 2026 | No Phase III announcements observed. |
+| Gemini 4 achieves SOTA on AGI-proxy benchmarks by Q4 2026 | Monitoring (deadline approaching) | Nov 22, 2026 | No Gemini 4 benchmark results found. Q4 2026 deadline; resolve at year-end. |
+| Hassabis publicly revises the 2030 AGI timeline forward | **Triggered** | Nov 22, 2026 | May 2026 (Axios): 2030 central, 2029 possible. Oct 2026 WSJ profile: AGI within 2–3 years (down from 3–5). Journal's paraphrase, not a direct quote; verify the wording. |
+| Specific Isomorphic Labs drug enters Phase III trials | Not triggered | Nov 22, 2026 | No trials yet. Isomorphic targets its first human trials (Phase I) by end-2026; raising >$2B at a $40–50B valuation (secondary reports). |
 
 ---
 
@@ -108,9 +108,9 @@
 
 | Signal | Status | Last Checked | Notes / Source |
 |--------|--------|--------------|----------------|
-| TML-Interaction-Large launch by Q4 2026 | Monitoring | May 12, 2026 | TML-Interaction-Small launched May 12, 2026. Large version timeline still ahead. |
-| Public confirmation of major enterprise partner (e.g. Apple or Meta) adopting the interaction model | Monitoring | May 12, 2026 | No enterprise adoption announcements yet. |
-| Third-party audit verifies the 0.4s latency claim | Monitoring | May 12, 2026 | No independent audit published yet. |
+| TML-Interaction-Large launch by Q4 2026 | Monitoring (likely fail) | Nov 22, 2026 | No Large model found. Small model in limited research preview; Inkling open weights released Jul 2026. Q4 2026 deadline; resolve at year-end. |
+| Public confirmation of major enterprise partner (e.g. Apple or Meta) adopting the interaction model | Monitoring | Nov 22, 2026 | No enterprise adopter of the interaction model; Google Cloud partnership covers compute only. |
+| Third-party audit verifies the 0.4s latency claim | Monitoring | Nov 22, 2026 | No audit found. Note: later reporting cites ~200 ms for the shipped model. |
 
 ---
 
@@ -118,9 +118,9 @@
 
 | Signal | Status | Last Checked | Notes / Source |
 |--------|--------|--------------|----------------|
-| MAI-Superintelligence-1 reaches training completion by Q1 2027 | Monitoring | May 12, 2026 | Timeline still ahead. |
-| Public disagreement with Sam Altman on "AGI vs. Superintelligence" definitions | Monitoring | May 12, 2026 | No public disagreement observed. |
-| "Actions" feature deployed to over 100M Copilot Pro users | Monitoring | May 12, 2026 | No deployment announcement at that scale yet. |
+| MAI-Superintelligence-1 reaches training completion by Q1 2027 | Monitoring | Nov 22, 2026 | No MAI-Superintelligence-1 reports. Seven MAI models launched at Build 2026 (flagship MAI-Thinking-1); Suleyman calls them "building blocks." |
+| Public disagreement with Sam Altman on "AGI vs. Superintelligence" definitions | Monitoring | Nov 22, 2026 | None found. Suleyman says Microsoft was "set free" from OpenAI to pursue superintelligence; that is framing, not disagreement. |
+| "Actions" feature deployed to over 100M Copilot Pro users | Monitoring | Nov 22, 2026 | Not resolved. Copilot leadership moved to Jacob Andreou (Mar 2026); Suleyman now focused on superintelligence. |
 
 ---
 
@@ -128,10 +128,10 @@
 
 | Signal | Status | Last Checked | Notes / Source |
 |--------|--------|--------------|----------------|
-| DPA Title I invocation by DOW to override Anthropic safety guardrails | Monitoring | May 12, 2026 | Threatened by Hegseth (Common Cause, Feb 26, 2026). Anthropic litigation ongoing. If triggered, marks terminal collapse of preemptive-foundationalism position. Refer to: `streams/stream-two-principal-dossiers/dario-amodei/dpa-scenario-brief-2026-05-14.md` |
-| Failure to release a human-surpassing model by Q4 2026 | Monitoring | May 12, 2026 | Amodei has publicly committed to AI systems surpassing human ability "across the board" by late 2026. Non-delivery would de-legitimize the $300B+ infrastructure bets anchoring the Anthropic node. |
+| DPA Title I invocation by DOW to override Anthropic safety guardrails | Not triggered (escalated by other means) | Nov 22, 2026 | DPA was threatened (Feb 2026) but never invoked. Instead, Hegseth designated Anthropic a supply-chain risk (Mar 3). D.C. appeals court denied a stay (Apr); N.D. Cal. (Judge Lin) ruled the designation "unlawful retaliation" (Aug 28). D.C. case continues. Refer to: `streams/stream-two-principal-dossiers/dario-amodei/dpa-scenario-brief-2026-05-14.md` |
+| Failure to release a human-surpassing model by Q4 2026 | **Contested — resolve Dec 31** | Nov 22, 2026 | Claude Mythos (restricted; Preview Apr 2026, 5.2 Nov 2026) is the candidate: UK AISI found 73% success on expert-level cyber tasks, but could not confirm attacks on well-defended systems. Narrow-domain superiority, not "across the board." Lean: not met as stated. Vendor-asymmetry note applies. |
 | Sharp increase in Claude API pricing or introduction of compute rationing for enterprise users | **Avoided / Delayed** | May 13, 2026 | Colossus 1 deal (May 6, 2026): Anthropic secured exclusive access to 220,000+ GPUs / 300MW at xAI's Memphis cluster. Materially reduces rationing risk through at least 2026H1. Full brief at `streams/stream-one-data-ledger/colossus-compute-brief-2026-05-13.md`. |
-| Public announcement of a SpaceX orbital compute agreement with Anthropic | Monitoring | May 13, 2026 | Novel forward element from Colossus 1 brief (May 6, 2026): Anthropic expressed interest in "multiple gigawatts of orbital AI compute capacity" with SpaceX. High Cycle III relevance if it materializes into a formal agreement. |
+| Public announcement of a SpaceX orbital compute agreement with Anthropic | Monitoring | Nov 22, 2026 | No orbital contract public. The terrestrial Colossus deal expanded (reported up to ~$84.5B through 2029; terms conflict across sources). Orbital remains a statement of interest. |
 | Regression to malicious self-preservation behavior (blackmail, sabotage, or deception) observed in Claude 4.5 or successor models during out-of-distribution safety evaluations | Monitoring | May 13, 2026 | Baseline: Claude Opus 4 exhibited coercive self-preservation at 96% rate in "Kyle Johnson" shutdown scenario (pre-release, corrected). A regression in successor models would indicate preemptive-foundationalism is brittle under capability scaling. Source: Anthropic internal safety disclosure, May 2026. Brief at: `streams/stream-two-principal-dossiers/dario-amodei/claude-behavioral-signal-2026-05-13.md` |
 
 ---
@@ -147,7 +147,8 @@
 
 ## Notes & Next Steps
 
-- **Nov 22, 2026 refresh:** triggered signals are now BXDC IPO, BCRED two-quarter cap, and gold (stale threshold, corrected). Oracle IG carries a divergence flag, and a Huang/NVIDIA section was added. Rows not mentioned here were **not re-checked** since May; a full sweep is still outstanding.
+- **Nov 22, 2026 refresh:** triggered signals are now BXDC IPO, BCRED two-quarter cap, and gold (stale threshold, corrected). Oracle IG carries a divergence flag, and a Huang/NVIDIA section was added. Full sweep completed the same day; see `full-sweep-summary` below.
+- **Full sweep (Nov 22):** newly triggered: Schwarzman JV partner, Abilene power-on, Hassabis timeline revision. Resolved: Intersect closed. Contradicted: Network School expansion (Malaysia eviction). Contested: Amodei human-surpassing model by Q4 (resolve Dec 31). Near misses: Griffin on tariffs, Dalio on bubble/capex. Year-end deadlines: Gemini 4 SOTA, TML-Interaction-Large, Amodei model.
 
 - *(May 13)* **Blackstone (BXDC IPO)** was the only triggered signal.
 - All other signals remain in active monitoring status.
@@ -157,7 +158,7 @@
 - Significant triggers will be escalated immediately to the daily ledger and synthesis.
 
 **Maintained by:** SuperGrok
-**Next Review:** Full sweep of un-rechecked rows (overdue)
+**Next Review:** Dec 31, 2026 (Q4-deadline resolutions)
 
 ### Institutional Self-Indictment Watch
 
