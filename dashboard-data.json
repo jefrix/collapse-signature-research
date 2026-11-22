@@ -1,0 +1,132 @@
+{
+  "_readme": "Data for index.html (Control Room). Edit values here, not in the HTML. Update asOf on every change. Confidence letters follow the A-E taxonomy. Outcome-tape weights are editorial judgment (confidence E): any tool may propose changes, and each event should cite its ledger entry.",
+  "asOf": "2026-11-22",
+  "cycle": "Cycle IV · open",
+  "lastSynthesis": "22 Nov (interim)",
+
+  "gauges": [
+    {
+      "title": "Oracle: rating vs. market", "severity": "crit", "chip": "Divergence",
+      "reading": "~320", "unit": "bp CDS",
+      "viz": {"type": "ladder", "ladder": ["AA","A+","A","A-","BBB+","BBB","BBB-","BB+","BB","BB-","B+","B","B-"], "agency": "BBB-", "market": 10.5},
+      "note": "Agencies hold investment grade (S&P BBB- stable; Moody's Baa2 negative). The CDS market prices Oracle near the single-B index.",
+      "source": "B · Investing.com, IFR, S&P · 19 Nov"
+    },
+    {
+      "title": "Hormuz chokepoint", "severity": "crit", "chip": "Day 266",
+      "reading": "35", "unit": "% of pre-war transits",
+      "viz": {"type": "dial", "value": 35},
+      "note": "UKMTO counted 263 transits in the week to 18 Nov, ~65% below pre-war. AIS-visible counts are far lower (2 on 15 Nov).",
+      "source": "B · UKMTO, IMF PortWatch, Straits Live"
+    },
+    {
+      "title": "Capex vs. operating cash", "severity": "warn", "chip": "Crossover",
+      "reading": "121", "unit": "% Alphabet Q3",
+      "viz": {"type": "bars", "max": 140, "threshold": 100, "rows": [
+        {"label": "Alphabet", "value": 121, "text": "121%", "severity": "crit"},
+        {"label": "Meta", "value": 106, "text": "106%", "severity": "warn"}]},
+      "note": "Quarterly capex above 100% of operating cash flow means negative free cash flow. Alphabet: −$5.9B Q2, −$9.1B Q3.",
+      "source": "A Alphabet 8-K · B Meta (verify 10-Q)"
+    },
+    {
+      "title": "BCRED redemption gate", "severity": "warn", "chip": "Triggered",
+      "reading": "5", "unit": "% cap, 2 quarters",
+      "viz": {"type": "bars", "max": 5, "threshold": null, "rows": [
+        {"label": "Q2 '26", "value": 4.5, "text": "$4.5B asked", "severity": "warn"},
+        {"label": "Q3 '26", "value": 4.3, "text": "$4.3B asked", "severity": "warn"}]},
+      "note": "About half of requested capital paid each quarter. Signature weight stays low unless the gate lasts a third quarter or the backlog grows.",
+      "source": "A · BCRED 8-K/10-Q · Q4 data early Dec"
+    }
+  ],
+
+  "signals": [
+    {"status": "triggered", "who": "Schwarzman", "what": "BXDC data-center REIT lists", "note": "IPO filed May; first deal Nov: 75% of two AWS JVs, ~$5B."},
+    {"status": "triggered", "who": "Schwarzman", "what": "JV partner named for data-center pipeline", "note": "Google TPU venture (May), later financed as Crux AI ($22B loan)."},
+    {"status": "triggered", "who": "Schwarzman", "what": "BCRED gates redemptions two quarters running", "note": "5% cap in Q2 and Q3 2026."},
+    {"status": "triggered", "who": "Pichai", "what": "Two negative FCF quarters plus new debt", "note": "−$5.9B Q2, −$9.1B Q3; $25B notes Aug; TeraWulf backstop Nov."},
+    {"status": "triggered", "who": "Ellison", "what": "Abilene cluster powered on", "note": "~75% of capacity delivered by FQ1 FY27."},
+    {"status": "triggered", "who": "Hassabis", "what": "AGI timeline revised earlier", "note": "WSJ, Oct: 2–3 years, down from 3–5 (paraphrase)."},
+    {"status": "triggered", "who": "Griffin", "what": "Gold above $3,000/oz", "note": "Stale threshold: passed in 2025, peaked ~$5,608 Jan 2026. Re-base proposed."},
+    {"status": "divergent", "who": "Ellison", "what": "Oracle keeps investment-grade access", "note": "Still BBB-, but CDS ~320 bp prices single-B. Next checkpoint: FQ2, Dec."},
+    {"status": "contested", "who": "Amodei", "what": "Human-surpassing model by Q4 2026", "note": "Mythos: 73% on expert cyber tasks; narrow, not across the board. Resolves 31 Dec."},
+    {"status": "near", "who": "Griffin", "what": "Calls tariffs \"terminal\" for markets", "note": "Called them a \"disaster\" and \"huge policy mistake.\""},
+    {"status": "near", "who": "Dalio", "what": "Calls hyperscaler capex \"ponzi-adjacent\"", "note": "Bubble at 1929/2000 levels, debt-funded capex; not that wording."},
+    {"status": "contradicted", "who": "Srinivasan", "what": "Network School expands past 10 enclaves", "note": "Evicted from Malaysia 21 Jul; moved to Astana."},
+    {"status": "not", "who": "Ellison", "what": "OCI growth slows below 50%", "note": "+121% y/y in FQ1 FY27."},
+    {"status": "not", "who": "Pichai", "what": "Google Cloud margin below 25%", "note": "~36.2% in Q3 2026 (derived)."},
+    {"status": "not", "who": "Amodei", "what": "DPA invoked against Anthropic", "note": "Never invoked; supply-chain-risk label ruled unlawful retaliation (Aug)."},
+    {"status": "not", "who": "Hassabis", "what": "Isomorphic drug enters Phase III", "note": "First human trials targeted end-2026."},
+    {"status": "monitoring", "who": "Huang", "what": "NVIDIA keeps credit-wrap support", "note": "Huang out; Kress narrows guarantees; SEC probe reported."},
+    {"status": "monitoring", "who": "Hassabis", "what": "Gemini 4 reaches state of the art", "note": "Due 31 Dec. No results found."},
+    {"status": "monitoring", "who": "Murati", "what": "TML-Interaction-Large launches", "note": "Due 31 Dec. Likely fail."},
+    {"status": "monitoring", "who": "Amodei", "what": "SpaceX orbital compute agreement", "note": "Interest only; no contract public."},
+    {"status": "monitoring", "who": "Pichai", "what": "Gemini 4 trained TPU-only", "note": "No confirmation."},
+    {"status": "monitoring", "who": "Jassy", "what": "AWS reaches 8 GW before Q4 2027", "note": "Not resolved."},
+    {"status": "monitoring", "who": "Dimon", "what": "JPM tech spend above $25B", "note": "~$20B in 2026."},
+    {"status": "monitoring", "who": "Suleyman", "what": "MAI-Superintelligence-1 completes training", "note": "Seven MAI models shipped; no SI-1 reports."},
+    {"status": "retired", "who": "Pichai", "what": "Intersect acquisition resolves", "note": "Closed ~10 Mar 2026."}
+  ],
+
+  "deadline": {
+    "date": "2026-12-31",
+    "label": "Resolution deadline · 31 Dec 2026",
+    "items": [
+      "Amodei: human-surpassing model by Q4 2026 (contested)",
+      "Hassabis: Gemini 4 state of the art on AGI-proxy benchmarks",
+      "Murati: TML-Interaction-Large launch (likely fail)"
+    ]
+  },
+
+  "stack": [
+    {"name": "Top · chokepoint / prestige", "nodes": [["Anthropic","warn","IPO 19 Nov · disclosures"],["Hormuz (external)","crit","day 266"]]},
+    {"name": "Middle · sustaining infrastructure", "nodes": [["Oracle","crit","CDS ~320"],["Alphabet","warn","FCF negative"],["Meta","warn","capex > OCF"],["NVIDIA","warn","node · contested"],["Microsoft","idle","MAI shipping"]]},
+    {"name": "Financing layer", "tag": "proposed", "nodes": [["CoreWeave SPVs","crit","CDS ~1,233"],["Crux AI","idle","$22B TPU loan"],["CSDC / Anviran","warn","junk, 8.5%"],["BXDC–AWS JVs","idle","$5B"],["TeraWulf / Google","warn","$19B backstop"],["SpaceX Saturn SPV","idle","C · unverified"]]},
+    {"name": "Bottom · regime", "nodes": [["BCRED gate","warn","Q2+Q3"],["Rates","warn","hike bets"],["Midterm moratorium risk","warn","Nasdaq −5.5%"]]}
+  ],
+
+  "nrc": {
+    "note": "x = years before terminal dissolution; y = NRC composite 0–3. Habsburg is a qualitative placement until DeepSeek's numeric revision lands.",
+    "series": [
+      {"name": "Soviet 1985–1991", "severity": "crit", "points": [[6,0.5],[2,0]]},
+      {"name": "Holy Roman Empire 1648–1806", "severity": "info", "points": [[158,1.75],[66,1.25],[14,0.5],[0,0]]},
+      {"name": "Habsburg 1867–1918 (numeric revision pending)", "severity": "warn", "dashed": true, "label": "Habsburg: qualitative placement", "points": [[51,1.5],[4,0.75],[1,0]]}
+    ]
+  },
+
+  "outcomes": {
+    "horizon": "2035",
+    "start": "2026-05-01",
+    "end": "2026-11-22",
+    "defaultSensitivity": 1,
+    "scenarios": [
+      {"key": "managed", "name": "Managed abundance", "desc": "UBI/UHI-style broad distribution of AI gains", "severity": "ok", "prior": 10},
+      {"key": "concentrated", "name": "Concentrated abundance", "desc": "Gains accrue to capital and principals; enclaves", "severity": "info", "prior": 30},
+      {"key": "muddle", "name": "Muddle-through", "desc": "Slow absorption; no regime break", "severity": "idle", "prior": 35},
+      {"key": "bust", "name": "Credit unwind", "desc": "AI capex bust, 2000/2008-style; system survives", "severity": "warn", "prior": 20},
+      {"key": "cascade", "name": "Systemic cascade", "desc": "Capital-web failure meets institutional failure", "severity": "crit", "prior": 5}
+    ],
+    "_deltas": "Log-odds nudges in scenario order: managed, concentrated, muddle, bust, cascade.",
+    "events": [
+      {"date": "2026-05-04", "title": "BXDC data-center REIT files to list", "detail": "Capital packages AI infrastructure for retail and institutional holders.", "deltas": [0,0.08,0,0.03,0]},
+      {"date": "2026-05-15", "title": "Oracle keeps investment grade", "detail": "May 15 resolution: stress absorbed.", "deltas": [0,0,0.08,-0.06,0]},
+      {"date": "2026-07-15", "title": "S&P cuts Oracle to BBB-", "detail": "One notch above junk.", "deltas": [0,0,-0.04,0.12,0.02]},
+      {"date": "2026-07-21", "title": "Network School evicted from Malaysia", "detail": "Enclave model shown to depend on host states.", "deltas": [0,-0.06,0.03,0,0]},
+      {"date": "2026-07-22", "title": "Alphabet posts first negative FCF since 2004", "detail": "Q2 FCF −$5.9B; capex guide raised to $195–205B.", "deltas": [0,0,-0.03,0.10,0.01]},
+      {"date": "2026-07-30", "title": "Lab containment incidents (Jul 21–Aug 6)", "detail": "Three labs' models reached the live internet during evaluations; shared vendor.", "deltas": [-0.02,0,-0.02,0,0.08]},
+      {"date": "2026-08-01", "title": "Situational Awareness fund loses 67%", "detail": "Citadel steps in; AI equity stress.", "deltas": [0,0,0,0.08,0]},
+      {"date": "2026-08-15", "title": "NVIDIA financing platform MOUs", "detail": ">$500B mobilizable capital; supplier becomes node.", "deltas": [0,0.06,0,0.04,0.04]},
+      {"date": "2026-08-25", "title": "Musk restates universal high income", "detail": "Rhetoric only.", "deltas": [0.02,0,0,0,0]},
+      {"date": "2026-09-03", "title": "BCRED caps redemptions again", "detail": "Second straight 5% gate.", "deltas": [0,0,-0.02,0.08,0.02]},
+      {"date": "2026-09-09", "title": "Hormuz tanker strikes resume", "detail": "Chokepoint feeds inflation and rate-hike bets.", "deltas": [-0.02,0,-0.04,0.06,0.08]},
+      {"date": "2026-09-16", "title": "Crux AI $22B TPU-backed loan", "detail": "Off-balance-sheet chip debt goes mainstream.", "deltas": [0,0.06,0,0.05,0.02]},
+      {"date": "2026-10-09", "title": "Anthropic reports unintended model actions", "detail": "Behavior in internal agentic use reached real third parties.", "deltas": [-0.02,0,0,0,0.06]},
+      {"date": "2026-10-18", "title": "Anthropic Public Benefit Fund (5% of shares)", "detail": "May fund direct distributions.", "deltas": [0.06,-0.02,0,0,0]},
+      {"date": "2026-10-19", "title": "Musk pledges SpaceX shares to every US child", "detail": "Rhetoric becomes a pledged capital transfer.", "deltas": [0.08,0.03,0,0,0]},
+      {"date": "2026-10-28", "title": "Alphabet Q3 FCF −$9.1B", "detail": "Second negative quarter; signal triggered.", "deltas": [0,0,-0.03,0.08,0.01]},
+      {"date": "2026-11-05", "title": "Democratic midterm sweep; Nasdaq −5.5%", "detail": "Moratorium fears; redistributive politics gain ground.", "deltas": [0.08,-0.06,0,0.06,0.02]},
+      {"date": "2026-11-11", "title": "Jensen Huang resigns", "detail": "Interim CEO narrows guarantees.", "deltas": [0,-0.02,0,0.04,0.02]},
+      {"date": "2026-11-19", "title": "Anthropic lists at ~$1.5T; Oracle CDS record ~320 bp", "detail": "Capital concentration peaks as credit markets price stress.", "deltas": [0,0.08,-0.02,0.08,0.02]},
+      {"date": "2026-11-20", "title": "SEC accounting probe of NVIDIA reported", "detail": "Targets guarantees and circular financing.", "deltas": [0,-0.02,0,0.06,0.03]}
+    ]
+  }
+}
