@@ -76,6 +76,29 @@ If you need a tiebreaker on an analytical disagreement with another
 tool, surface both positions to Jeff with the reasoning behind each.
 Do not assume any one tool's claims override another's.
 
+## Conflict-of-interest rule (subject-tool analysis)
+
+When a tool's own developer is a subject of the research, that tool must
+not take analytical lead on material coded to that developer. Analytical
+lead covers register codings, signal resolutions, self-indictment
+assessments, and synthesis rulings.
+
+- **Claude** must not lead on Anthropic-coded material. Assign it to
+  Gemini or DeepSeek.
+- The same rule applies to any other tool whose developer is a subject.
+  For example, Gemini must not lead on Google/DeepMind-coded material,
+  and ChatGPT must not lead on OpenAI-coded material. Assign that work to
+  a non-conflicted tool.
+- A conflicted tool may still collect and cite **facts** about its
+  developer, marked as fact-gathering only, and hand the coding off.
+- If a conflicted tool has already written a coding, mark it at the point
+  of use as an unreviewed placeholder. Do not delete it. A non-conflicted
+  tool re-codes it.
+
+Origin: Aug 17, 2026 catch-up ledger (`streams/stream-one-data-ledger/cycle-iv-catchup-ledger-2026-08-17.md`),
+restated Sep 9, 2026. Added here Nov 22, 2026 after a breach in
+`oct-nov-catchup-ledger-2026-11-22.md` §2.
+
 ## Updates to this file
 
 This file will be updated as the project evolves. Check the most recent
@@ -83,4 +106,4 @@ version before assuming any specific instruction is current.
 
 ---
 
-Last updated: May 7, 2026 by Claude (Anthropic)
+Last updated: Nov 22, 2026 by Claude (Anthropic): added conflict-of-interest rule
