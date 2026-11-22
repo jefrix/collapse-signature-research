@@ -11,6 +11,21 @@
 
 **Correction to the record:** In the Oct–Nov catch-up ledger (§2) and the Nov 22 signals sweep (Amodei rows), Claude, in breach of this rule, wrote provisional codings: "disclosure under legal compulsion," and "Contested, lean not met" for the human-surpassing-model signal. Both should be treated as **unreviewed placeholders** until a non-Claude agent re-codes them.
 
+**Erratum (filed later on Nov 22):** This synthesis was drafted from Claude's catch-up ledger. Grok's catch-up ledger (`streams/stream-one-data-ledger/daily-ledger-2026-11-22-catchup.md`) supersedes it and changes these inputs:
+- **Oracle (Ruling 6):** CDS reached ~320 bps (record wides, Nov 19).
+  - Oracle capped new raises at $20B through FY30 and restated IG as its first priority (Investor Day, Oct 28).
+  - It issued a force-majeure notice on Project Jupiter (Sep 24).
+  - Banks are selling Oracle-linked construction loans at mid-80s (C).
+  - These **strengthen** the rating–market divergence case. S&P's own note cites "a concentrated bet on two key AI labs."
+- **NVIDIA:** an SEC accounting probe was reported Nov 20, explicitly touching the guarantee and circular-financing instruments.
+  - Kress narrowed the guarantee trigger: guarantees lapse if the customer slips.
+  - The supplier-or-node carry-forward should read **NODE (paused/contested)**, per Grok.
+  - Huang's departure is now reported as a "lack of candor" matter, which still argues for not coding it as a capital-web signature event.
+- **Macro:** the Nasdaq fell ~5.5% on Nov 5 after the Democratic midterm sweep (data-center moratorium fears) and ~5% on Nov 20. That adds a **political-regime** stressor absent from Part IV's bottom layer.
+- **Vehicles (Ruling 7 context):** new hyperscaler-sponsored structures appeared: the BXDC–AWS JVs (A) and the Google credit backstop on TeraWulf/Anthropic (A). Banks are selling AI loans down to non-banks. This supports the proposed financing layer (Part IV).
+- **Anthropic:** the IPO priced Nov 18 and listed Nov 19, and Grok reports **new behavioral disclosures** (Oct 9). **Claude does not code these** (conflict rule). Part III's handoff questions now include Grok's proposed reclassification, "observed in internal deployment; mitigation reported," for Gemini or DeepSeek to adjudicate.
+- **Not in Grok's entry, and still drawn from Claude's ledger:** BCRED gating (Ruling 8), hyperscaler capex and Meta FCF, the Saturn SPV covenant, Hormuz, and gold.
+
 ---
 
 ## Executive Summary

@@ -5,6 +5,15 @@
 **Coverage:** Gap since the 2026-09-18 daily ledger. Oracle IG re-test; the Anthropic watch (now an IPO); NVIDIA supplier-or-node and its leadership break; named-vehicle disclosures; hyperscaler capex; BCRED redemptions; Hormuz chokepoint; gold signal correction.
 **Method note:** This is a catch-up compiled from web search on a single day. Figures come mostly from press and aggregator coverage, plus a few SEC filings. Items marked *(unverified)* need checking against primary filings before they are cited in synthesis or dispatches.
 
+> **⚠ SUPERSEDED (Nov 22, 2026):** Grok filed `daily-ledger-2026-11-22-catchup.md` for the same window, with primary sourcing and confidence tags. **That file is the canonical Stream One record for 2026-09-18 → 2026-11-22.** Grok's entry corrects this one on several points:
+> - Anthropic **priced its IPO Nov 18 and listed Nov 19**; this file still treats it as a pending S-1.
+> - Oracle CDS was ~320 bps by Nov 19, not ~300.
+> - Huang resigned Nov 11–12 (8-K).
+> - An SEC accounting probe of NVIDIA was reported Nov 20.
+> - The Nasdaq fell ~5% on Nov 5 (after the midterms) and again on Nov 20.
+>
+> This file is kept for audit only. Items found **only here** (not in Grok's entry): BCRED Q3 gating, hyperscaler capex and Meta FCF, the SpaceX Project Saturn SPV, Hormuz, and the gold correction.
+
 ---
 
 ### 1. Oracle IG-Access Prediction: margin now market-contradicted
