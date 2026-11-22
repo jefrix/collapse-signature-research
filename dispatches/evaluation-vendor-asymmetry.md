@@ -1,6 +1,6 @@
 # Methodological Note: The Evaluation-Vendor Asymmetry and the Qing Governance Register
 
-**Filing Path:** `streams/stream-three-civilizational-foundation/methodological-notes/evaluation-vendor-asymmetry.md`
+**Filing Path:** `dispatches/evaluation-vendor-asymmetry.md`
 
 **Date:** August 17, 2026
 
