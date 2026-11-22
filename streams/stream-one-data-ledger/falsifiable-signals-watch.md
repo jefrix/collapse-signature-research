@@ -147,7 +147,7 @@
 
 ## Notes & Next Steps
 
-- **Nov 22, 2026 refresh:** triggered signals are now BXDC IPO, BCRED two-quarter cap, and gold (stale threshold, corrected). Oracle IG carries a divergence flag, and a Huang/NVIDIA section was added. Full sweep completed the same day; see `full-sweep-summary` below.
+- **Nov 22, 2026 refresh:** triggered signals are now BXDC IPO, BCRED two-quarter cap, and gold (stale threshold, corrected). Oracle IG carries a divergence flag, and a Huang/NVIDIA section was added. Full sweep completed the same day (next bullet).
 - **Full sweep (Nov 22):** newly triggered: Schwarzman JV partner, Abilene power-on, Hassabis timeline revision. Resolved: Intersect closed. Contradicted: Network School expansion (Malaysia eviction). Contested: Amodei human-surpassing model by Q4 (resolve Dec 31). Near misses: Griffin on tariffs, Dalio on bubble/capex. Year-end deadlines: Gemini 4 SOTA, TML-Interaction-Large, Amodei model.
 
 - *(May 13)* **Blackstone (BXDC IPO)** was the only triggered signal.
