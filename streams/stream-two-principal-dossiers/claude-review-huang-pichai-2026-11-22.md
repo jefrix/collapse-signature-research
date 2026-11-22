@@ -63,7 +63,7 @@ Most of the dossier's evidence base is real and pre-dates these events. That sup
 
 **P1. Intersect has closed. (FIXED by Claude, Nov 22: §II, §IV and signal 4 updated.)** The dossier says closing is "pending verification." Google closed the $4.75B acquisition around Mar 10, 2026, and Intersect's grid-tied assets were spun out as IPX Power (DCD, Nossaman, PV Tech; the falsifiable-signals watch has it as "Resolved — completed"). Update §II and §IV, and retire falsifiable signal 4.
 
-**P2. Capex guidance is stale.** The dossier cites $175–185B (Feb 2026). Alphabet raised this to **$195–205B at Q2** and reaffirmed it at Q3 (secondary sources, B). Verify against the Q3 release and update.
+**P2. Capex guidance is stale. (FIXED by Claude, Nov 22: §II updated to $195–205B, July raise. Still open: confirm the prior range and the Q3 reaffirmation against releases.)** The dossier cites $175–185B (Feb 2026). Alphabet raised this to **$195–205B at Q2** and reaffirmed it at Q3 (secondary sources, B). Verify against the Q3 release and update.
 
 **P3. Q3 free cash flow needs primary confirmation.** The dossier gives −$9.1B, with capex of $51.4B against operating cash flow of $42.3B. Earlier web sourcing confirmed the $51.4B capex but not the OCF. This figure carries the dossier's "slack tightening" coding and its falsifiable signal 2, so cite the Q3 10-Q. If it is confirmed, Alphabet joins Meta in the capex-exceeds-OCF crossover, which strengthens Part IV of the Nov 22 synthesis.
 
